@@ -1,0 +1,1449 @@
+\documentclass[12pt, letterpaper]{article}
+
+% -------------------------------------------------
+% PAQUETES Y FORMATO
+% -------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,mexico]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[margin=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array,booktabs}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+% La expansión automática de microtype falla con la fuente monoespaciada
+% usada por los marcadores de gráficas en algunas instalaciones de MiKTeX.
+\usepackage[expansion=false]{microtype}
+\usepackage{hyperref}
+
+% El cuadernillo numera los incisos con el alfabeto latino sin incluir la ñ.
+\makeatletter
+\renewcommand{\alph}[1]{\expandafter\@alphlatin\csname c@#1\endcsname}
+\newcommand{\@alphlatin}[1]{\ifcase#1\or a\or b\or c\or d\or e\or f\or g\or h\or i\or j\or k\or l\or m\or n\or o\or p\or q\or r\or s\or t\or u\or v\or w\or x\or y\or z\else\@ctrerr\fi}
+\makeatother
+
+\definecolor{MoradoPrincipal}{RGB}{74,20,140}
+\definecolor{MoradoSecundario}{RGB}{106,27,154}
+\definecolor{MoradoClaro}{RGB}{243,229,245}
+\definecolor{GrisTexto}{RGB}{33,33,33}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\headheight}{14.5pt}
+\setlist[enumerate]{itemsep=0.45em,topsep=0.35em}
+\setlist[itemize]{itemsep=0.25em,topsep=0.3em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{GrisTexto} Cálculo Diferencial}
+\fancyhead[R]{\small\color{GrisTexto} Cuadernillo resuelto}
+\fancyfoot[C]{\small\color{GrisTexto} Página \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrule}{{\color{MoradoPrincipal}\hrule width\headwidth height \headrulewidth \vspace{-\headrulewidth}}}
+\renewcommand{\footrule}{{\color{MoradoPrincipal}\hrule width\headwidth height \footrulewidth \vspace{-\footrulewidth}}}
+
+\titleformat{\section}
+  {\color{MoradoPrincipal}\normalfont\Large\bfseries}
+  {\thesection.}{0.5em}{}
+  [\color{MoradoPrincipal}\titlerule]
+
+\titleformat{\subsection}
+  {\color{MoradoSecundario}\normalfont\large\bfseries}
+  {\thesubsection.}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\color{MoradoPrincipal}\normalfont\bfseries}
+  {\thesubsubsection.}{0.5em}{}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=MoradoPrincipal,
+    filecolor=MoradoSecundario,
+    urlcolor=MoradoPrincipal,
+    pdftitle={Cuadernillo resuelto: Cálculo diferencial},
+    pdfauthor={Rodríguez Rodríguez Diego Felipe}
+}
+
+% Cada llamada conserva el espacio destinado a una evidencia, con el diseño
+% visual de Tarea 4.
+\newcommand{\grafica}{%
+    \begin{center}
+        \begin{tcolorbox}[
+            colframe=MoradoPrincipal,
+            colback=MoradoClaro!30,
+            arc=3mm,
+            width=0.86\textwidth,
+            height=2.3cm,
+            halign=center,
+            valign=center
+        ]
+            \texttt{// evidencia de gráfica}
+        \end{tcolorbox}
+    \end{center}
+}
+
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\sen}{\operatorname{sen}}
+
+\newcommand{\arcsec}{\operatorname{arcsec}}
+
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\newcommand{\respuesta}[1]{\[\boxed{#1}\]}
+
+% Colores originales de las gráficas de Desmos
+\definecolor{desmosMorado}{HTML}{975FA8}
+\definecolor{desmosAzulFuerte}{HTML}{6557D2}
+\definecolor{desmosAzul}{HTML}{1565C0}
+\definecolor{desmosVerde}{HTML}{388C83}
+\definecolor{desmosAmarillo}{HTML}{FFCC02}
+\definecolor{desmosRojo}{HTML}{D32F2F}
+
+\begin{document}
+
+\begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{m{3.5cm} m{8cm} m{3.5cm}}
+                \centering
+                \IfFileExists{../Logos/unam_logo.png}
+                {\includegraphics[width=3cm,height=3.5cm,keepaspectratio]{../Logos/unam_logo.png}}
+                {\framebox{\parbox[c][3.5cm][c]{3cm}{\centering UNAM}}}
+                &
+                \centering
+                {\bfseries\large UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}\\[0.3cm]
+                {\bfseries\large FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN}\\[0.2cm]
+                {\small\color{MoradoPrincipal}\rule{8cm}{1.5pt}}
+                &
+                \centering
+                \IfFileExists{../Logos/fes_aragon_logo.png}
+                {\includegraphics[width=3.5cm,height=3.5cm,keepaspectratio]{../Logos/fes_aragon_logo.png}}
+                {\framebox{\parbox[c][3.5cm][c]{3.5cm}{\centering FES Aragón}}}
+            \end{tabular}
+        \end{table}
+
+        \vspace{1.5cm}
+        {\color{MoradoPrincipal}\Large\bfseries INGENIERÍA EN COMPUTACIÓN}\\[0.4cm]
+        {\color{MoradoSecundario}\large\bfseries Cálculo diferencial}\\[1.5cm]
+
+        \begin{tcolorbox}[
+            colframe=MoradoPrincipal,
+            colback=MoradoClaro!30,
+            arc=3mm,
+            width=0.9\textwidth,
+            halign=center
+        ]
+            \vspace{0.3cm}
+            {\large\bfseries Cuadernillo resuelto}\\[0.2cm]
+            \small Ejercicios, procedimientos y evidencias de cálculo diferencial.
+            \vspace{0.3cm}
+        \end{tcolorbox}
+
+        \vfill
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{rl}
+                \textbf{\color{MoradoPrincipal} Alumno:} & Rodríguez Rodríguez Diego Felipe\\[0.2cm]
+                \textbf{\color{MoradoPrincipal} Profesor:} & Dr. Arturo Rodríguez García\\[0.2cm]
+                \textbf{\color{MoradoPrincipal} Asignatura:} & Cálculo diferencial\\[0.2cm]
+                \textbf{\color{MoradoPrincipal} Trabajo:} & Cuadernillo de ejercicios\\[0.2cm]
+            \end{tabular}
+        \end{table}
+
+        \vspace{1cm}
+        {\small San Juan de Aragón, Estado de México}
+    \end{center}
+\end{titlepage}
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{2}
+\renewcommand{\contentsname}{\color{MoradoPrincipal} ÍNDICE GENERAL}
+\tableofcontents
+
+\newpage
+
+% =================================================
+% TEMA 1
+% =================================================
+\section{Tema 1. Funciones}
+
+\subsection*{1.- Encuentra el dominio y rango de las siguientes funciones. Muestra la gráfica de la función.}
+\begin{enumerate}[label=\alph*)]
+  \item $y=2x-3$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_1_a.png}
+\end{center}
+  \textbf{Dominio: }$\R$. \quad \textbf{Rango: }$\R$.
+  \item $y=x^2+1$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_1_b.png}
+\end{center}
+  \textbf{Dominio: }$\R$. \quad \textbf{Rango: }$[1,+\infty)$, pues $x^2\geq0$.
+  \item $y=\sqrt{x-2}$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_1_c.png}
+\end{center}
+  Para que la raíz sea real, $x-2\geq0$.\\
+  \textbf{Dominio: }$[2,+\infty)$. \quad \textbf{Rango: }$[0,+\infty)$.
+  \item $y=\dfrac{1}{x+3}$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_1_d.png}
+\end{center}
+  El denominador no puede ser cero: $x\neq-3$. Además, la fracción nunca vale cero.\\
+  \textbf{Dominio: }$\R\setminus\{-3\}$. \quad \textbf{Rango: }$\R\setminus\{0\}$.
+  \item $y=x^3+2$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_1_e.png}
+\end{center}
+  \textbf{Dominio: }$\R$. \quad \textbf{Rango: }$\R$.
+\end{enumerate}
+
+\subsection*{2.- Encuentra el dominio de las siguientes funciones. Muestra la gráfica de la función.}
+\begin{enumerate}[label=\alph*)]
+  \item $y=\dfrac{1}{x^2-9}$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_2_a.png}
+\end{center}
+  $x^2-9=(x-3)(x+3)\neq0$. \respuesta{D=(-\infty,-3)\cup(-3,3)\cup(3,+\infty)}
+  \item $y=\dfrac{1}{x^2-5x+6}$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_2_b.png}
+\end{center}
+  $x^2-5x+6=(x-2)(x-3)\neq0$. \respuesta{D=\R\setminus\{2,3\}}
+  \item $y=\dfrac{1}{x^2+6x+9}$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_2_c.png}
+\end{center}
+  $x^2+6x+9=(x+3)^2\neq0$. \respuesta{D=\R\setminus\{-3\}}
+  \item $y=\dfrac{1}{x^2-x-6}$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_2_d.png}
+\end{center}
+  $x^2-x-6=(x-3)(x+2)\neq0$. \respuesta{D=\R\setminus\{-2,3\}}
+  \item $y=\dfrac{\sqrt{x}}{x^2-x-6}$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema1_2_e.png}
+\end{center}
+  Se requiere $x\geq0$ y $(x-3)(x+2)\neq0$. Al intersectar las condiciones: 
+  \respuesta{D=[0,3)\cup(3,+\infty)}
+\end{enumerate}
+
+\subsection*{3.- Muestre la gráfica de las siguientes funciones seccionadas}
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=\begin{cases}x^2,&\text{si }x<2,\\x+6,&\text{si }x\geq2.\end{cases}$\grafica
+  \item $f(x)=\begin{cases}x^2,&\text{si }x\leq2,\\x+6,&\text{si }x>2.\end{cases}$\grafica
+  \item $f(x)=\begin{cases}x^2,&\text{si }x<2,\\x+6,&\text{si }x>2.\end{cases}$\grafica
+  \item $f(x)=\begin{cases}x^2,&\text{si }x<2,\\6,&\text{si }x=2,\\x+6,&\text{si }x>2.\end{cases}$\grafica
+  \item $f(x)=\begin{cases}-1,&\text{si }x\leq0,\\1,&\text{si }0<x<3,\\2,&\text{si }x\geq3.\end{cases}$\grafica
+\end{enumerate}
+
+\subsection*{4.- Para las siguientes funciones, indica si se trata de una función par, una función impar, o ninguna de las anteriores.}
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=x^4$. Como $f(-x)=(-x)^4=x^4=f(x)$, \textbf{es par}.
+  \item $f(x)=\dfrac1x$. Como $f(-x)=\dfrac1{-x}=-\dfrac1x=-f(x)$, \textbf{es impar}.
+  \item $f(x)=x+1$. $f(-x)=-x+1$, que no es igual a $f(x)$ ni a $-f(x)$. \textbf{No es par ni impar}.
+  \item $f(x)=x$. $f(-x)=-x=-f(x)$, \textbf{es impar}.
+  \item $f(x)=\dfrac1{x^2}$. $f(-x)=\dfrac1{(-x)^2}=\dfrac1{x^2}=f(x)$, \textbf{es par}.
+\end{enumerate}
+
+\subsection*{5.- Para las siguientes funciones, indica los intervalos en que son crecientes y los intervalos en que son decrecientes.}
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=-3x+2$. Pendiente negativa: \textbf{decreciente en }$(-\infty,+\infty)$.
+  \item $f(x)=x^3$. \textbf{Creciente en }$(-\infty,+\infty)$.
+  \item $f(x)=x^2+4$. \textbf{Decreciente en }$(-\infty,0]$ y \textbf{creciente en }$[0,+\infty)$.
+  \item $f(x)=-|x|=\begin{cases}x,&x<0,\\-x,&x\geq0.\end{cases}$ \textbf{Creciente en }$(-\infty,0]$ y \textbf{decreciente en }$[0,+\infty)$.
+  \item $f(x)=5$. Es constante en $\R$; no es estrictamente creciente ni estrictamente decreciente (es no decreciente y no creciente a la vez).
+\end{enumerate}
+
+% =================================================
+% TEMA 2
+% =================================================
+
+\newpage
+\section{Tema 2. Funciones algebraicas y funciones trascendentes}
+
+Utiliza un graficador para mostrar las gráficas de las siguientes funciones. Puedes colocar varias funciones en un mismo plano cartesiano siempre y cuando se distingan claramente una de la otra (por ejemplo, ponerlas con diferentes colores).
+
+\subsection*{FUNCIONES ALGEBRAICAS}
+\subsubsection*{1.- Funciones constantes}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=4$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=-2$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=-5$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=0$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_constantes.png}
+\end{center}
+
+\subsubsection*{2.- Funciones polinómicas de primer grado}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=x$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2x$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=5x$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\dfrac{1}{2}x$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=\dfrac{1}{5}x$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_lineales_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=-x$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=-2x$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=-\dfrac{1}{3}x$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=x+5$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=x-3$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_lineales_2.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=2x+3$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2x-3$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=-2x+3$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=-2x-3$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_lineales_3.png}
+\end{center}
+
+\subsubsection*{3.- Funciones polinómicas de segundo grado}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=x^2$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2x^2$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=5x^2$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\dfrac{1}{2}x^2$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=-x^2$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_cuadraticas_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=-2x^2$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=-\dfrac{1}{2}x^2$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=x^2+3$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=x^2-3$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=2x^2+1$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_cuadraticas_2.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=-x^2+2$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=-x^2-2$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=(x+2)^2$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=(x-3)^2$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=(x+2)^2+3$
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=(x+2)^2-3$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_cuadraticas_3.png}
+\end{center}
+
+\subsubsection*{4.- Funciones polinómicas de grado superior a dos}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=x^3$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2x^3$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=-x^3$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=x^3+2$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=x^3-2$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_polinomios_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=(x+2)^3$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=(x-2)^3$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=x^4$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=x^5$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=x^6$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_polinomios_2.png}
+\end{center}
+
+\subsubsection*{5.- Funciones racionales}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\dfrac{1}{x}$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=\dfrac{3}{x}$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\dfrac{7}{x}$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=-\dfrac{1}{x}$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=-\dfrac{3}{x}$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_racionales_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\dfrac{7}{x}+3$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=\dfrac{7}{x}-2$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\dfrac{7}{x-2}$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\dfrac{7}{x+3}$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=\dfrac{7}{x+2}-3$
+  \item[\textcolor{desmosRojo}{$\blacksquare$}] $y=\dfrac{7}{x+2}+3$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_racionales_2.png}
+\end{center}
+
+\subsubsection*{6.- Funciones radicales}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\sqrt{x}$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=-\sqrt{x}$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\sqrt{x+2}$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\sqrt{x-3}$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=\sqrt{x}+3$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_radicales_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\sqrt{x}-3$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=\sqrt{x-3}+2$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\sqrt[3]{x}$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\sqrt[4]{x}$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_radicales_2.png}
+\end{center}
+
+\subsection*{FUNCIONES TRASCENDENTES}
+\subsubsection*{7.- Funciones exponenciales}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=2^x$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2^{-x}$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\left(\dfrac{1}{2}\right)^x$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=3^x$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=2^x+3$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_exponenciales_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=2^{x+3}$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2^{x-3}-4$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=e^x$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=e^{-x}$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_exponenciales_2.png}
+\end{center}
+
+\subsubsection*{8.- Funciones logarítmicas}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\log_2 x$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=\log x$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\ln x$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=-\log_2 x$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=\log_{\dfrac{1}{2}}x$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_logaritmicas_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=(\log_2 x)+3$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=\log_2(x+3)$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_logaritmicas_2.png}
+\end{center}
+
+\subsubsection*{9.- Funciones trigonométricas}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\sin x$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=\cos x$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\tan x$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\csc x$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=\sec x$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_trigonometricas_1.png}
+\end{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\cot x$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=2\sin x$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=(\sin x)+2$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\sin(x+30^\circ)$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_trigonometricas_2.png}
+\end{center}
+
+\subsubsection*{10.- Funciones trigonométricas inversas}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{desmosMorado}{$\blacksquare$}] $y=\sin^{-1}x$
+  \item[\textcolor{desmosAzulFuerte}{$\blacksquare$}] $y=\cos^{-1}x$
+  \item[\textcolor{desmosAzul}{$\blacksquare$}] $y=\tan^{-1}x$
+  \item[\textcolor{desmosVerde}{$\blacksquare$}] $y=\csc^{-1}x$
+  \item[\textcolor{desmosAmarillo}{$\blacksquare$}] $y=\sec^{-1}x$
+  \item[\textcolor{desmosRojo}{$\blacksquare$}] $y=\cot^{-1}x$
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema2_trigonometricas_inversas.png}
+\end{center}
+
+% =================================================
+% TEMA 3
+% =================================================
+
+\newpage
+
+% Colores de las leyendas de transformaciones
+\definecolor{transformNaranja}{HTML}{FF9933}
+\definecolor{transformVerdeClaro}{HTML}{CCFF33}
+\definecolor{transformVerde}{HTML}{00FF00}
+\definecolor{transformCeleste}{HTML}{27F5EB}
+\definecolor{transformNegro}{HTML}{000000}
+\definecolor{transformGris}{HTML}{CCCCCC}
+\definecolor{transformAzul}{HTML}{0000FF}
+\definecolor{transformMorado}{HTML}{9900FF}
+\definecolor{transformRosa}{HTML}{FF00FF}
+\definecolor{transformRojo}{HTML}{FF0000}
+\section{Tema 3. Transformación y composición de funciones}
+
+\subsection*{1.- Sea $f(x)=x^2$. Realiza las siguientes transformaciones de la función. Muestra la gráfica resultante.}
+\begin{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{transformNaranja}{$\blacksquare$}] Desplazamiento vertical 2 unidades hacia arriba.
+  \item[\textcolor{transformVerdeClaro}{$\blacksquare$}] Desplazamiento vertical 2 unidades hacia abajo.
+  \item[\textcolor{transformVerde}{$\blacksquare$}] Desplazamiento horizontal 2 unidades a la derecha.
+  \item[\textcolor{transformCeleste}{$\blacksquare$}] Desplazamiento horizontal 2 unidades a la izquierda.
+  \item[\textcolor{transformNegro}{$\blacksquare$}] Compresión horizontal por un factor de 2.
+  \item[\textcolor{transformGris}{$\blacksquare$}] Alargamiento horizontal por un factor de 2.
+  \item[\textcolor{transformAzul}{$\blacksquare$}] Alargamiento vertical por un factor de 2.
+  \item[\textcolor{transformMorado}{$\blacksquare$}] Compresión vertical por un factor de 2.
+  \item[\textcolor{transformRosa}{$\blacksquare$}] Reflexión sobre el eje $x$.
+  \item[\textcolor{transformRojo}{$\blacksquare$}] Reflexión sobre el eje $y$.
+\end{itemize}
+\includegraphics[width=0.86\textwidth]{imagenes/tema3_transformaciones_parabola.png}
+\end{center}
+
+\subsection*{2.- Sea $f(x)=\sqrt{x}$. Realiza las siguientes transformaciones de la función. Muestra la gráfica resultante.}
+\begin{center}
+\begin{itemize}[label=\quad, leftmargin=*, itemsep=0.5em]
+  \item[\textcolor{transformNaranja}{$\blacksquare$}] Desplazamiento vertical 2 unidades hacia arriba.
+  \item[\textcolor{transformVerdeClaro}{$\blacksquare$}] Desplazamiento vertical 2 unidades hacia abajo.
+  \item[\textcolor{transformVerde}{$\blacksquare$}] Desplazamiento horizontal 2 unidades a la derecha.
+  \item[\textcolor{transformCeleste}{$\blacksquare$}] Desplazamiento horizontal 2 unidades a la izquierda.
+  \item[\textcolor{transformRosa}{$\blacksquare$}] Compresión horizontal por un factor de 2.
+  \item[\textcolor{transformNegro}{$\blacksquare$}] Alargamiento horizontal por un factor de 2.
+  \item[\textcolor{transformAzul}{$\blacksquare$}] Alargamiento vertical por un factor de 2.
+  \item[\textcolor{transformMorado}{$\blacksquare$}] Compresión vertical por un factor de 2.
+  \item[\textcolor{transformGris}{$\blacksquare$}] Reflexión sobre el eje $x$.
+  \item[\textcolor{transformRojo}{$\blacksquare$}] Reflexión sobre el eje $y$.
+\end{itemize}
+\includegraphics[width=0.86\textwidth]{imagenes/tema3_transformaciones_raiz.png}
+\end{center}
+
+\subsection*{3.- Sean $f(x)=\sqrt{x}$, $g(x)=x-3$, $h(x)=\sin x$. Encuentre:}
+\begin{enumerate}[label=\alph*)]
+  \item $(f\circ g)(x)=f(g(x))=\sqrt{x-3}$, con $x\geq3$.
+  \item $(f\circ h)(x)=f(h(x))=\sqrt{\sin x}$, donde $\sin x\geq0$.
+  \item $(g\circ f)(x)=g(f(x))=\sqrt{x}-3$, con $x\geq0$.
+  \item $(g\circ h)(x)=g(h(x))=\sin x-3$.
+  \item $(h\circ f)(x)=h(f(x))=\sin(\sqrt{x})$, con $x\geq0$.
+  \item $(h\circ g)(x)=h(g(x))=\sin(x-3)$.
+  \item $(f\circ f)(x)=f(f(x))=\sqrt{\sqrt{x}}=\sqrt[4]{x}$, con $x\geq0$.
+  \item $(g\circ g)(x)=g(g(x))=(x-3)-3=x-6$.
+  \item $(h\circ h)(x)=h(h(x))=\sin(\sin x)$.
+\end{enumerate}
+
+% =================================================
+% TEMA 4
+% =================================================
+
+\newpage
+\section{Tema 4. Límites}
+
+\subsection*{1. Grafica la función $f(x)=\dfrac{x^2-1}{x-1}$ e indica cuánto vale $f(1)$. Realiza una conjetura del valor de $\displaystyle\lim_{x\to1}\dfrac{x^2-1}{x-1}$ mediante un tabulado con valores de $x$ cercanos a 1.}
+\[
+f(x)=\frac{x^2-1}{x-1}=\frac{(x-1)(x+1)}{x-1}=x+1,\qquad x\neq1.
+\]
+En $x=1$ la expresión original produce $0/0$, por lo que $f(1)$ no está definida. La gráfica es la recta $y=x+1$ con un hueco en $(1,2)$.\begin{center}
+\includegraphics[width=0.86\textwidth]{imagenes/tema4_limites_ejercicio_1.png}
+\end{center}
+\begin{center}
+\begin{tabular}{c|c@{\qquad}c|c}
+$x$ (izquierda) & $f(x)$ & $x$ (derecha) & $f(x)$\\\hline
+0.9 & 1.9 & 1.1 & 2.1\\
+0.99 & 1.99 & 1.01 & 2.01\\
+0.999 & 1.999 & 1.001 & 2.001\\
+0.9999 & 1.9999 & 1.0001 & 2.0001
+\end{tabular}
+\end{center}
+\respuesta{f(1)\text{ no existe},\qquad \lim_{x\to1}f(x)=2}
+
+\subsection*{2. Obtenga la gráfica de la función y a partir de ella indica cuánto vale $f(1)$ y $\displaystyle\lim_{x\to1}f(x)$ para cada uno de los siguientes incisos.}
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=\begin{cases}x^2,&x\leq1,\\-x+2,&x>1.\end{cases}$\grafica
+  \[
+  f(1)=1^2=1,\qquad
+  \lim_{x\to1^-}f(x)=\lim_{x\to1^-}x^2=1^2=1,
+  \]
+  \[
+  \lim_{x\to1^+}f(x)=\lim_{x\to1^+}(-x+2)=-1+2=1.
+  \]
+  Como los límites laterales coinciden:
+  \[
+  \boxed{\lim_{x\to1}f(x)=1}.
+  \]
+  \item $f(x)=\begin{cases}x^2,&x<1,\\-x+2,&x>1.\end{cases}$\grafica
+  \[
+  f(1)\text{ no está definida},\qquad
+  \lim_{x\to1^-}f(x)=\lim_{x\to1^-}x^2=1,
+  \]
+  \[
+  \lim_{x\to1^+}f(x)=\lim_{x\to1^+}(-x+2)=-1+2=1.
+  \]
+  Por tanto:
+  \[
+  \boxed{\lim_{x\to1}f(x)=1}.
+  \]
+  \item $f(x)=\begin{cases}x^2,&x<1,\\3,&x=1,\\-x+2,&x>1.\end{cases}$\grafica
+  \[
+  f(1)=3,\qquad
+  \lim_{x\to1^-}f(x)=\lim_{x\to1^-}x^2=1,
+  \]
+  \[
+  \lim_{x\to1^+}f(x)=\lim_{x\to1^+}(-x+2)=1.
+  \]
+  El valor puntual no cambia el límite:
+  \[
+  \boxed{\lim_{x\to1}f(x)=1}.
+  \]
+  \item $f(x)=\begin{cases}x^2,&x\leq1,\\-x+3,&x>1.\end{cases}$\grafica
+  \[
+  f(1)=1^2=1,\qquad
+  \lim_{x\to1^-}f(x)=1^2=1,
+  \]
+  \[
+  \lim_{x\to1^+}f(x)=\lim_{x\to1^+}(-x+3)=-1+3=2.
+  \]
+  Como $1\neq2$:
+  \[
+  \boxed{\lim_{x\to1}f(x)\text{ no existe}}.
+  \]
+  \item $f(x)=\begin{cases}x^2,&x<1,\\-x+3,&x>1.\end{cases}$\grafica
+  \[
+  f(1)\text{ no está definida},\qquad
+  \lim_{x\to1^-}f(x)=1^2=1,
+  \]
+  \[
+  \lim_{x\to1^+}f(x)=\lim_{x\to1^+}(-x+3)=2.
+  \]
+  Los límites laterales son diferentes:
+  \[
+  \boxed{\lim_{x\to1}f(x)\text{ no existe}}.
+  \]
+\end{enumerate}
+
+\subsection*{3. Obtenga la gráfica de la función y a partir de ella indica cuánto vale $f(1)$, $\lim_{x\to1^-}f(x)$, $\lim_{x\to1^+}f(x)$ y $\lim_{x\to1}f(x)$ para cada uno de los siguientes incisos.}
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=\begin{cases}x^2,&x\leq1,\\-(x-1)^2+1,&x>1.\end{cases}$\grafica
+  \[
+  f(1)=1^2=1,\qquad
+  \lim_{x\to1^-}f(x)=1^2=1,
+  \]
+  \[
+  \lim_{x\to1^+}f(x)=-(1-1)^2+1=1.
+  \]
+  \[
+  \boxed{\lim_{x\to1}f(x)=1}.
+  \]
+  \item $f(x)=\begin{cases}x^2+1,&x\leq1,\\-(x-1)^2+1,&x>1.\end{cases}$\grafica
+  \[
+  f(1)=1^2+1=2,\qquad
+  \lim_{x\to1^-}f(x)=1^2+1=2,
+  \]
+  \[
+  \lim_{x\to1^+}f(x)=-(1-1)^2+1=1.
+  \]
+  \[
+  2\neq1\quad\Longrightarrow\quad
+  \boxed{\lim_{x\to1}f(x)\text{ no existe}}.
+  \]
+\end{enumerate}
+
+\subsection*{4. Grafica la función $f(x)=\dfrac{1}{|x-1|}$ e indica cuánto vale $f(1)$. Realiza una conjetura del valor de $\displaystyle\lim_{x\to1}\dfrac{1}{|x-1|}$ mediante un tabulado con valores de $x$ cercanos a 1.}
+\grafica
+$f(1)$ no está definida porque el denominador vale cero. Al acercarse a 1 por ambos lados, $|x-1|$ se aproxima a cero por valores positivos.
+\begin{center}
+\begin{tabular}{c|c@{\qquad}c|c}
+$x$ (izquierda) & $f(x)$ & $x$ (derecha) & $f(x)$\\\hline
+0.9 & 10 & 1.1 & 10\\
+0.99 & 100 & 1.01 & 100\\
+0.999 & 1000 & 1.001 & 1000
+\end{tabular}
+\end{center}
+\[
+\lim_{x\to1^-}|x-1|=0^+,\qquad
+\lim_{x\to1^+}|x-1|=0^+,
+\]
+\[
+\frac{1}{|x-1|}\longrightarrow\frac1{0^+}=+\infty.
+\]
+\respuesta{\lim_{x\to1^-}f(x)=+\infty,\quad \lim_{x\to1^+}f(x)=+\infty,\quad \lim_{x\to1}f(x)=+\infty}
+
+\subsection*{5. Obtenga la gráfica de la función y a partir de ella indica cuánto vale $f(1)$, $\lim_{x\to1^-}f(x)$, $\lim_{x\to1^+}f(x)$ y $\lim_{x\to1}f(x)$ para cada uno de los siguientes incisos.}
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=\left(\dfrac{1}{x-1}\right)^2$.\grafica
+  \[
+  x\to1^\pm\Longrightarrow (x-1)^2\to0^+,\qquad
+  \left(\frac1{x-1}\right)^2=\frac1{(x-1)^2}\to+\infty.
+  \]
+  \respuesta{\lim_{x\to1}f(x)=+\infty}
+  \item $f(x)=-\left|\dfrac{1}{x-1}\right|$.\grafica
+  \[
+  \left|\frac1{x-1}\right|=\frac1{|x-1|}\to+\infty,\qquad
+  -\left|\frac1{x-1}\right|\to-\infty.
+  \]
+  \respuesta{\lim_{x\to1}f(x)=-\infty}
+  \item $f(x)=\dfrac{1}{x-1}$.\grafica
+  \[
+  x\to1^-:\ x-1\to0^-\Rightarrow\frac1{x-1}\to-\infty,
+  \qquad
+  x\to1^+:\ x-1\to0^+\Rightarrow\frac1{x-1}\to+\infty.
+  \]
+  \respuesta{\lim_{x\to1}f(x)\text{ no existe}}
+  \item $f(x)=-\dfrac{1}{x-1}$.\grafica
+  \[
+  x\to1^-:\ -\frac1{x-1}\to+\infty,\qquad
+  x\to1^+:\ -\frac1{x-1}\to-\infty.
+  \]
+  \respuesta{\lim_{x\to1}f(x)\text{ no existe}}
+\end{enumerate}
+
+\subsection*{6. Evalúe los siguientes límites eliminando las indeterminaciones por métodos algebraicos.}
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle
+  \lim_{x\to0}\frac{x^2}{x}
+  =\lim_{x\to0}\frac{x\cdot x}{x}
+  =\lim_{x\to0}x
+  =\boxed{0}$.
+  \item $\displaystyle
+  \lim_{x\to5}\frac{x^2-6x+5}{x-5}
+  =\lim_{x\to5}\frac{(x-1)(x-5)}{x-5}
+  =\lim_{x\to5}(x-1)
+  =5-1=\boxed{4}$.
+  \item $\displaystyle
+  \lim_{x\to4}\frac{x^2-4x}{x^2-3x-4}
+  =\lim_{x\to4}\frac{x(x-4)}{(x-4)(x+1)}
+  =\lim_{x\to4}\frac{x}{x+1}
+  =\frac45$.
+  \item $\displaystyle
+  \lim_{x\to-3}\frac{x^2-9}{2x^2+7x+3}
+  =\lim_{x\to-3}\frac{(x-3)(x+3)}{(2x+1)(x+3)}
+  =\lim_{x\to-3}\frac{x-3}{2x+1}
+  =\frac{-6}{-5}=\boxed{\frac65}$.
+  \item $\displaystyle
+  \lim_{x\to-2}\frac{x+2}{x^3+8}
+  =\lim_{x\to-2}\frac{x+2}{(x+2)(x^2-2x+4)}
+  =\lim_{x\to-2}\frac1{x^2-2x+4}
+  =\frac1{4+4+4}=\boxed{\frac1{12}}$.
+  \item $\displaystyle
+  \lim_{x\to1}\frac{x^4-1}{x^3-1}
+  =\lim_{x\to1}\frac{(x-1)(x+1)(x^2+1)}{(x-1)(x^2+x+1)}
+  =\lim_{x\to1}\frac{(x+1)(x^2+1)}{x^2+x+1}
+  =\frac{2(2)}3=\boxed{\frac43}$.
+  \item $\displaystyle
+  \lim_{x\to-1}\frac{x^2+2x+1}{x^4-1}
+  =\lim_{x\to-1}\frac{(x+1)^2}{(x-1)(x+1)(x^2+1)}
+  =\lim_{x\to-1}\frac{x+1}{(x-1)(x^2+1)}
+  =\boxed{0}$.
+  \item $\displaystyle
+  \lim_{x\to0}\frac{\sqrt{9+x}-3}{x}
+  =\lim_{x\to0}\frac{(\sqrt{9+x}-3)(\sqrt{9+x}+3)}
+  {x(\sqrt{9+x}+3)}
+  =\lim_{x\to0}\frac{x}{x(\sqrt{9+x}+3)}
+  =\frac1{3+3}=\boxed{\frac16}$.
+  \item $\displaystyle
+  \lim_{x\to3}\frac{\sqrt{x+1}-2}{x-3}
+  =\lim_{x\to3}\frac{x+1-4}{(x-3)(\sqrt{x+1}+2)}
+  =\lim_{x\to3}\frac1{\sqrt{x+1}+2}
+  =\frac14=\boxed{\frac14}$.
+  \item $\displaystyle
+  \lim_{x\to-4}\frac{\sqrt{x^2+9}-5}{x+4}
+  =\lim_{x\to-4}\frac{x^2+9-25}
+  {(x+4)(\sqrt{x^2+9}+5)}
+  =\lim_{x\to-4}\frac{x-4}{\sqrt{x^2+9}+5}
+  =\frac{-8}{10}=\boxed{-\frac45}$.
+\end{enumerate}
+
+% =================================================
+% TEMA 5
+% =================================================
+
+\newpage
+\section{Tema 5. Continuidad}
+
+\subsection*{1.- En cada uno de los siguientes ejercicios, determina si la función es continua en $x=a$. Justifica claramente tu respuesta a partir de la definición de continuidad.}
+Para que $f$ sea continua en $x=a$ deben cumplirse simultáneamente: (1) $f(a)$ está definida; (2) existe $\lim_{x\to a}f(x)$; y (3) el límite es igual a $f(a)$.
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=\dfrac{1}{x-3},\ a=3$. $f(3)$ no está definida y el límite bilateral no existe (los laterales divergen con signos opuestos). \textbf{No es continua} en $x=3$.
+  \item $f(x)=\dfrac{x^2-9}{x-3},\ a=3$. Para $x\neq3$, $f(x)=x+3$, por lo que $\lim_{x\to3}f(x)=6$. Sin embargo, $f(3)$ no está definida. \textbf{No es continua} en $x=3$.
+  \item $f(x)=\begin{cases}\dfrac{1}{x-3},&x\neq3,\\2,&x=3.\end{cases},\ a=3$. $f(3)=2$, pero $\lim_{x\to3^-}f(x)=-\infty$ y $\lim_{x\to3^+}f(x)=+\infty$. El límite bilateral no existe. \textbf{No es continua}.
+  \item $f(x)=\begin{cases}\dfrac{x^2-9}{x-3},&x\neq3,\\2,&x=3.\end{cases},\ a=3$. Para $x\neq3$, $f(x)=x+3$, así que $\lim_{x\to3}f(x)=6$, mientras que $f(3)=2$. Como $6\neq2$, \textbf{no es continua}.
+  \item $f(x)=\begin{cases}\dfrac{x^2-9}{x-3},&x\neq3,\\6,&x=3.\end{cases},\ a=3$. Para $x\neq3$, $f(x)=x+3$; por tanto, $\lim_{x\to3}f(x)=6=f(3)$. Se cumplen las tres condiciones: \textbf{sí es continua} en $x=3$.
+\end{enumerate}
+
+\subsection*{2.- Grafica la siguiente función seccionada. Identifica todos los valores de $x$ en los que la función no es continua. Para cada uno de dichos valores, determina: a) si la función es continua por la izquierda, b) si la función es continua por la derecha. Establezca todos los intervalos sobre los que la función es continua.}
+\[
+f(x)=\begin{cases}
+-x,&x\leq-4,\\
+x,&-4<x\leq-2,\\
+x^2,&-2<x<2,\\
+-2,&x=2,\\
+x-3,&x>2.
+\end{cases}
+\]
+\grafica
+Los posibles puntos de discontinuidad son los cambios de regla: $x=-4,-2,2$.
+\begin{itemize}
+  \item En $x=-4$: $f(-4)=4$ y $\lim_{x\to-4^-}f(x)=4$, pero $\lim_{x\to-4^+}f(x)=-4$. Es \textbf{continua por la izquierda}, no por la derecha.
+  \item En $x=-2$: $f(-2)=-2$ y $\lim_{x\to-2^-}f(x)=-2$, mientras que $\lim_{x\to-2^+}f(x)=4$. Es \textbf{continua por la izquierda}, no por la derecha.
+  \item En $x=2$: $f(2)=-2$, $\lim_{x\to2^-}f(x)=4$ y $\lim_{x\to2^+}f(x)=-1$. No es continua ni por la izquierda ni por la derecha.
+\end{itemize}
+Los intervalos máximos en los que es continua son:
+\[
+\boxed{(-\infty,-4],\quad(-4,-2],\quad(-2,2),\quad(2,+\infty).}
+\]
+
+\subsection*{3.- Sea la función seccionada:}
+\[
+f(x)=\begin{cases}
+x^2,&0\leq x\leq2,\\
+x,&2<x<4,\\
+4,&4<x\leq6.
+\end{cases}
+\]
+Para cada una de las siguientes afirmaciones responde Falso (F) o Verdadero (V). En caso de ser falso explica por qué.
+\begin{enumerate}[label=\alph*)]
+  \item $f(2)=4$. \textbf{V}.
+  \item $\lim_{x\to2^-}f(x)=4$. \textbf{V}, porque por la izquierda se usa $x^2$.
+  \item $\lim_{x\to2^+}f(x)=2$. \textbf{V}, porque por la derecha se usa $x$.
+  \item $\lim_{x\to2}f(x)$ no está definido. \textbf{V}, los límites laterales son distintos ($4\neq2$).
+  \item $f(x)$ es continua por la izquierda en $x=2$. \textbf{V}, $\lim_{x\to2^-}f(x)=f(2)=4$.
+  \item $f(x)$ es continua por la derecha en $x=2$. \textbf{F}, pues $\lim_{x\to2^+}f(x)=2\neq f(2)=4$.
+  \item $f(x)$ es continua en $x=2$. \textbf{F}, el límite bilateral no existe.
+  \item $f(x)$ es continua en el intervalo $[0,2]$. \textbf{V}, en ese intervalo coincide con $x^2$.
+  \item $f(4)$ no está definida. \textbf{V}, ninguno de los tramos incluye $x=4$.
+  \item $\lim_{x\to4^-}f(x)=2$. \textbf{F}, el límite por la izquierda es $4$.
+  \item $\lim_{x\to4^+}f(x)=4$. \textbf{V}, a la derecha la función vale constantemente $4$.
+  \item $\lim_{x\to4}f(x)=4$. \textbf{V}, ambos límites laterales valen $4$, aunque $f(4)$ no esté definida.
+  \item $f(x)$ es continua por la izquierda en $x=4$. \textbf{F}, porque $f(4)$ no existe.
+  \item $f(x)$ es continua por la derecha en $x=4$. \textbf{F}, porque $f(4)$ no existe.
+  \item $f(x)$ es continua en $x=4$. \textbf{F}, no está definida en ese punto.
+  \item $f(x)$ es continua en el intervalo $[2,4]$. \textbf{F}, $f(4)$ no está definida y además hay una discontinuidad en $x=2$.
+  \item $f(x)$ es continua en el intervalo $(2,4)$. \textbf{V}, en ese intervalo $f(x)=x$.
+\end{enumerate}
+
+% =================================================
+% TEMA 6
+% =================================================
+
+\newpage
+\section{Tema 6. Límites cuando $x$ tiende a infinito}
+
+\subsection*{1.- Para las siguientes funciones, realiza una conjetura del valor de $\lim_{x\to\infty}f(x)$ y de $\lim_{x\to-\infty}f(x)$ mediante un tabulado.}
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=\dfrac{2x+1}{x-2}$. Dividiendo entre $x$: $f(x)=\dfrac{2+1/x}{1-2/x}$. En ambos extremos se aproxima a $2$.\\
+  \respuesta{\lim_{x\to+\infty}f(x)=2,\qquad\lim_{x\to-\infty}f(x)=2}
+  \item $f(x)=\sqrt{x^2}=|x|$.\\
+  \respuesta{\lim_{x\to+\infty}f(x)=+\infty,\qquad\lim_{x\to-\infty}f(x)=+\infty}
+  \item $f(x)=-\dfrac{x^3}{4}$.\\
+  \respuesta{\lim_{x\to+\infty}f(x)=-\infty,\qquad\lim_{x\to-\infty}f(x)=+\infty}
+\end{enumerate}
+\textbf{Tabulado para observar el comportamiento en ambos extremos:}
+\begin{center}
+\begin{tabular}{r|r|r|r}
+$x$ & $f_a(x)=\frac{2x+1}{x-2}$ & $f_b(x)=\sqrt{x^2}$ & $f_c(x)=-\frac{x^3}{4}$\\\hline
+$-100$ & $1.9510$ & $100$ & $250000$\\
+$-10$ & $1.5833$ & $10$ & $2500$\\
+$10$ & $2.6250$ & $10$ & $-2500$\\
+$100$ & $2.0510$ & $100$ & $-250000$
+\end{tabular}
+\end{center}
+
+\subsection*{2.- Evaluar los siguientes límites mediante manipulaciones algebraicas. Agrega la gráfica de la función y traza la asíntota horizontal correspondiente (si existe) para verificar tu respuesta.}
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^3+2x}{x^2-1}=+\infty$. El grado del numerador es mayor; la función crece como $x$ positivo. No hay asíntota horizontal.\grafica
+  \item $\displaystyle\lim_{x\to-\infty}\frac{x^3+2x}{x^2-1}=-\infty$. La función se comporta como $x$ para valores negativos grandes. No hay asíntota horizontal.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^3-1}=0$. El denominador tiene mayor grado. Asíntota horizontal: $y=0$.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^2-1}=\boxed{\frac12}$. Se divide entre $x^2$. Asíntota horizontal: $y=\frac12$.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^5+2x^3+1}{x^2-1}=+\infty$. El cociente se comporta como $x^3$. No hay asíntota horizontal.\grafica
+  \item $\displaystyle\lim_{x\to-\infty}\frac{x^5+2x^3+1}{x^2-1}=-\infty$. El cociente se comporta como $x^3$. No hay asíntota horizontal.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2+1}}{2x^2-1}=0$. El numerador crece como $x$ y el denominador como $2x^2$. Asíntota horizontal: $y=0$.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^7+1}}{2x^3-1}=+\infty$. Para $x>0$, el cociente se comporta como $\frac12\sqrt{x}$. No hay asíntota horizontal.\grafica
+  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{x^7+1}}{2x^3-1}$. \textbf{El límite no está definido en los reales}: $x^7+1<0$ para todo $x<-1$, de modo que la función no tiene valores reales arbitrariamente lejos hacia $-\infty$. Se conserva aquí la expresión tal como aparece impresa en el cuadernillo.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^6-x}}{x^3+1}=3$. Para $x>0$, se divide numerador y denominador entre $x^3$: el cociente tiende a $3$. Asíntota horizontal: $y=3$.\grafica
+  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{9x^6-x}}{x^3+1}=-3$. Como $\sqrt{x^6}=|x^3|=-x^3$ cuando $x<0$, el cociente tiende a $-3$. Asíntota horizontal: $y=-3$.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^6-x}-x^3}{5x^3+1}=\frac{3-1}{5}=\boxed{\frac25}$. Asíntota horizontal: $y=\frac25$.\grafica
+  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{9x^6-x}-x^3}{5x^3+1}=\frac{-3-1}{5}=\boxed{-\frac45}$. Asíntota horizontal: $y=-\frac45$.\grafica
+\end{enumerate}
+
+% =================================================
+% TEMA 7
+% =================================================
+
+\newpage
+\section{Tema 7. Definición de derivada}
+
+Encuentre la derivada de las siguientes funciones utilizando la definición de derivada como límite:
+\[
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
+\]
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=x$:
+  $\displaystyle f'(x)=\lim_{h\to0}\frac{(x+h)-x}{h}=\lim_{h\to0}\frac{h}{h}=\boxed{1}$.
+  \item $f(x)=x^2$:
+  $\displaystyle f'(x)=\lim_{h\to0}\frac{(x+h)^2-x^2}{h}=\lim_{h\to0}(2x+h)=\boxed{2x}$.
+  \item $f(x)=x^3$:
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{(x+h)^3-x^3}{h}\\
+  &=\lim_{h\to0}\frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}\\
+  &=\lim_{h\to0}(3x^2+3xh+h^2)=\boxed{3x^2}.
+  \end{aligned}
+  \]
+  \item $f(x)=x^4$:
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{(x+h)^4-x^4}{h}\\
+  &=\lim_{h\to0}\frac{4x^3h+6x^2h^2+4xh^3+h^4}{h}\\
+  &=\lim_{h\to0}(4x^3+6x^2h+4xh^2+h^3)=\boxed{4x^3}.
+  \end{aligned}
+  \]
+  \item $f(x)=x^5$:
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{(x+h)^5-x^5}{h}\\
+  &=\lim_{h\to0}(5x^4+10x^3h+10x^2h^2+5xh^3+h^4)
+  =\boxed{5x^4}.
+  \end{aligned}
+  \]
+  \item $f(x)=3$:
+  $\displaystyle f'(x)=\lim_{h\to0}\frac{3-3}{h}=\boxed{0}$.
+  \item $f(x)=3x^2$:
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{3(x+h)^2-3x^2}{h}\\
+  &=\lim_{h\to0}\frac{3(2xh+h^2)}h
+  =\lim_{h\to0}(6x+3h)=\boxed{6x}.
+  \end{aligned}
+  \]
+  \item $f(x)=2x^2+4x+1$:
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{2(x+h)^2+4(x+h)+1-(2x^2+4x+1)}h\\
+  &=\lim_{h\to0}\frac{4xh+2h^2+4h}{h}
+  =\lim_{h\to0}(4x+2h+4)=\boxed{4x+4}.
+  \end{aligned}
+  \]
+  \item $f(x)=\dfrac1x$:
+  $\displaystyle f'(x)=\lim_{h\to0}\frac{\frac1{x+h}-\frac1x}{h}=\lim_{h\to0}\frac{-1}{x(x+h)}=\boxed{-\frac1{x^2}}$.
+  \item $f(x)=\dfrac1{x^2}$:
+  $\displaystyle f'(x)=\lim_{h\to0}\frac{x^2-(x+h)^2}{h x^2(x+h)^2}=\lim_{h\to0}\frac{-(2x+h)}{x^2(x+h)^2}=\boxed{-\frac2{x^3}}$.
+  \item $f(x)=\dfrac1{x^3}$:
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}
+  \frac{\frac1{(x+h)^3}-\frac1{x^3}}h\\
+  &=\lim_{h\to0}\frac{x^3-(x+h)^3}{h\,x^3(x+h)^3}\\
+  &=\lim_{h\to0}\frac{-3x^2-3xh-h^2}{x^3(x+h)^3}
+  =\boxed{-\frac3{x^4}}.
+  \end{aligned}
+  \]
+  \item $f(x)=\sqrt{x}$:
+  $\displaystyle f'(x)=\lim_{h\to0}\frac{\sqrt{x+h}-\sqrt{x}}{h}=\lim_{h\to0}\frac{1}{\sqrt{x+h}+\sqrt{x}}=\boxed{\frac{1}{2\sqrt{x}}}$, para $x>0$.
+  \item $f(x)=\dfrac1{\sqrt{x}}$:
+  \[
+  f'(x)=\lim_{h\to0}\frac{\frac1{\sqrt{x+h}}-\frac1{\sqrt{x}}}{h}
+  =\lim_{h\to0}\frac{-1}{\sqrt{x}\sqrt{x+h}(\sqrt{x}+\sqrt{x+h})}
+  =\boxed{-\frac{1}{2x^{3/2}}},\quad x>0.
+  \]
+\end{enumerate}
+
+% =================================================
+% TEMA 8
+% =================================================
+
+\newpage
+\section{Tema 8. Reglas de derivación}
+
+Encuentre las derivadas de las siguientes funciones con ayuda de tu formulario de reglas de derivación. En los incisos con $\log x$ se interpreta el logaritmo común (base 10).
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=3\sin x+4\cos x$.\\
+  \[
+  f'(x)=3(\sin x)'+4(\cos x)'
+  =3\cos x+4(-\sin x)
+  =\boxed{3\cos x-4\sin x}.
+  \]
+  \item $f(x)=3x^5+\dfrac15x^4+\dfrac23x^3-\dfrac57x^2+\dfrac87x-\dfrac13$.\\
+  $\boxed{f'(x)=15x^4+\dfrac45x^3+2x^2-\dfrac{10}{7}x+\dfrac87}$.
+  \item $f(x)=\dfrac3x+\dfrac1{x^2}-\dfrac1{5x^2}-\dfrac2{3x^3}$.\\
+  Derivando término a término: $\boxed{f'(x)=-\dfrac3{x^2}-\dfrac8{5x^3}+\dfrac2{x^4}}$.
+  \item $f(x)=3\sqrt{x}+\sqrt[4]{x}$.\\
+  \[
+  f(x)=3x^{1/2}+x^{1/4}
+  \quad\Longrightarrow\quad
+  f'(x)=3\left(\frac12x^{-1/2}\right)
+  +\frac14x^{-3/4}
+  =\boxed{\frac{3}{2\sqrt{x}}+\frac{1}{4x^{3/4}}}.
+  \]
+  \item $f(x)=\sqrt[5]{x^2}-\dfrac{3}{\sqrt[5]{x^2}}=x^{2/5}-3x^{-2/5}$.\\
+  \[
+  f'(x)=\frac25x^{2/5-1}-3\left(-\frac25x^{-2/5-1}\right)
+  =\frac25x^{-3/5}+\frac65x^{-7/5}.
+  \]
+  \item $f(x)=\dfrac23\log_2x+3\ln|x|$.\\
+  \[
+  (\log_2x)'=\frac1{x\ln2},\qquad(\ln|x|)'=\frac1x,
+  \]
+  \[
+  f'(x)=\frac23\left(\frac1{x\ln2}\right)+3\left(\frac1x\right)
+  =\boxed{\frac{2}{3x\ln2}+\frac3x}.
+  \]
+  \item $f(x)=x^2\log x$. Por regla del producto: 
+  $\boxed{f'(x)=2x\log x+\dfrac{x}{\ln10}}$.
+  \item $f(x)=e^x\cos x$.\\
+  \[
+  f'(x)=(e^x)'\cos x+e^x(\cos x)'
+  =e^x\cos x-e^x\sin x
+  =\boxed{e^x(\cos x-\sin x)}.
+  \]
+  \item $f(x)=x^2e^x\cos x$.\\
+  $\boxed{f'(x)=e^x\left[(2x+x^2)\cos x-x^2\sin x\right]}$.
+  \item $f(x)=\dfrac{x^2}{\ln|x|}$. Por regla del cociente:
+  $\boxed{f'(x)=\dfrac{2x\ln|x|-x}{(\ln|x|)^2}}$.
+  \item $f(x)=\dfrac{x^2\cos x}{e^x}$. Escribiendo $f=x^2e^{-x}\cos x$:
+  $\boxed{f'(x)=e^{-x}\left[(2x-x^2)\cos x-x^2\sin x\right]}$.
+  \item $f(x)=\dfrac{x^2\cos x}{e^x\sinh x}$.\\
+  $\boxed{f'(x)=\dfrac{2x\cos x-x^2\sin x-x^2\cos x-x^2\cos x\coth x}{e^x\sinh x}}$.
+  \item $f(x)=\ln x^3$. Como $\ln(x^3)=3\ln x$ para $x>0$:
+  \[
+  f'(x)=\frac{d}{dx}(3\ln x)=3\left(\frac1x\right)
+  =\boxed{\frac3x}.
+  \]
+  \item $f(x)=\sqrt[3]{\ln x}=(\ln x)^{1/3}$.\\
+  $\boxed{f'(x)=\dfrac{1}{3x(\ln x)^{2/3}}}$.
+  \item $f(x)=\sin 2x+\cos 3x$.\\
+  \[
+  f'(x)=\cos(2x)(2)+[-\sin(3x)](3)
+  =\boxed{2\cos2x-3\sin3x}.
+  \]
+  \item $f(x)=\sin x^2+e^{2x+3}$.\\
+  \[
+  f'(x)=\cos(x^2)(2x)+e^{2x+3}(2)
+  =\boxed{2x\cos(x^2)+2e^{2x+3}}.
+  \]
+  \item $f(x)=e^{\sin(x^2)}$. Por regla de la cadena:
+  $\boxed{f'(x)=2x\cos(x^2)e^{\sin(x^2)}}$.
+  \item $f(x)=\cos\left(\dfrac{1-e^{2x}}{1+e^x}\right)$. Como el argumento se simplifica a $1-e^x$:
+  $\boxed{f'(x)=e^x\sin(1-e^x)}$.
+  \item $\displaystyle f(x)=\frac{1}{\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x}}}}}}$. Para escribir la derivada sin ocultar la regla de la cadena, definimos
+  \[
+  u_1=\sqrt{x},\quad u_2=\sqrt{x+u_1},\quad u_3=\sqrt{x+u_2},\quad
+  u_4=\sqrt{x+u_3},\quad u_5=\sqrt{x+u_4}.
+  \]
+  Entonces $f=1/u_5$ y
+  \[
+  u_1'=\frac1{2u_1},\quad u_2'=\frac{1+u_1'}{2u_2},\quad
+  u_3'=\frac{1+u_2'}{2u_3},\quad u_4'=\frac{1+u_3'}{2u_4},\quad
+  u_5'=\frac{1+u_4'}{2u_5}.
+  \]
+  Por tanto, $\boxed{f'(x)=-\dfrac{u_5'}{u_5^2}=-\dfrac{1+u_4'}{2u_5^3}}$.
+  \item $f(x)=\cos\sqrt{\sin(3x^2)+\tan(6x^3)}$. Sea $A=\sin(3x^2)+\tan(6x^3)$. Entonces $A'=6x\cos(3x^2)+18x^2\sec^2(6x^3)$ y
+  $\boxed{f'(x)=-\dfrac{\sin(\sqrt A)}{2\sqrt A}\left[6x\cos(3x^2)+18x^2\sec^2(6x^3)\right]}$.
+\end{enumerate}
+
+% =================================================
+% TEMA 9
+% =================================================
+
+\newpage
+\section{Tema 9. Máximos y mínimos}
+
+\subsection*{1.- Para cada una de las siguientes funciones encuentre: los valores máximos, los valores mínimos, las asíntotas verticales, los intervalos en que es creciente, los intervalos en que es decreciente, los puntos de inflexión, los intervalos en que es cóncava y los intervalos en que es convexa. Muestra la gráfica de la función.}
+
+\textbf{Criterio:} los puntos críticos se obtienen de $f'(x)=0$ o de los puntos donde $f'$ no existe dentro del dominio. La concavidad se determina con el signo de $f''(x)$.
+
+\begin{enumerate}[label=\alph*)]
+  \item $f(x)=x^3-12x+2$.
+  \[
+  f'(x)=3x^2-12=3(x-2)(x+2),\qquad f''(x)=6x.
+  \]
+  Los puntos críticos son $x=-2$ y $x=2$. El signo de $f'$ da:
+  \begin{itemize}
+    \item Creciente en $(-\infty,-2)\cup(2,+\infty)$.
+    \item Decreciente en $(-2,2)$.
+  \end{itemize}
+  $f(-2)=18$ es un máximo local y $f(2)=-14$ es un mínimo local. No tiene asíntotas verticales. Como $f''(x)=0$ en $x=0$ y cambia de signo, hay punto de inflexión $(0,2)$. Es cóncava hacia abajo en $(-\infty,0)$ y convexa hacia arriba en $(0,+\infty)$. No tiene máximo ni mínimo absoluto porque es una cúbica no acotada.\grafica
+
+  \item $f(x)=x^3-3x^2+1$.
+  \[
+  f'(x)=3x^2-6x=3x(x-2),\qquad f''(x)=6x-6.
+  \]
+  Los puntos críticos son $x=0$ y $x=2$:
+  \begin{itemize}
+    \item Creciente en $(-\infty,0)\cup(2,+\infty)$.
+    \item Decreciente en $(0,2)$.
+  \end{itemize}
+  $f(0)=1$ es máximo local y $f(2)=-3$ es mínimo local. No tiene asíntotas verticales. $f''(x)=0$ en $x=1$ y cambia de signo; el punto de inflexión es $(1,-1)$. Es cóncava hacia abajo en $(-\infty,1)$ y convexa hacia arriba en $(1,+\infty)$. No existen extremos absolutos porque la función no está acotada.\grafica
+
+  \item $f(x)=\dfrac{x^2}{x^2-1}$.
+  \[
+  f'(x)=\frac{-2x}{(x^2-1)^2},\qquad
+  f''(x)=\frac{2(3x^2+1)}{(x^2-1)^3}.
+  \]
+  El dominio es $\R\setminus\{-1,1\}$. Por ello tiene asíntotas verticales $x=-1$ y $x=1$. Como el denominador de $f'$ es positivo en todo el dominio, el signo depende de $-x$:
+  \begin{itemize}
+    \item Creciente en $(-\infty,-1)\cup(-1,0)$.
+    \item Decreciente en $(0,1)\cup(1,+\infty)$.
+  \end{itemize}
+  En $x=0$, $f(0)=0$ y la derivada cambia de positiva a negativa: hay un máximo local de valor $0$. No existe mínimo local ni máximo o mínimo absoluto (la función no está acotada cerca de las asíntotas). El numerador de $f''$ siempre es positivo, así que es convexa hacia arriba en $(-\infty,-1)\cup(1,+\infty)$ y cóncava hacia abajo en $(-1,1)$. No tiene puntos de inflexión: $f''$ no se anula y $x=\pm1$ no pertenecen al dominio.\grafica
+\end{enumerate}
+
+\subsection*{2.- Se dispone de $1200\,\mathrm{cm}^2$ de material para hacer una caja con una base cuadrada y sin tapa. Encuentre el mayor volumen posible de la caja.}
+Sea $x$ el lado de la base cuadrada y $h$ la altura. El área disponible es la base más cuatro caras:
+\[
+x^2+4xh=1200\quad\Longrightarrow\quad h=\frac{1200-x^2}{4x}.
+\]
+El volumen es
+\[
+V(x)=x^2h=\frac{1200x-x^3}{4},\qquad 0<x<\sqrt{1200}.
+\]
+Derivamos e igualamos a cero:
+\[
+V'(x)=300-\frac34x^2=0
+\quad\Longrightarrow\quad x^2=400\quad\Longrightarrow\quad x=20\text{ cm}.
+\]
+La altura se obtiene sustituyendo el lado:
+\[
+h=\frac{1200-20^2}{4(20)}
+=\frac{1200-400}{80}
+=\frac{800}{80}=10\text{ cm}.
+\]
+\[
+V_{\max}=20^2(10)=400(10)=4000\text{ cm}^3.
+\]
+Además, $V''(x)=-\frac32x<0$ en el dominio, por lo que se trata de un máximo.
+\respuesta{\text{Base: }20\text{ cm}\times20\text{ cm};\quad h=10\text{ cm};\quad V_{\max}=4000\text{ cm}^3}
+
+\subsection*{3.- Se dispone de una lámina de cartón cuadrada de 1.2 metros de lado. Determine las dimensiones de la caja sin tapa de volumen máximo que se puede construir recortando un cuadrado igual en cada esquina y doblando las aristas resultantes de los cortes.}
+Sea $x$ el lado de cada cuadrado recortado. La caja tendrá base $(1.2-2x)\times(1.2-2x)$ y altura $x$. Por tanto,
+\[
+V(x)=x(1.2-2x)^2,\qquad 0<x<0.6.
+\]
+\[
+\begin{aligned}
+V'(x)&=(1.2-2x)^2+x\,[2(1.2-2x)(-2)]\\
+&=(1.2-2x)\bigl[(1.2-2x)-4x\bigr]\\
+&=(1.2-2x)(1.2-6x)=0.
+\end{aligned}
+\]
+Los valores críticos son $x=0.6$ y $x=0.2$. El primero produce una caja degenerada (volumen cero); el máximo interior ocurre en $x=0.2$ m. La base mide $1.2-2(0.2)=0.8$ m por lado y la altura es $0.2$ m.\respuesta{\text{Dimensiones: }0.8\text{ m}\times0.8\text{ m}\times0.2\text{ m};\quad V_{\max}=0.128\text{ m}^3}
+
+\subsection*{4.- Se desea construir una lata con forma de cilindro cuyo volumen sea $1000\,\mathrm{cm}^3$. Encuentre las dimensiones que minimicen el área superficial total de la lata.}
+\textbf{Nota:} el área superficial total de la lata debe considerar la superficie lateral, la tapa y el fondo.
+
+El volumen y el área total de un cilindro cerrado son
+\[
+\pi r^2h=1000,\qquad A=2\pi r^2+2\pi rh.
+\]
+Despejamos $h=1000/(\pi r^2)$ y sustituimos:
+\[
+A(r)=2\pi r^2+\frac{2000}{r}.
+\]
+\[
+A'(r)=4\pi r-\frac{2000}{r^2}=0
+\quad\Longrightarrow\quad r^3=\frac{500}{\pi}.
+\]
+Multiplicando por $r^2$:
+\[
+4\pi r^3-2000=0
+\quad\Longrightarrow\quad
+r^3=\frac{500}{\pi}.
+\]
+Así, $r=\sqrt[3]{500/\pi}$ y, usando la condición de volumen:
+\[
+h=\frac{1000}{\pi r^2}
+=\frac{1000}{\pi r^2}
+=2r.
+\]
+\[
+\boxed{r=\sqrt[3]{\frac{500}{\pi}}\approx5.419\text{ cm},\qquad
+h=2\sqrt[3]{\frac{500}{\pi}}\approx10.838\text{ cm}.}
+\]
+Estas dimensiones minimizan el área total; el resultado también se obtiene al verificar que $A''(r)=4\pi+4000/r^3>0$.
+
+% =================================================
+% TEMA 10
+% =================================================
+
+\newpage
+\section{Tema 10. Introducción a las integrales}
+
+\subsection*{1.- Resuelve las siguientes integrales definidas. Para cada una, grafique la función correspondiente e ilumine el área a la que hace referencia la integral. Haga un cálculo aproximado del área descomponiéndola en figuras geométricas básica (por ejemplo, rectángulos, cuadrados, triángulos, etc.).}
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle\int_0^4(x+2)\,dx$. La región es un trapecio de bases $2$ y $6$, y altura $4$; área $\frac{2+6}{2}(4)=16$.\\
+  $\displaystyle\left[\frac{x^2}{2}+2x\right]_0^4=\boxed{16}$.\grafica
+  \item $\displaystyle\int_0^2(-x+4)\,dx$. La región es un trapecio de bases $4$ y $2$, y altura $2$; área $\frac{4+2}{2}(2)=6$.\\
+  $\displaystyle\left[-\frac{x^2}{2}+4x\right]_0^2=\boxed{6}$.\grafica
+  \item $\displaystyle\int_0^6 5\,dx$. La región es un rectángulo de base $6$ y altura $5$; área $6(5)=30$.\\
+  $\displaystyle[5x]_0^6=\boxed{30}$.\grafica
+  \item $\displaystyle\int_{-3}^3(-x+1)\,dx$. La integral con signo es
+  $\displaystyle\left[-\frac{x^2}{2}+x\right]_{-3}^3=\boxed{6}$. Para distinguir el área geométrica total: de $-3$ a $1$ hay un trapecio de área $8$ y de $1$ a $3$ un triángulo debajo del eje $x$ de área $2$; el área geométrica total es $8+2=10$, mientras que el área con signo es $8-2=6$.\grafica
+  \item $\displaystyle\int_0^{2\pi}\sin x\,dx$.\\
+  $\displaystyle[-\cos x]_0^{2\pi}=(-1)-(-1)=\boxed{0}$. El área geométrica sin signo es $2+2=4$: dos regiones iguales, una sobre el eje $x$ y otra debajo.\grafica
+\end{enumerate}
+
+\subsection*{2.- Resuelve las siguientes integrales inmediatas:}
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle\int(3x^2+\cos x)\,dx
+  =\int3x^2\,dx+\int\cos x\,dx
+  =x^3+\sin x+C$.
+  \[
+  \boxed{x^3+\sin x+C}.
+  \]
+  \item $\displaystyle\int(e^x-\sin x)\,dx
+  =\int e^x\,dx-\int\sin x\,dx
+  =e^x+\cos x+C$.
+  \[
+  \boxed{e^x+\cos x+C}.
+  \]
+  \item $\displaystyle\int(4\cos x+5\sin x)\,dx
+  =4\int\cos x\,dx+5\int\sin x\,dx
+  =4\sin x-5\cos x+C$.
+  \[
+  \boxed{4\sin x-5\cos x+C}.
+  \]
+  \item $\displaystyle\int\left(x^3+\frac12x^2+\frac{2}{\sqrt3}x+4\right)dx$
+  \[
+  =\boxed{\frac{x^4}{4}+\frac{x^3}{6}+\frac{x^2}{\sqrt3}+4x+C}.
+  \]
+  \item $\displaystyle\int\left(3\sqrt{x}-5\sqrt[5]{x}\right)dx$
+  \[
+  =\int(3x^{1/2}-5x^{1/5})dx
+  =\boxed{2x^{3/2}-\frac{25}{6}x^{6/5}+C}.
+  \]
+  \item $\displaystyle\int\left(\frac3{x^5}+\frac4{x^2}+\frac5x\right)dx$
+  \[
+  =\boxed{-\frac{3}{4x^4}-\frac4x+5\ln|x|+C}.
+  \]
+  \item $\displaystyle\int\frac5{\sqrt[3]{x^2}}dx=5\int x^{-2/3}dx=\boxed{15\sqrt[3]{x}+C}$.
+  \item $\displaystyle\int(2\tan x-3\sin x)dx$
+  \[
+  =2\int\frac{\sin x}{\cos x}\,dx-3\int\sin x\,dx.
+  \]
+  Con $u=\cos x$, $du=-\sin x\,dx$:
+  \[
+  -2\ln|\cos x|+3\cos x+C
+  =\boxed{-2\ln|\cos x|+3\cos x+C}.
+  \]
+  \item $\displaystyle\int\left(\frac3{1+x^2}+\frac4{\sqrt{1-x^2}}\right)dx$
+  \[
+  =\boxed{3\arctan x+4\arcsin x+C}.
+  \]
+  \item $\displaystyle\int\left(\frac5{x^2-4}+\frac4{x\sqrt{x^2-9}}\right)dx$
+  \[
+  =\frac54\int\left(\frac1{x-2}-\frac1{x+2}\right)dx
+  +4\int\frac{dx}{x\sqrt{x^2-9}}
+  \]
+  \[
+  =\boxed{\frac54\ln\left|\frac{x-2}{x+2}\right|+\frac43\arcsec\left(\frac{|x|}{3}\right)+C}.
+  \]
+\end{enumerate}
+
+% =================================================
+% TEMA 11
+% =================================================
+
+\newpage
+\section{Tema 11. Técnicas de integración: integración por cambio de variable e integración por partes}
+
+\subsection{1.- Resuelve utilizando el método de integración por cambio de variable:}
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle\int2x\sin(x^2)dx$. $u=x^2$, $du=2x\,dx$: $\boxed{-\cos(x^2)+C}$.
+  \item $\displaystyle\int3x^2e^{x^3}dx$. $u=x^3$, $du=3x^2\,dx$: $\boxed{e^{x^3}+C}$.
+  \item $\displaystyle\int x^2e^{x^3}dx$. $u=x^3$, $du=3x^2\,dx$: $\boxed{\frac13e^{x^3}+C}$.
+  \item $\displaystyle\int x\sin(x^2)dx$. $u=x^2$, $du=2x\,dx$: $\boxed{-\frac12\cos(x^2)+C}$.
+  \item $\displaystyle\int e^{-2x}dx=\boxed{-\frac12e^{-2x}+C}$.
+  \item $\displaystyle\int\frac1{5-3x}dx$. $u=5-3x$, $du=-3dx$: $\boxed{-\frac13\ln|5-3x|+C}$.
+  \item $\displaystyle\int\frac{x^2}{x^3+1}dx$. $u=x^3+1$, $du=3x^2dx$: $\boxed{\frac13\ln|x^3+1|+C}$.
+  \item $\displaystyle\int\frac{(\ln x)^2}{x}dx$. $u=\ln x$, $du=dx/x$: $\boxed{\frac{(\ln x)^3}{3}+C}$.
+  \item $\displaystyle\int(x+1)\sqrt{2x+x^2}\,dx$. $u=x^2+2x$, $du=2(x+1)dx$: $\boxed{\frac13(2x+x^2)^{3/2}+C}$.
+  \item $\displaystyle\int(\cos^4\theta)(\sin\theta)d\theta$. $u=\cos\theta$, $du=-\sin\theta d\theta$: $\boxed{-\frac15\cos^5\theta+C}$.
+  \item $\displaystyle\int\frac{e^u}{(1-e^u)^2}du$. $v=1-e^u$, $dv=-e^u du$: $\boxed{\frac1{1-e^u}+C}$.
+  \item $\displaystyle\int_0^1\cos\left(\frac{\pi t}{2}\right)dt$
+  \[
+  =\left[\frac2\pi\sin\left(\frac{\pi t}{2}\right)\right]_0^1
+  =\boxed{\frac2\pi}.
+  \]
+\end{enumerate}
+
+\subsection{2.- Resuelve utilizando el método de integración por partes:}
+Se utiliza $\displaystyle\int u\,dv=uv-\int v\,du$.
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle\int x\cos5x\,dx$. Tomamos $u=x$, $dv=\cos5x\,dx$:
+  $\boxed{\frac{x\sin5x}{5}+\frac{\cos5x}{25}+C}$.
+  \item $\displaystyle\int te^{-3t}dt$. Con $u=t$, $dv=e^{-3t}dt$:
+  $\boxed{-\frac{te^{-3t}}3-\frac{e^{-3t}}9+C}$.
+  \item $\displaystyle\int(x^2+2x)\cos x\,dx$. Aplicando partes dos veces:
+  $\boxed{(x^2+2x-2)\sin x+(2x+2)\cos x+C}$.
+  \item $\displaystyle\int x^2\ln x\,dx$. Con $u=\ln x$, $dv=x^2dx$:
+  $\boxed{\frac{x^3}{3}\ln x-\frac{x^3}{9}+C}$.
+  \item $\displaystyle\int(\ln x)^2dx$. Con $u=(\ln x)^2$, $dv=dx$ y aplicando partes otra vez:
+  $\boxed{x(\ln x)^2-2x\ln x+2x+C}$.
+  \item $\displaystyle\int\sqrt{x^3}\ln x\,dx=\int x^{3/2}\ln x\,dx$:
+  $\boxed{\frac25x^{5/2}\ln x-\frac4{25}x^{5/2}+C}$.
+  \item $\displaystyle\int x^3\sin x\,dx$. Aplicando partes repetidamente:
+  $\boxed{-x^3\cos x+3x^2\sin x+6x\cos x-6\sin x+C}$.
+  \item $\displaystyle\int x^5e^{-x}dx$. Aplicando partes repetidamente:
+  $\boxed{-e^{-x}(x^5+5x^4+20x^3+60x^2+120x+120)+C}$.
+  \item $\displaystyle\int e^x\cos x\,dx$. Aplicando partes dos veces y despejando la integral original:
+  $\boxed{\frac{e^x}{2}(\sin x+\cos x)+C}$.
+  \item $\displaystyle\int\sin(\ln x)dx$. Sea $u=\ln x$, entonces $x=e^u$ y $dx=e^u du$:
+  $\boxed{\frac{x}{2}\left[\sin(\ln x)-\cos(\ln x)\right]+C}$.
+\end{enumerate}
+
+% =================================================
+% TEMA 12
+% =================================================
+
+\newpage
+\section{Tema 12. Técnicas de integración: integración de funciones trigonométricas e integración de funciones racionales}
+
+\subsection{1.- Integra las siguientes funciones trigonométricas:}
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle\int\cos^7x\,dx$. Se separa un factor $\cos x$ y se usa $u=\sin x$:
+  \[
+  \begin{aligned}
+  \int\cos^7x\,dx
+  &=\int\cos^6x\cos x\,dx\\
+  &=\int(1-\sin^2x)^3\cos x\,dx\\
+  &\xrightarrow{u=\sin x}\int(1-u^2)^3du\\
+  &=\int(1-3u^2+3u^4-u^6)du\\
+  &=\boxed{\sin x-\sin^3x+\frac35\sin^5x-\frac17\sin^7x+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int(\sin^4x)(\cos^3x)dx$. Se reserva $\cos x$ y se usa $u=\sin x$:
+  \[
+  \begin{aligned}
+  \int\sin^4x\cos^3x\,dx
+  &=\int\sin^4x(1-\sin^2x)\cos x\,dx\\
+  &\xrightarrow{u=\sin x}\int u^4(1-u^2)\,du\\
+  &=\int(u^4-u^6)\,du\\
+  &=\boxed{\frac{\sin^5x}{5}-\frac{\sin^7x}{7}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int\sin^5x\,dx$. Se reserva $\sin x$ y se usa $u=\cos x$:
+  \[
+  -\int(1-u^2)^2du
+  =\boxed{-\cos x+\frac23\cos^3x-\frac15\cos^5x+C}.
+  \]
+  \item $\displaystyle\int(\sin^3x)(\cos^4x)dx$. Se reserva $\sin x$ y se usa $u=\cos x$:
+  \[
+  -\int(u^4-u^6)du
+  =\boxed{-\frac15\cos^5x+\frac17\cos^7x+C}.
+  \]
+  \item $\displaystyle\int\cos^4x\,dx$. Con reducción de potencia, $\cos^4x=\frac{3+4\cos2x+\cos4x}{8}$:
+  \[
+  \boxed{\frac{3x}{8}+\frac{\sin2x}{4}+\frac{\sin4x}{32}+C}.
+  \]
+  \item $\displaystyle\int\sin^6x\,dx$. Con reducción de potencia, $\sin^6x=\frac{10-15\cos2x+6\cos4x-\cos6x}{32}$:
+  \[
+  \boxed{\frac{5x}{16}-\frac{15\sin2x}{64}+\frac{3\sin4x}{64}-\frac{\sin6x}{192}+C}.
+  \]
+  \item $\displaystyle\int(\sin^2x)(\cos^2x)dx$. Como $\sin^2x\cos^2x=\frac18(1-\cos4x)$:
+  \[
+  \boxed{\frac{x}{8}-\frac{\sin4x}{32}+C}.
+  \]
+  \item $\displaystyle\int(\tan^4x)(\sec^4x)dx$. Se escribe $\sec^4x=(1+\tan^2x)\sec^2x$ y se usa $u=\tan x$:
+  \[
+  \int u^4(1+u^2)du
+  =\boxed{\frac{\tan^5x}{5}+\frac{\tan^7x}{7}+C}.
+  \]
+  \item $\displaystyle\int(\tan^3x)(\sec^5x)dx$. Se separa $\sec x\tan x\,dx$ y se usa $u=\sec x$:
+  \[
+  \int(u^2-1)u^4du
+  =\boxed{\frac{\sec^7x}{7}-\frac{\sec^5x}{5}+C}.
+  \]
+  \item $\displaystyle\int(\sin3x)(\cos4x)dx$. Por producto a suma, $\sin3x\cos4x=\frac12(\sin7x-\sin x)$:
+  \[
+  \boxed{-\frac{\cos7x}{14}+\frac{\cos x}{2}+C}.
+  \]
+\end{enumerate}
+
+\subsection{2.- Integra las siguientes funciones racionales:}
+\begin{enumerate}[label=\alph*)]
+  \item $\displaystyle\int\frac{x^4+3x^2+x}{x-2}dx$. División algebraica:
+  \[
+  \frac{x^4+3x^2+x}{x-2}=x^3+2x^2+7x+15+\frac{30}{x-2}.
+  \]
+  \[
+  \boxed{\frac{x^4}{4}+\frac{2x^3}{3}+\frac{7x^2}{2}+15x+30\ln|x-2|+C}.
+  \]
+  \item $\displaystyle\int\frac{x+12}{x^2+5x+6}dx$. Factorizando y descomponiendo:
+  \[
+  \frac{x+12}{(x+2)(x+3)}=\frac{10}{x+2}-\frac9{x+3}.
+  \]
+  \[
+  \boxed{10\ln|x+2|-9\ln|x+3|+C}.
+  \]
+  \item $\displaystyle\int\frac{2x+3}{x^3+x^2-6x}dx$. Factorizamos $x(x+3)(x-2)$:
+  \[
+  \frac{2x+3}{x(x+3)(x-2)}=-\frac1{2x}+\frac7{10(x-2)}-\frac1{5(x+3)}.
+  \]
+  \[
+  \boxed{-\frac12\ln|x|+\frac7{10}\ln|x-2|-\frac15\ln|x+3|+C}.
+  \]
+  \item $\displaystyle\int\frac{x^2}{x^4-5x^2+4}dx$. Como $x^4-5x^2+4=(x^2-1)(x^2-4)$:
+  \[
+  \frac{x^2}{(x^2-1)(x^2-4)}=-\frac1{3(x+2)}+\frac1{6(x+1)}-\frac1{6(x-1)}+\frac1{3(x-2)}.
+  \]
+  \[
+  \boxed{-\frac13\ln|x+2|+\frac16\ln|x+1|-\frac16\ln|x-1|+\frac13\ln|x-2|+C}.
+  \]
+  \item $\displaystyle\int\frac{x+1}{x^2-6x+9}dx=\int\left(\frac1{x-3}+\frac4{(x-3)^2}\right)dx$:
+  \[
+  \boxed{\ln|x-3|-\frac4{x-3}+C}.
+  \]
+  \item $\displaystyle\int\frac{x}{x^3-3x^2+3x-1}dx=\int\frac{x}{(x-1)^3}dx$.
+  \[
+  \frac{x}{(x-1)^3}=\frac1{(x-1)^2}+\frac1{(x-1)^3},\qquad
+  \boxed{-\frac1{x-1}-\frac1{2(x-1)^2}+C}.
+  \]
+  \item $\displaystyle\int\frac{x+1}{x^3+2x}dx=\int\left[\frac1{2x}-\frac{x-2}{2(x^2+2)}\right]dx$:
+  \[
+  \boxed{\frac12\ln|x|-\frac14\ln(x^2+2)+\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \]
+  \item $\displaystyle\int\frac{x+1}{x^4+3x^2+2}dx$. Como $x^4+3x^2+2=(x^2+1)(x^2+2)$:
+  \[
+  \frac{x+1}{(x^2+1)(x^2+2)}=\frac{x+1}{x^2+1}-\frac{x+1}{x^2+2}.
+  \]
+  \[
+  \boxed{\frac12\ln(x^2+1)+\arctan x-\frac12\ln(x^2+2)-\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \]
+  \item $\displaystyle\int\frac{x^3+1}{x^4+4x^2+4}dx=\int\frac{x^3+1}{(x^2+2)^2}dx$.
+  \[
+  \frac{x^3+1}{(x^2+2)^2}=\frac{x}{x^2+2}-\frac{2x-1}{(x^2+2)^2}.
+  \]
+  Integrando cada término:
+  \[
+  \boxed{\frac12\ln(x^2+2)+\frac{x+4}{4(x^2+2)}+\frac1{4\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \]
+  \item $\displaystyle\int\frac{3x+4}{(x+1)(x+2)^2}dx$. Fracciones parciales:
+  \[
+  \frac{3x+4}{(x+1)(x+2)^2}=\frac1{x+1}-\frac1{x+2}+\frac2{(x+2)^2}.
+  \]
+  \[
+  \boxed{\ln|x+1|-\ln|x+2|-\frac2{x+2}+C}.
+  \]
+\end{enumerate}
+
+\end{document}
