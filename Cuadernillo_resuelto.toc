@@ -3,15 +3,15 @@
 \contentsline {section}{\numberline {2}Tema 2. Funciones algebraicas y funciones trascendentes}{18}{section.2}%
 \contentsline {section}{\numberline {3}Tema 3. Transformación y composición de funciones}{34}{section.3}%
 \contentsline {section}{\numberline {4}Tema 4. Límites}{37}{section.4}%
-\contentsline {section}{\numberline {5}Tema 5. Continuidad}{51}{section.5}%
-\contentsline {section}{\numberline {6}Tema 6. Límites cuando $x$ tiende a infinito}{54}{section.6}%
-\contentsline {section}{\numberline {7}Tema 7. Definición de derivada}{64}{section.7}%
-\contentsline {section}{\numberline {8}Tema 8. Reglas de derivación}{66}{section.8}%
-\contentsline {section}{\numberline {9}Tema 9. Máximos y mínimos}{69}{section.9}%
-\contentsline {section}{\numberline {10}Tema 10. Introducción a las integrales}{76}{section.10}%
-\contentsline {section}{\numberline {11}Tema 11. Técnicas de integración: integración por cambio de variable e integración por partes}{85}{section.11}%
-\contentsline {subsection}{\numberline {11.1}1.- Resuelve utilizando el método de integración por cambio de variable:}{85}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}2.- Resuelve utilizando el método de integración por partes:}{87}{subsection.11.2}%
-\contentsline {section}{\numberline {12}Tema 12. Técnicas de integración: integración de funciones trigonométricas e integración de funciones racionales}{91}{section.12}%
-\contentsline {subsection}{\numberline {12.1}1.- Integra las siguientes funciones trigonométricas:}{91}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}2.- Integra las siguientes funciones racionales:}{94}{subsection.12.2}%
+\contentsline {section}{\numberline {5}Tema 5. Continuidad}{52}{section.5}%
+\contentsline {section}{\numberline {6}Tema 6. Límites cuando $x$ tiende a infinito}{55}{section.6}%
+\contentsline {section}{\numberline {7}Tema 7. Definición de derivada}{72}{section.7}%
+\contentsline {section}{\numberline {8}Tema 8. Reglas de derivación}{75}{section.8}%
+\contentsline {section}{\numberline {9}Tema 9. Máximos y mínimos}{78}{section.9}%
+\contentsline {section}{\numberline {10}Tema 10. Introducción a las integrales}{85}{section.10}%
+\contentsline {section}{\numberline {11}Tema 11. Técnicas de integración: integración por cambio de variable e integración por partes}{94}{section.11}%
+\contentsline {subsection}{\numberline {11.1}1.- Resuelve utilizando el método de integración por cambio de variable:}{94}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}2.- Resuelve utilizando el método de integración por partes:}{96}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Tema 12. Técnicas de integración: integración de funciones trigonométricas e integración de funciones racionales}{100}{section.12}%
+\contentsline {subsection}{\numberline {12.1}1.- Integra las siguientes funciones trigonométricas:}{100}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}2.- Integra las siguientes funciones racionales:}{103}{subsection.12.2}%

@@ -778,42 +778,89 @@ $x$ (izquierda) & $f(x)$ & $x$ (derecha) & $f(x)$\\\hline
 \end{enumerate}
 
 \subsection*{6. Evalúe los siguientes límites eliminando las indeterminaciones por métodos algebraicos.}
+\textbf{Procedimiento general:} primero se sustituye el valor al que tiende $x$. Si se obtiene una indeterminación del tipo $\frac00$, se factoriza o racionaliza para cancelar el factor que provoca la indeterminación. No se cancela cualquier expresión que aún dependa de $x$ sin comprobar que se mantiene válida para $x\neq a$.
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle
+  \item $\displaystyle\lim_{x\to0}\frac{x^2}{x}$. Al sustituir se obtiene $\frac00$. Como $x\neq0$ cerca del punto,
+  \[
+  \frac{x^2}{x}=x.
+  \]
+  Por tanto,
+  \[
   \lim_{x\to0}\frac{x^2}{x}
   =\lim_{x\to0}\frac{x\cdot x}{x}
   =\lim_{x\to0}x
-  =\boxed{0}$.
-  \item $\displaystyle
+  =\boxed{0}.
+  \]
+  \item $\displaystyle\lim_{x\to5}\frac{x^2-6x+5}{x-5}$. Primero factorizamos el numerador:
+  \[
+  x^2-6x+5=(x-1)(x-5).
+  \]
+  Luego cancelamos el factor común $(x-5)$, válido para $x\neq5$:
+  \[
   \lim_{x\to5}\frac{x^2-6x+5}{x-5}
   =\lim_{x\to5}\frac{(x-1)(x-5)}{x-5}
   =\lim_{x\to5}(x-1)
-  =5-1=\boxed{4}$.
-  \item $\displaystyle
+  =5-1=\boxed{4}.
+  \]
+  \item $\displaystyle\lim_{x\to4}\frac{x^2-4x}{x^2-3x-4}$. Al sustituir se obtiene $\frac00$. Factorizamos:
+  \[
+  x^2-4x=x(x-4),
+  \qquad
+  x^2-3x-4=(x-4)(x+1).
+  \]
+  Cancelando $(x-4)$:
+  \[
   \lim_{x\to4}\frac{x^2-4x}{x^2-3x-4}
   =\lim_{x\to4}\frac{x(x-4)}{(x-4)(x+1)}
   =\lim_{x\to4}\frac{x}{x+1}
-  =\frac45$.
-  \item $\displaystyle
+  =\frac45.
+  \]
+  \item $\displaystyle\lim_{x\to-3}\frac{x^2-9}{2x^2+7x+3}$. Al sustituir se obtiene $\frac00$. Factorizamos ambos polinomios:
+  \[
+  x^2-9=(x-3)(x+3),
+  \qquad
+  2x^2+7x+3=(2x+1)(x+3).
+  \]
+  Después de cancelar $(x+3)$:
+  \[
   \lim_{x\to-3}\frac{x^2-9}{2x^2+7x+3}
   =\lim_{x\to-3}\frac{(x-3)(x+3)}{(2x+1)(x+3)}
   =\lim_{x\to-3}\frac{x-3}{2x+1}
-  =\frac{-6}{-5}=\boxed{\frac65}$.
-  \item $\displaystyle
+  =\frac{-6}{-5}=\boxed{\frac65}.
+  \]
+  \item $\displaystyle\lim_{x\to-2}\frac{x+2}{x^3+8}$. La suma de cubos factoriza como
+  \[
+  x^3+8=(x+2)(x^2-2x+4).
+  \]
+  \[
   \lim_{x\to-2}\frac{x+2}{x^3+8}
   =\lim_{x\to-2}\frac{x+2}{(x+2)(x^2-2x+4)}
   =\lim_{x\to-2}\frac1{x^2-2x+4}
-  =\frac1{4+4+4}=\boxed{\frac1{12}}$.
-  \item $\displaystyle
+  =\frac1{4+4+4}=\boxed{\frac1{12}}.
+  \]
+  \item $\displaystyle\lim_{x\to1}\frac{x^4-1}{x^3-1}$. Aplicamos diferencia de cuadrados y diferencia de cubos:
+  \[
+  x^4-1=(x-1)(x+1)(x^2+1),
+  \qquad
+  x^3-1=(x-1)(x^2+x+1).
+  \]
+  \[
   \lim_{x\to1}\frac{x^4-1}{x^3-1}
-  =\lim_{x\to1}\frac{(x-1)(x+1)(x^2+1)}{(x-1)(x^2+x+1)}
   =\lim_{x\to1}\frac{(x+1)(x^2+1)}{x^2+x+1}
-  =\frac{2(2)}3=\boxed{\frac43}$.
-  \item $\displaystyle
-  \lim_{x\to-1}\frac{x^2+2x+1}{x^4-1}
-  =\lim_{x\to-1}\frac{(x+1)^2}{(x-1)(x+1)(x^2+1)}
+  =\frac{2(2)}3=\boxed{\frac43}.
+  \]
+  \item $\displaystyle\lim_{x\to-1}\frac{x^2+2x+1}{x^4-1}$. Factorizamos un trinomio cuadrado perfecto y una diferencia de cuadrados:
+  \[
+  x^2+2x+1=(x+1)^2,
+  \qquad
+  x^4-1=(x-1)(x+1)(x^2+1).
+  \]
+  Cancelamos un factor $(x+1)$ y sustituimos:
+  \[
+  \lim_{x\to-1}\frac{(x+1)^2}{(x-1)(x+1)(x^2+1)}
   =\lim_{x\to-1}\frac{x+1}{(x-1)(x^2+1)}
-  =\boxed{0}$.
+  =\boxed{0}.
+  \]
   \item $\displaystyle
   \lim_{x\to0}\frac{\sqrt{9+x}-3}{x}
   =\lim_{x\to0}\frac{(\sqrt{9+x}-3)(\sqrt{9+x}+3)}
@@ -931,40 +978,214 @@ $100$ & $2.0510$ & $100$ & $-250000$
 \end{center}
 \newpage
 \subsection*{2.- Evaluar los siguientes límites mediante manipulaciones algebraicas. Agrega la gráfica de la función y traza la asíntota horizontal correspondiente (si existe) para verificar tu respuesta.}
+\textbf{Criterio práctico:} para cocientes de polinomios se divide numerador y denominador entre la máxima potencia de $x$. Si los grados son iguales, el límite es el cociente de los coeficientes principales; si el grado del denominador es mayor, el límite es $0$; si el grado del numerador es mayor, el límite será $+\infty$ o $-\infty$ según los signos.
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^3+2x}{x^2-1}=+\infty$. El grado del numerador es mayor; la función crece como $x$ positivo. No hay asíntota horizontal.
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^3+2x}{x^2-1}$. Dividimos entre $x^2$:
+  \[
+  \frac{x^3+2x}{x^2-1}
+  =\frac{x+\frac{2}{x}}{1-\frac1{x^2}}.
+  \]
+  Como $\frac2x\to0$ y $\frac1{x^2}\to0$, pero $x\to+\infty$:
+  \[
+  \lim_{x\to\infty}\frac{x+2/x}{1-1/x^2}=+\infty.
+  \]
+  No existe asíntota horizontal.
   \begin{center}
-  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_a.jpeg}
+  \includegraphics[width=0.65\textwidth]{imagenes/tema6_2_a.jpeg}
   \end{center}
   \newpage
-  \item $\displaystyle\lim_{x\to-\infty}\frac{x^3+2x}{x^2-1}=-\infty$. La función se comporta como $x$ para valores negativos grandes. No hay asíntota horizontal.
+  \item $\displaystyle\lim_{x\to-\infty}\frac{x^3+2x}{x^2-1}$. Dividimos numerador y denominador entre $x^2$:
+  \[
+  \frac{x^3+2x}{x^2-1}
+  =\frac{x+\frac2x}{1-\frac1{x^2}}.
+  \]
+  Ahora $\frac2x\to0$, $\frac1{x^2}\to0$ y $x\to-\infty$. Por ello:
+  \[
+  \lim_{x\to-\infty}\frac{x+2/x}{1-1/x^2}=-\infty.
+  \]
+  No existe asíntota horizontal.
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_b.jpeg}
   \end{center}
   \newpage
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^3-1}=0$. El denominador tiene mayor grado. Asíntota horizontal: $y=0$.
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^3-1}$. Dividimos entre $x^3$:
+  \[
+  \frac{x^2+1}{2x^3-1}
+  =\frac{\frac1x+\frac1{x^3}}{2-\frac1{x^3}}.
+  \]
+  Como $\frac1x\to0$, $\frac1{x^3}\to0$ y el denominador tiende a $2$:
+  \[
+  \lim_{x\to\infty}\frac{1/x+1/x^3}{2-1/x^3}
+  =\frac02=\boxed{0}.
+  \]
+  Asíntota horizontal: $y=0$.
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_c.jpeg}
   \end{center}
   \newpage
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^2-1}=\boxed{\frac12}$. Se divide entre $x^2$. Asíntota horizontal: $y=\frac12$.
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^2-1}$. Los grados son iguales. Dividimos entre $x^2$:
+  \[
+  \frac{x^2+1}{2x^2-1}
+  =\frac{1+\frac1{x^2}}{2-\frac1{x^2}}.
+  \]
+  Cuando $x\to\infty$, $\frac1{x^2}\to0$:
+  \[
+  \lim_{x\to\infty}\frac{1+1/x^2}{2-1/x^2}
+  =\frac{1+0}{2-0}=\boxed{\frac12}.
+  \]
+  Asíntota horizontal: $y=\frac12$.
   \begin{center}
-  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_d.jpeg}
+  \includegraphics[width=0.65\textwidth]{imagenes/tema6_2_d.jpeg}
   \end{center}
   \newpage
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^5+2x^3+1}{x^2-1}=+\infty$. El cociente se comporta como $x^3$. No hay asíntota horizontal.
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^5+2x^3+1}{x^2-1}$. Dividimos numerador y denominador entre $x^2$:
+  \[
+  \frac{x^5+2x^3+1}{x^2-1}
+  =\frac{x^3+2x+\frac1{x^2}}{1-\frac1{x^2}}.
+  \]
+  Tenemos $2x\to+\infty$, $\frac1{x^2}\to0$ y $1-\frac1{x^2}\to1$:
+  \[
+  \lim_{x\to\infty}\frac{x^5+2x^3+1}{x^2-1}=+\infty.
+  \]
+  No existe asíntota horizontal.
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_e.jpeg}
   \end{center}
   \newpage
-  \item $\displaystyle\lim_{x\to-\infty}\frac{x^5+2x^3+1}{x^2-1}=-\infty$. El cociente se comporta como $x^3$. No hay asíntota horizontal.\grafica
-  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2+1}}{2x^2-1}=0$. El numerador crece como $x$ y el denominador como $2x^2$. Asíntota horizontal: $y=0$.\grafica
-  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^7+1}}{2x^3-1}=+\infty$. Para $x>0$, el cociente se comporta como $\frac12\sqrt{x}$. No hay asíntota horizontal.\grafica
-  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{x^7+1}}{2x^3-1}$. \textbf{El límite no está definido en los reales}: $x^7+1<0$ para todo $x<-1$, de modo que la función no tiene valores reales arbitrariamente lejos hacia $-\infty$. Se conserva aquí la expresión tal como aparece impresa en el cuadernillo.\grafica
-  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^6-x}}{x^3+1}=3$. Para $x>0$, se divide numerador y denominador entre $x^3$: el cociente tiende a $3$. Asíntota horizontal: $y=3$.\grafica
-  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{9x^6-x}}{x^3+1}=-3$. Como $\sqrt{x^6}=|x^3|=-x^3$ cuando $x<0$, el cociente tiende a $-3$. Asíntota horizontal: $y=-3$.\grafica
-  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^6-x}-x^3}{5x^3+1}=\frac{3-1}{5}=\boxed{\frac25}$. Asíntota horizontal: $y=\frac25$.\grafica
-  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{9x^6-x}-x^3}{5x^3+1}=\frac{-3-1}{5}=\boxed{-\frac45}$. Asíntota horizontal: $y=-\frac45$.\grafica
+  \item $\displaystyle\lim_{x\to-\infty}\frac{x^5+2x^3+1}{x^2-1}$. Dividimos entre $x^2$:
+  \[
+  \frac{x^5+2x^3+1}{x^2-1}
+  =\frac{x^3+2x+\frac1{x^2}}{1-\frac1{x^2}}.
+  \]
+  Para $x\to-\infty$, $x^3\to-\infty$, $2x\to-\infty$ y $\frac1{x^2}\to0$. El denominador tiende a $1$, por lo que:
+  \[
+  \lim_{x\to-\infty}\frac{x^5+2x^3+1}{x^2-1}=-\infty.
+  \]
+  No existe asíntota horizontal.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_f.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2+1}}{2x^2-1}$. Para $x>0$, $x^2$ es positivo y podemos escribir:
+  \[
+  \sqrt{x^2+1}=x\sqrt{1+\frac1{x^2}}.
+  \]
+  Por tanto,
+  \[
+  \frac{\sqrt{x^2+1}}{2x^2-1}
+  =\frac{\sqrt{1+1/x^2}}{2x-1/x}.
+  \]
+  El numerador tiende a $1$, mientras que $2x-\frac1x\to+\infty$:
+  \[
+  \lim_{x\to\infty}\frac{\sqrt{x^2+1}}{2x^2-1}=0.
+  \]
+  Asíntota horizontal: $y=0$.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_g.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^7+1}}{2x^3-1}$. Para $x>0$:
+  \[
+  \sqrt{x^7+1}=x^{7/2}\sqrt{1+\frac1{x^7}},
+  \qquad
+  2x^3-1=x^3\left(2-\frac1{x^3}\right).
+  \]
+  Entonces
+  \[
+  \frac{\sqrt{x^7+1}}{2x^3-1}
+  =\frac12\sqrt{x}\,
+  \frac{\sqrt{1+1/x^7}}{1-1/(2x^3)}.
+  \]
+  Como $\sqrt{x}\to+\infty$ y el factor restante tiende a $1$:
+  \[
+  \lim_{x\to\infty}\frac{\sqrt{x^7+1}}{2x^3-1}=+\infty.
+  \]
+  No existe asíntota horizontal.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_h.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{x^7+1}}{2x^3-1}$. La raíz exige $x^7+1\geq0$. Como $x^7\leq-1$ cuando $x\leq-1$, tenemos:
+  \[
+  x^7+1\geq0\quad\Longleftrightarrow\quad x^7\geq-1
+  \quad\Longleftrightarrow\quad x\geq-1.
+  \]
+  Por tanto, no existen valores reales de la función a la izquierda de $-1$ arbitrariamente cercanos a $-\infty$. El límite no está definido en los reales.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_i.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^6-x}}{x^3+1}$. Para $x>0$, $\sqrt{x^6}=x^3$. Extraemos $x^6$ dentro de la raíz:
+  \[
+  \sqrt{9x^6-x}=x^3\sqrt{9-\frac1{x^5}}.
+  \]
+  Dividimos también el denominador entre $x^3$:
+  \[
+  \frac{\sqrt{9x^6-x}}{x^3+1}
+  =\frac{\sqrt{9-1/x^5}}{1+1/x^3}.
+  \]
+  Como $\frac1{x^5}\to0$ y $\frac1{x^3}\to0$:
+  \[
+  \lim_{x\to\infty}\frac{\sqrt{9x^6-x}}{x^3+1}
+  =\frac{\sqrt{9}}1=\boxed3.
+  \]
+  Asíntota horizontal: $y=3$.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_j.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{9x^6-x}}{x^3+1}$. Cuando $x<0$, $x^6=|x^3|^2$ y al extraer el factor se tiene:
+  \[
+  \sqrt{9x^6-x}=|x^3|\sqrt{9-\frac1{x^5}}
+  =-x^3\sqrt{9-\frac1{x^5}}.
+  \]
+  Dividiendo numerador y denominador entre $x^3$:
+  \[
+  \frac{\sqrt{9x^6-x}}{x^3+1}
+  =\frac{-\sqrt{9-1/x^5}}{1+1/x^3}.
+  \]
+  Como $1/x^5\to0$ y $1/x^3\to0$:
+  \[
+  \lim_{x\to-\infty}\frac{\sqrt{9x^6-x}}{x^3+1}
+  =-\sqrt9=\boxed{-3}.
+  \]
+  Asíntota horizontal: $y=-3$.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_k.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{9x^6-x}-x^3}{5x^3+1}$. Para $x>0$, factorizamos $x^3$ en ambos términos:
+  \[
+  \frac{\sqrt{9x^6-x}-x^3}{5x^3+1}
+  =\frac{x^3\sqrt{9-1/x^5}-x^3}{x^3(5+1/x^3)}
+  =\frac{\sqrt{9-1/x^5}-1}{5+1/x^3}.
+  \]
+  Como $1/x^5\to0$ y $1/x^3\to0$:
+  \[
+  \lim_{x\to\infty}\frac{\sqrt{9-1/x^5}-1}{5+1/x^3}
+  =\frac{3-1}{5}=\boxed{\frac25}.
+  \]
+  Asíntota horizontal: $y=\frac25$.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_l.png}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to-\infty}\frac{\sqrt{9x^6-x}-x^3}{5x^3+1}$. Para $x<0$, $\sqrt{9x^6-x}= -x^3\sqrt{9-1/x^5}$:
+  \[
+  \frac{\sqrt{9x^6-x}-x^3}{5x^3+1}
+  =\frac{-x^3\sqrt{9-1/x^5}-x^3}{x^3(5+1/x^3)}
+  =\frac{-\sqrt{9-1/x^5}-1}{5+1/x^3}.
+  \]
+  Al aplicar los límites de $1/x^5$ y $1/x^3$:
+  \[
+  \lim_{x\to-\infty}\frac{-\sqrt{9-1/x^5}-1}{5+1/x^3}
+  =\frac{-3-1}{5}=\boxed{-\frac45}.
+  \]
+  Asíntota horizontal: $y=-\frac45$.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_m.png}
+  \end{center}
+  \newpage
 \end{enumerate}
 
 % =================================================
@@ -978,11 +1199,24 @@ Encuentre la derivada de las siguientes funciones utilizando la definición de d
 \[
 f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
 \]
+\textbf{Método:} primero se calcula $f(x+h)$ sustituyendo $x+h$ en la variable original, luego se resta $f(x)$, se simplifica y se factoriza $h$ para cancelar $h$ del denominador. El último paso es evaluar el límite cuando $h\to0$.
 \begin{enumerate}[label=\alph*)]
   \item $f(x)=x$:
-  $\displaystyle f'(x)=\lim_{h\to0}\frac{(x+h)-x}{h}=\lim_{h\to0}\frac{h}{h}=\boxed{1}$.
+  \[
+  f'(x)=\lim_{h\to0}\frac{(x+h)-x}{h}
+  =\lim_{h\to0}\frac{x+h-x}{h}
+  =\lim_{h\to0}\frac{h}{h}
+  =\boxed{1}.
+  \]
   \item $f(x)=x^2$:
-  $\displaystyle f'(x)=\lim_{h\to0}\frac{(x+h)^2-x^2}{h}=\lim_{h\to0}(2x+h)=\boxed{2x}$.
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{(x+h)^2-x^2}{h}\\
+  &=\lim_{h\to0}\frac{x^2+2xh+h^2-x^2}{h}\\
+  &=\lim_{h\to0}\frac{h(2x+h)}h
+  =\lim_{h\to0}(2x+h)=\boxed{2x}.
+  \end{aligned}
+  \]
   \item $f(x)=x^3$:
   \[
   \begin{aligned}
@@ -1026,9 +1260,26 @@ f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
   \end{aligned}
   \]
   \item $f(x)=\dfrac1x$:
-  $\displaystyle f'(x)=\lim_{h\to0}\frac{\frac1{x+h}-\frac1x}{h}=\lim_{h\to0}\frac{-1}{x(x+h)}=\boxed{-\frac1{x^2}}$.
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{\frac1{x+h}-\frac1x}{h}\\
+  &=\lim_{h\to0}\frac{\frac{x-(x+h)}{x(x+h)}}h
+  =\lim_{h\to0}\frac{-h}{h\,x(x+h)}
+  =\lim_{h\to0}\frac{-1}{x(x+h)}
+  =\boxed{-\frac1{x^2}},
+  \end{aligned}
+  \]
+  siempre que $x\neq0$.
   \item $f(x)=\dfrac1{x^2}$:
-  $\displaystyle f'(x)=\lim_{h\to0}\frac{x^2-(x+h)^2}{h x^2(x+h)^2}=\lim_{h\to0}\frac{-(2x+h)}{x^2(x+h)^2}=\boxed{-\frac2{x^3}}$.
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{\frac1{(x+h)^2}-\frac1{x^2}}h\\
+  &=\lim_{h\to0}\frac{x^2-(x+h)^2}{h\,x^2(x+h)^2}\\
+  &=\lim_{h\to0}\frac{-2xh-h^2}{h\,x^2(x+h)^2}\\
+  &=\lim_{h\to0}\frac{-(2x+h)}{x^2(x+h)^2}
+  =\boxed{-\frac2{x^3}},\qquad x\neq0.
+  \end{aligned}
+  \]
   \item $f(x)=\dfrac1{x^3}$:
   \[
   \begin{aligned}
@@ -1040,7 +1291,17 @@ f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
   \end{aligned}
   \]
   \item $f(x)=\sqrt{x}$:
-  $\displaystyle f'(x)=\lim_{h\to0}\frac{\sqrt{x+h}-\sqrt{x}}{h}=\lim_{h\to0}\frac{1}{\sqrt{x+h}+\sqrt{x}}=\boxed{\frac{1}{2\sqrt{x}}}$, para $x>0$.
+  \[
+  \begin{aligned}
+  f'(x)&=\lim_{h\to0}\frac{\sqrt{x+h}-\sqrt{x}}h\\
+  &=\lim_{h\to0}
+  \frac{(\sqrt{x+h}-\sqrt{x})(\sqrt{x+h}+\sqrt{x})}
+  {h(\sqrt{x+h}+\sqrt{x})}\\
+  &=\lim_{h\to0}\frac{(x+h)-x}{h(\sqrt{x+h}+\sqrt{x})}\\
+  &=\lim_{h\to0}\frac1{\sqrt{x+h}+\sqrt{x}}
+  =\boxed{\frac1{2\sqrt{x}}},\qquad x>0.
+  \end{aligned}
+  \]
   \item $f(x)=\dfrac1{\sqrt{x}}$:
   \[
   f'(x)=\lim_{h\to0}\frac{\frac1{\sqrt{x+h}}-\frac1{\sqrt{x}}}{h}
@@ -1057,6 +1318,13 @@ f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.
 \section{Tema 8. Reglas de derivación}
 
 Encuentre las derivadas de las siguientes funciones con ayuda de tu formulario de reglas de derivación. En los incisos con $\log x$ se interpreta el logaritmo común (base 10).
+\textbf{Criterios utilizados:}
+\begin{itemize}
+  \item Regla del producto: $(uv)'=u'v+uv'$.
+  \item Regla del cociente: $\left(\frac uv\right)'=\frac{u'v-uv'}{v^2}$.
+  \item Regla de la cadena: $(f(g(x)))'=f'(g(x))g'(x)$.
+  \item Después de derivar se simplifica cada factor y se identifica el factor común para presentar el resultado de forma factorizada.
+\end{itemize}
 \begin{enumerate}[label=\alph*)]
   \item $f(x)=3\sin x+4\cos x$.\\
   \[
@@ -1089,20 +1357,48 @@ Encuentre las derivadas de las siguientes funciones con ayuda de tu formulario d
   f'(x)=\frac23\left(\frac1{x\ln2}\right)+3\left(\frac1x\right)
   =\boxed{\frac{2}{3x\ln2}+\frac3x}.
   \]
-  \item $f(x)=x^2\log x$. Por regla del producto: 
-  $\boxed{f'(x)=2x\log x+\dfrac{x}{\ln10}}$.
+  \item $f(x)=x^2\log x$. Por regla del producto, con $u=x^2$ y $v=\log x$:
+  \[
+  u'=2x,\qquad v'=\frac1{x\ln10}.
+  \]
+  \[
+  f'=u'v+uv'
+  =2x\log x+x^2\left(\frac1{x\ln10}\right)
+  =\boxed{2x\log x+\frac{x}{\ln10}}.
+  \]
   \item $f(x)=e^x\cos x$.\\
   \[
   f'(x)=(e^x)'\cos x+e^x(\cos x)'
   =e^x\cos x-e^x\sin x
   =\boxed{e^x(\cos x-\sin x)}.
   \]
-  \item $f(x)=x^2e^x\cos x$.\\
-  $\boxed{f'(x)=e^x\left[(2x+x^2)\cos x-x^2\sin x\right]}$.
-  \item $f(x)=\dfrac{x^2}{\ln|x|}$. Por regla del cociente:
-  $\boxed{f'(x)=\dfrac{2x\ln|x|-x}{(\ln|x|)^2}}$.
-  \item $f(x)=\dfrac{x^2\cos x}{e^x}$. Escribiendo $f=x^2e^{-x}\cos x$:
-  $\boxed{f'(x)=e^{-x}\left[(2x-x^2)\cos x-x^2\sin x\right]}$.
+  \item $f(x)=x^2e^x\cos x$. Aplicamos primero la regla del producto a $u=x^2$ y $v=e^x\cos x$:
+  \[
+  u'=2x,\qquad v'=e^x\cos x-e^x\sin x=e^x(\cos x-\sin x).
+  \]
+  \[
+  f'=2x(e^x\cos x)+x^2e^x(\cos x-\sin x)
+  =\boxed{e^x\left[(2x+x^2)\cos x-x^2\sin x\right]}.
+  \]
+  \item $f(x)=\dfrac{x^2}{\ln|x|}$. Por regla del cociente, $u=x^2$ y $v=\ln|x|$:
+  \[
+  u'=2x,\qquad v'= \frac1x.
+  \]
+  \[
+  f'=\frac{u'v-uv'}{v^2}
+  =\frac{2x\ln|x|-x^2(1/x)}{(\ln|x|)^2}
+  =\boxed{\frac{2x\ln|x|-x}{(\ln|x|)^2}},
+  \]
+  para $x\neq0,\pm1$.
+  \item $f(x)=\dfrac{x^2\cos x}{e^x}$. Escribiendo $f=x^2e^{-x}\cos x$, derivamos primero $x^2e^{-x}$:
+  \[
+  (x^2e^{-x})'=2xe^{-x}-x^2e^{-x}=e^{-x}(2x-x^2).
+  \]
+  Aplicamos nuevamente el producto con $\cos x$:
+  \[
+  f'=e^{-x}(2x-x^2)\cos x+x^2e^{-x}(-\sin x)
+  =\boxed{e^{-x}\left[(2x-x^2)\cos x-x^2\sin x\right]}.
+  \]
   \item $f(x)=\dfrac{x^2\cos x}{e^x\sinh x}$.\\
   $\boxed{f'(x)=\dfrac{2x\cos x-x^2\sin x-x^2\cos x-x^2\cos x\coth x}{e^x\sinh x}}$.
   \item $f(x)=\ln x^3$. Como $\ln(x^3)=3\ln x$ para $x>0$:
@@ -1110,22 +1406,44 @@ Encuentre las derivadas de las siguientes funciones con ayuda de tu formulario d
   f'(x)=\frac{d}{dx}(3\ln x)=3\left(\frac1x\right)
   =\boxed{\frac3x}.
   \]
-  \item $f(x)=\sqrt[3]{\ln x}=(\ln x)^{1/3}$.\\
-  $\boxed{f'(x)=\dfrac{1}{3x(\ln x)^{2/3}}}$.
+  \item $f(x)=\sqrt[3]{\ln x}=(\ln x)^{1/3}$. Por la regla de la potencia combinada con la cadena:
+  \[
+  f'=\frac13(\ln x)^{-2/3}\frac{d}{dx}(\ln x)
+  =\frac13(\ln x)^{-2/3}\frac1x
+  =\boxed{\dfrac{1}{3x(\ln x)^{2/3}}},
+  \]
+  para $x>0$ y $\ln x\neq0$.
   \item $f(x)=\sin 2x+\cos 3x$.\\
   \[
   f'(x)=\cos(2x)(2)+[-\sin(3x)](3)
   =\boxed{2\cos2x-3\sin3x}.
   \]
-  \item $f(x)=\sin x^2+e^{2x+3}$.\\
+  \item $f(x)=\sin(x^2)+e^{2x+3}$.\\
   \[
   f'(x)=\cos(x^2)(2x)+e^{2x+3}(2)
   =\boxed{2x\cos(x^2)+2e^{2x+3}}.
   \]
-  \item $f(x)=e^{\sin(x^2)}$. Por regla de la cadena:
-  $\boxed{f'(x)=2x\cos(x^2)e^{\sin(x^2)}}$.
-  \item $f(x)=\cos\left(\dfrac{1-e^{2x}}{1+e^x}\right)$. Como el argumento se simplifica a $1-e^x$:
-  $\boxed{f'(x)=e^x\sin(1-e^x)}$.
+  \item $f(x)=e^{\sin(x^2)}$. Aplicamos la cadena tres veces:
+  \[
+  e^u\text{ con }u=\sin(x^2),\qquad
+  u'=\cos(x^2)(2x).
+  \]
+  \[
+  f'=e^{\sin(x^2)}u'
+  =\boxed{2x\cos(x^2)e^{\sin(x^2)}}.
+  \]
+  \item $f(x)=\cos\left(\dfrac{1-e^{2x}}{1+e^x}\right)$. Primero simplificamos el argumento:
+  \[
+  \frac{1-e^{2x}}{1+e^x}
+  =\frac{(1-e^x)(1+e^x)}{1+e^x}
+  =1-e^x.
+  \]
+  Entonces $f(x)=\cos(1-e^x)$ y
+  \[
+  f'= -\sin(1-e^x)\frac{d}{dx}(1-e^x)
+  =-\sin(1-e^x)(-e^x)
+  =\boxed{e^x\sin(1-e^x)}.
+  \]
   \item $\displaystyle f(x)=\frac{1}{\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x}}}}}}$. Para escribir la derivada sin ocultar la regla de la cadena, definimos
   \[
   u_1=\sqrt{x},\quad u_2=\sqrt{x+u_1},\quad u_3=\sqrt{x+u_2},\quad
