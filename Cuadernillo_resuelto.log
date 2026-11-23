@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.11)  10 NOV 2026 04:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.11)  22 NOV 2026 20:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -802,239 +802,396 @@ File: imagenes/tema1_2_e.png Graphic file (type png)
 Package pdftex.def Info: imagenes/tema1_2_e.png  used on input line 230.
 (pdftex.def)             Requested size: 405.94714pt x 366.30563pt.
  [10 <./imagenes/tema1_2_d.png>]
+<imagenes/tema1_3_a.jpeg, id=181, 637.38126pt x 605.26125pt>
+File: imagenes/tema1_3_a.jpeg Graphic file (type jpg)
+<use imagenes/tema1_3_a.jpeg>
+Package pdftex.def Info: imagenes/tema1_3_a.jpeg  used on input line 240.
+(pdftex.def)             Requested size: 405.94714pt x 385.49104pt.
+ [11 <./imagenes/tema1_2_e.png>]
+<imagenes/tema1_3_b.jpeg, id=190, 612.2875pt x 758.835pt>
+File: imagenes/tema1_3_b.jpeg Graphic file (type jpg)
+<use imagenes/tema1_3_b.jpeg>
+Package pdftex.def Info: imagenes/tema1_3_b.jpeg  used on input line 244.
+(pdftex.def)             Requested size: 405.94714pt x 503.10211pt.
+ [12 <./imagenes/tema1_3_a.jpeg>]
+<imagenes/tema1_3_c.jpeg, id=197, 627.34375pt x 765.86125pt>
+File: imagenes/tema1_3_c.jpeg Graphic file (type jpg)
+<use imagenes/tema1_3_c.jpeg>
+Package pdftex.def Info: imagenes/tema1_3_c.jpeg  used on input line 248.
+(pdftex.def)             Requested size: 405.94714pt x 495.59525pt.
+ [13 <./imagenes/tema1_3_b.jpeg>]
+<imagenes/tema1_3_d.jpeg, id=205, 481.8pt x 524.96124pt>
+File: imagenes/tema1_3_d.jpeg Graphic file (type jpg)
+<use imagenes/tema1_3_d.jpeg>
+Package pdftex.def Info: imagenes/tema1_3_d.jpeg  used on input line 252.
+(pdftex.def)             Requested size: 405.94714pt x 442.32619pt.
+ [14 <./imagenes/tema1_3_c.jpeg>] [15 <./imagenes/tema1_3_d.jpeg>]
+<imagenes/tema1_3_e.jpeg, id=217, 841.1425pt x 599.23875pt>
+File: imagenes/tema1_3_e.jpeg Graphic file (type jpg)
+<use imagenes/tema1_3_e.jpeg>
+Package pdftex.def Info: imagenes/tema1_3_e.jpeg  used on input line 257.
+(pdftex.def)             Requested size: 405.94714pt x 289.20404pt.
+ [16 <./imagenes/tema1_3_e.jpeg>] [17]
+<imagenes/tema2_constantes.png, id=239, 522.753pt x 335.45325pt>
+File: imagenes/tema2_constantes.png Graphic file (type png)
+<use imagenes/tema2_constantes.png>
+Package pdftex.def Info: imagenes/tema2_constantes.png  used on input line 298.
+(pdftex.def)             Requested size: 405.94714pt x 260.49565pt.
+ [18 <./imagenes/tema2_constantes.png>]
+<imagenes/tema2_lineales_1.png, id=247, 379.4175pt x 379.4175pt>
+File: imagenes/tema2_lineales_1.png Graphic file (type png)
+<use imagenes/tema2_lineales_1.png>
+Package pdftex.def Info: imagenes/tema2_lineales_1.png  used on input line 310.
+(pdftex.def)             Requested size: 405.94714pt x 405.95534pt.
+<imagenes/tema2_lineales_2.png, id=248, 483.60675pt x 260.172pt>
+File: imagenes/tema2_lineales_2.png Graphic file (type png)
+<use imagenes/tema2_lineales_2.png>
+Package pdftex.def Info: imagenes/tema2_lineales_2.png  used on input line 320.
+(pdftex.def)             Requested size: 405.94714pt x 218.39607pt.
+ [19 <./imagenes/tema2_lineales_1.png>]
+<imagenes/tema2_lineales_3.png, id=256, 377.61075pt x 260.172pt>
+File: imagenes/tema2_lineales_3.png Graphic file (type png)
+<use imagenes/tema2_lineales_3.png>
+Package pdftex.def Info: imagenes/tema2_lineales_3.png  used on input line 329.
+(pdftex.def)             Requested size: 405.94714pt x 279.70721pt.
+ [20 <./imagenes/tema2_lineales_2.png> <./imagenes/tema2_lineales_3.png>]
+<imagenes/tema2_cuadraticas_1.png, id=264, 413.74574pt x 346.896pt>
+File: imagenes/tema2_cuadraticas_1.png Graphic file (type png)
+<use imagenes/tema2_cuadraticas_1.png>
+Package pdftex.def Info: imagenes/tema2_cuadraticas_1.png  used on input line 341.
+(pdftex.def)             Requested size: 405.94714pt x 340.37392pt.
+<imagenes/tema2_cuadraticas_2.png, id=265, 419.76825pt x 401.70074pt>
+File: imagenes/tema2_cuadraticas_2.png Graphic file (type png)
+<use imagenes/tema2_cuadraticas_2.png>
+Package pdftex.def Info: imagenes/tema2_cuadraticas_2.png  used on input line 351.
+(pdftex.def)             Requested size: 405.94714pt x 388.48465pt.
+ [21 <./imagenes/tema2_cuadraticas_1.png>]
+<imagenes/tema2_cuadraticas_3.png, id=272, 437.83575pt x 371.58826pt>
+File: imagenes/tema2_cuadraticas_3.png Graphic file (type png)
+<use imagenes/tema2_cuadraticas_3.png>
+Package pdftex.def Info: imagenes/tema2_cuadraticas_3.png  used on input line 362.
+(pdftex.def)             Requested size: 405.94714pt x 344.54156pt.
+ [22 <./imagenes/tema2_cuadraticas_2.png>]
+<imagenes/tema2_polinomios_1.png, id=279, 362.5545pt x 365.56575pt>
+File: imagenes/tema2_polinomios_1.png Graphic file (type png)
+<use imagenes/tema2_polinomios_1.png>
+Package pdftex.def Info: imagenes/tema2_polinomios_1.png  used on input line 374.
+(pdftex.def)             Requested size: 405.94714pt x 409.34158pt.
+ [23 <./imagenes/tema2_cuadraticas_3.png>]
+<imagenes/tema2_polinomios_2.png, id=286, 582.37575pt x 371.58826pt>
+File: imagenes/tema2_polinomios_2.png Graphic file (type png)
+<use imagenes/tema2_polinomios_2.png>
+Package pdftex.def Info: imagenes/tema2_polinomios_2.png  used on input line 384.
+(pdftex.def)             Requested size: 405.94714pt x 259.02704pt.
+ [24 <./imagenes/tema2_polinomios_1.png>]
+<imagenes/tema2_racionales_1.png, id=293, 425.79076pt x 290.88675pt>
+File: imagenes/tema2_racionales_1.png Graphic file (type png)
+<use imagenes/tema2_racionales_1.png>
+Package pdftex.def Info: imagenes/tema2_racionales_1.png  used on input line 396.
+(pdftex.def)             Requested size: 405.94714pt x 277.33507pt.
+ [25 <./imagenes/tema2_polinomios_2.png>]
+<imagenes/tema2_racionales_2.png, id=301, 464.937pt x 370.986pt>
+File: imagenes/tema2_racionales_2.png Graphic file (type png)
+<use imagenes/tema2_racionales_2.png>
+Package pdftex.def Info: imagenes/tema2_racionales_2.png  used on input line 407.
+(pdftex.def)             Requested size: 405.94714pt x 323.93265pt.
+ [26 <./imagenes/tema2_racionales_1.png>]
+<imagenes/tema2_radicales_1.png, id=308, 449.2785pt x 247.52475pt>
+File: imagenes/tema2_radicales_1.png Graphic file (type png)
+<use imagenes/tema2_radicales_1.png>
+Package pdftex.def Info: imagenes/tema2_radicales_1.png  used on input line 419.
+(pdftex.def)             Requested size: 405.94714pt x 223.66534pt.
+ [27 <./imagenes/tema2_racionales_2.png>]
+<imagenes/tema2_radicales_2.png, id=315, 595.023pt x 313.77225pt>
+File: imagenes/tema2_radicales_2.png Graphic file (type png)
+<use imagenes/tema2_radicales_2.png>
+Package pdftex.def Info: imagenes/tema2_radicales_2.png  used on input line 428.
+(pdftex.def)             Requested size: 405.94714pt x 214.07088pt.
+ [28 <./imagenes/tema2_radicales_1.png> <./imagenes/tema2_radicales_2.png>]
+<imagenes/tema2_exponenciales_1.png, id=325, 501.67426pt x 346.896pt>
+File: imagenes/tema2_exponenciales_1.png Graphic file (type png)
+<use imagenes/tema2_exponenciales_1.png>
+Package pdftex.def Info: imagenes/tema2_exponenciales_1.png  used on input line 441.
+(pdftex.def)             Requested size: 405.94714pt x 280.70897pt.
+<imagenes/tema2_exponenciales_2.png, id=326, 455.90324pt x 328.8285pt>
+File: imagenes/tema2_exponenciales_2.png Graphic file (type png)
+<use imagenes/tema2_exponenciales_2.png>
+Package pdftex.def Info: imagenes/tema2_exponenciales_2.png  used on input line 450.
+(pdftex.def)             Requested size: 405.94714pt x 292.81198pt.
+ [29 <./imagenes/tema2_exponenciales_1.png>]
+<imagenes/tema2_logaritmicas_1.png, id=334, 654.64575pt x 406.51875pt>
+File: imagenes/tema2_logaritmicas_1.png Graphic file (type png)
+<use imagenes/tema2_logaritmicas_1.png>
+Package pdftex.def Info: imagenes/tema2_logaritmicas_1.png  used on input line 462.
+(pdftex.def)             Requested size: 405.94714pt x 252.08864pt.
+ [30 <./imagenes/tema2_exponenciales_2.png>]
+<imagenes/tema2_logaritmicas_2.png, id=341, 496.85625pt x 330.033pt>
+File: imagenes/tema2_logaritmicas_2.png Graphic file (type png)
+<use imagenes/tema2_logaritmicas_2.png>
+Package pdftex.def Info: imagenes/tema2_logaritmicas_2.png  used on input line 469.
+(pdftex.def)             Requested size: 405.94714pt x 269.65184pt.
+ [31 <./imagenes/tema2_logaritmicas_1.png> <./imagenes/tema2_logaritmicas_2.png>]
+<imagenes/tema2_trigonometricas_1.png, id=350, 592.01175pt x 305.943pt>
+File: imagenes/tema2_trigonometricas_1.png Graphic file (type png)
+<use imagenes/tema2_trigonometricas_1.png>
+Package pdftex.def Info: imagenes/tema2_trigonometricas_1.png  used on input line 481.
+(pdftex.def)             Requested size: 405.94714pt x 209.78908pt.
+<imagenes/tema2_trigonometricas_2.png, id=351, 552.26324pt x 296.307pt>
+File: imagenes/tema2_trigonometricas_2.png Graphic file (type png)
+<use imagenes/tema2_trigonometricas_2.png>
+Package pdftex.def Info: imagenes/tema2_trigonometricas_2.png  used on input line 490.
+(pdftex.def)             Requested size: 405.94714pt x 217.80789pt.
+ [32 <./imagenes/tema2_trigonometricas_1.png> <./imagenes/tema2_trigonometricas_2.png>]
+<imagenes/tema2_trigonometricas_inversas.png, id=359, 620.3175pt x 314.3745pt>
+File: imagenes/tema2_trigonometricas_inversas.png Graphic file (type png)
+<use imagenes/tema2_trigonometricas_inversas.png>
+Package pdftex.def Info: imagenes/tema2_trigonometricas_inversas.png  used on input line 503.
+(pdftex.def)             Requested size: 405.94714pt x 205.73212pt.
+ [33 <./imagenes/tema2_trigonometricas_inversas.png>]
+<imagenes/tema3_transformaciones_parabola.png, id=366, 490.83376pt x 419.76825pt>
+File: imagenes/tema3_transformaciones_parabola.png Graphic file (type png)
+<use imagenes/tema3_transformaciones_parabola.png>
+Package pdftex.def Info: imagenes/tema3_transformaciones_parabola.png  used on input line 539.
+(pdftex.def)             Requested size: 405.94714pt x 347.18416pt.
+ [34]
+<imagenes/tema3_transformaciones_raiz.png, id=373, 420.3705pt x 346.29375pt>
+File: imagenes/tema3_transformaciones_raiz.png Graphic file (type png)
+<use imagenes/tema3_transformaciones_raiz.png>
+Package pdftex.def Info: imagenes/tema3_transformaciones_raiz.png  used on input line 556.
+(pdftex.def)             Requested size: 405.94714pt x 334.43028pt.
+ [35 <./imagenes/tema3_transformaciones_parabola.png>] [36 <./imagenes/tema3_transformaciones_raiz.png>]
+<imagenes/tema4_limites_ejercicio_1.png, id=395, 394.47375pt x 199.947pt>
+File: imagenes/tema4_limites_ejercicio_1.png Graphic file (type png)
+<use imagenes/tema4_limites_ejercicio_1.png>
+Package pdftex.def Info: imagenes/tema4_limites_ejercicio_1.png  used on input line 584.
+(pdftex.def)             Requested size: 405.94714pt x 205.7616pt.
+ [37 <./imagenes/tema4_limites_ejercicio_1.png>]
+<imagenes/tema4_2_a.jpeg, id=404, 645.41125pt x 655.44875pt>
+File: imagenes/tema4_2_a.jpeg Graphic file (type jpg)
+<use imagenes/tema4_2_a.jpeg>
+Package pdftex.def Info: imagenes/tema4_2_a.jpeg  used on input line 601.
+(pdftex.def)             Requested size: 405.94714pt x 412.2548pt.
+ [38 <./imagenes/tema4_2_a.jpeg>]
+<imagenes/tema4_2_b.jpeg, id=412, 673.51625pt x 607.26875pt>
+File: imagenes/tema4_2_b.jpeg Graphic file (type jpg)
+<use imagenes/tema4_2_b.jpeg>
+Package pdftex.def Info: imagenes/tema4_2_b.jpeg  used on input line 617.
+(pdftex.def)             Requested size: 405.94714pt x 366.0227pt.
+ [39 <./imagenes/tema4_2_b.jpeg>]
+<imagenes/tema4_2_c.jpeg, id=419, 700.6175pt x 569.12625pt>
+File: imagenes/tema4_2_c.jpeg Graphic file (type jpg)
+<use imagenes/tema4_2_c.jpeg>
+Package pdftex.def Info: imagenes/tema4_2_c.jpeg  used on input line 633.
+(pdftex.def)             Requested size: 405.94714pt x 329.76346pt.
+ [40 <./imagenes/tema4_2_c.jpeg>]
+<imagenes/tema4_2_d.jpeg, id=426, 775.89874pt x 560.0925pt>
+File: imagenes/tema4_2_d.jpeg Graphic file (type jpg)
+<use imagenes/tema4_2_d.jpeg>
+Package pdftex.def Info: imagenes/tema4_2_d.jpeg  used on input line 649.
+(pdftex.def)             Requested size: 405.94714pt x 293.0445pt.
+ [41 <./imagenes/tema4_2_d.jpeg>]
+<imagenes/tema4_2_e.jpeg, id=433, 707.64375pt x 563.10374pt>
+File: imagenes/tema4_2_e.jpeg Graphic file (type jpg)
+<use imagenes/tema4_2_e.jpeg>
+Package pdftex.def Info: imagenes/tema4_2_e.jpeg  used on input line 665.
+(pdftex.def)             Requested size: 405.94714pt x 323.0346pt.
+ [42 <./imagenes/tema4_2_e.jpeg>]
+<imagenes/tema4_3_a.jpg, id=440, 674.52pt x 563.10374pt>
+File: imagenes/tema4_3_a.jpg Graphic file (type jpg)
+<use imagenes/tema4_3_a.jpg>
+Package pdftex.def Info: imagenes/tema4_3_a.jpg  used on input line 684.
+(pdftex.def)             Requested size: 405.94714pt x 338.89592pt.
+ [43 <./imagenes/tema4_3_a.jpg>]
+<imagenes/tema4_3_b.jpg, id=450, 659.46375pt x 729.72626pt>
+File: imagenes/tema4_3_b.jpg Graphic file (type jpg)
+<use imagenes/tema4_3_b.jpg>
+Package pdftex.def Info: imagenes/tema4_3_b.jpg  used on input line 699.
+(pdftex.def)             Requested size: 405.94714pt x 449.20767pt.
+<imagenes/tema4_5.jpg, id=451, 753.81625pt x 679.53876pt>
+File: imagenes/tema4_5.jpg Graphic file (type jpg)
+<use imagenes/tema4_5.jpg>
+Package pdftex.def Info: imagenes/tema4_5.jpg  used on input line 716.
+(pdftex.def)             Requested size: 405.94714pt x 365.93968pt.
+ [44 <./imagenes/tema4_3_b.jpg>] [45 <./imagenes/tema4_5.jpg>]
+<imagenes/tema4_5_a.jpeg, id=463, 789.95125pt x 614.295pt>
+File: imagenes/tema4_5_a.jpeg Graphic file (type jpg)
+<use imagenes/tema4_5_a.jpeg>
+Package pdftex.def Info: imagenes/tema4_5_a.jpeg  used on input line 740.
+(pdftex.def)             Requested size: 405.94714pt x 315.67651pt.
+ [46 <./imagenes/tema4_5_a.jpeg>]
+<imagenes/tema4_5_b.jpeg, id=470, 714.67pt x 508.90125pt>
+File: imagenes/tema4_5_b.jpeg Graphic file (type jpg)
+<use imagenes/tema4_5_b.jpeg>
+Package pdftex.def Info: imagenes/tema4_5_b.jpeg  used on input line 750.
+(pdftex.def)             Requested size: 405.94714pt x 289.06725pt.
+ [47 <./imagenes/tema4_5_b.jpeg>]
+<imagenes/tema4_5_c.jpeg, id=477, 995.72pt x 778.91pt>
+File: imagenes/tema4_5_c.jpeg Graphic file (type jpg)
+<use imagenes/tema4_5_c.jpeg>
+Package pdftex.def Info: imagenes/tema4_5_c.jpeg  used on input line 760.
+(pdftex.def)             Requested size: 405.94714pt x 317.5605pt.
+ [48 <./imagenes/tema4_5_c.jpeg>]
+<imagenes/tema4_5_d.jpeg, id=484, 995.72pt x 773.89125pt>
+File: imagenes/tema4_5_d.jpeg Graphic file (type jpg)
+<use imagenes/tema4_5_d.jpeg>
+Package pdftex.def Info: imagenes/tema4_5_d.jpeg  used on input line 771.
+(pdftex.def)             Requested size: 405.94714pt x 315.51436pt.
+ [49 <./imagenes/tema4_5_d.jpeg>] [50]
+<imagenes/tema5_2.jpeg, id=507, 752.8125pt x 638.385pt>
+File: imagenes/tema5_2.jpeg Graphic file (type jpg)
+<use imagenes/tema5_2.jpeg>
+Package pdftex.def Info: imagenes/tema5_2.jpeg  used on input line 864.
+(pdftex.def)             Requested size: 405.94714pt x 344.25519pt.
+ [51] [52 <./imagenes/tema5_2.jpeg>] [53]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 911.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 911.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--916
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 917--918
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
+
+ []
+
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11 <./imagenes/tema1_2_e.png>] [12] [13]
-<imagenes/tema2_constantes.png, id=215, 522.753pt x 335.45325pt>
-File: imagenes/tema2_constantes.png Graphic file (type png)
-<use imagenes/tema2_constantes.png>
-Package pdftex.def Info: imagenes/tema2_constantes.png  used on input line 282.
-(pdftex.def)             Requested size: 405.94714pt x 260.49565pt.
- [14 <./imagenes/tema2_constantes.png>]
-<imagenes/tema2_lineales_1.png, id=223, 379.4175pt x 379.4175pt>
-File: imagenes/tema2_lineales_1.png Graphic file (type png)
-<use imagenes/tema2_lineales_1.png>
-Package pdftex.def Info: imagenes/tema2_lineales_1.png  used on input line 294.
-(pdftex.def)             Requested size: 405.94714pt x 405.95534pt.
-<imagenes/tema2_lineales_2.png, id=224, 483.60675pt x 260.172pt>
-File: imagenes/tema2_lineales_2.png Graphic file (type png)
-<use imagenes/tema2_lineales_2.png>
-Package pdftex.def Info: imagenes/tema2_lineales_2.png  used on input line 304.
-(pdftex.def)             Requested size: 405.94714pt x 218.39607pt.
- [15 <./imagenes/tema2_lineales_1.png>]
-<imagenes/tema2_lineales_3.png, id=231, 377.61075pt x 260.172pt>
-File: imagenes/tema2_lineales_3.png Graphic file (type png)
-<use imagenes/tema2_lineales_3.png>
-Package pdftex.def Info: imagenes/tema2_lineales_3.png  used on input line 313.
-(pdftex.def)             Requested size: 405.94714pt x 279.70721pt.
- [16 <./imagenes/tema2_lineales_2.png> <./imagenes/tema2_lineales_3.png>]
-<imagenes/tema2_cuadraticas_1.png, id=239, 413.74574pt x 346.896pt>
-File: imagenes/tema2_cuadraticas_1.png Graphic file (type png)
-<use imagenes/tema2_cuadraticas_1.png>
-Package pdftex.def Info: imagenes/tema2_cuadraticas_1.png  used on input line 325.
-(pdftex.def)             Requested size: 405.94714pt x 340.37392pt.
-<imagenes/tema2_cuadraticas_2.png, id=240, 419.76825pt x 401.70074pt>
-File: imagenes/tema2_cuadraticas_2.png Graphic file (type png)
-<use imagenes/tema2_cuadraticas_2.png>
-Package pdftex.def Info: imagenes/tema2_cuadraticas_2.png  used on input line 335.
-(pdftex.def)             Requested size: 405.94714pt x 388.48465pt.
- [17 <./imagenes/tema2_cuadraticas_1.png>]
-<imagenes/tema2_cuadraticas_3.png, id=247, 437.83575pt x 371.58826pt>
-File: imagenes/tema2_cuadraticas_3.png Graphic file (type png)
-<use imagenes/tema2_cuadraticas_3.png>
-Package pdftex.def Info: imagenes/tema2_cuadraticas_3.png  used on input line 346.
-(pdftex.def)             Requested size: 405.94714pt x 344.54156pt.
- [18 <./imagenes/tema2_cuadraticas_2.png>]
-<imagenes/tema2_polinomios_1.png, id=254, 362.5545pt x 365.56575pt>
-File: imagenes/tema2_polinomios_1.png Graphic file (type png)
-<use imagenes/tema2_polinomios_1.png>
-Package pdftex.def Info: imagenes/tema2_polinomios_1.png  used on input line 358.
-(pdftex.def)             Requested size: 405.94714pt x 409.34158pt.
- [19 <./imagenes/tema2_cuadraticas_3.png>]
-<imagenes/tema2_polinomios_2.png, id=262, 582.37575pt x 371.58826pt>
-File: imagenes/tema2_polinomios_2.png Graphic file (type png)
-<use imagenes/tema2_polinomios_2.png>
-Package pdftex.def Info: imagenes/tema2_polinomios_2.png  used on input line 368.
-(pdftex.def)             Requested size: 405.94714pt x 259.02704pt.
- [20 <./imagenes/tema2_polinomios_1.png>]
-<imagenes/tema2_racionales_1.png, id=269, 425.79076pt x 290.88675pt>
-File: imagenes/tema2_racionales_1.png Graphic file (type png)
-<use imagenes/tema2_racionales_1.png>
-Package pdftex.def Info: imagenes/tema2_racionales_1.png  used on input line 380.
-(pdftex.def)             Requested size: 405.94714pt x 277.33507pt.
- [21 <./imagenes/tema2_polinomios_2.png>]
-<imagenes/tema2_racionales_2.png, id=276, 464.937pt x 370.986pt>
-File: imagenes/tema2_racionales_2.png Graphic file (type png)
-<use imagenes/tema2_racionales_2.png>
-Package pdftex.def Info: imagenes/tema2_racionales_2.png  used on input line 391.
-(pdftex.def)             Requested size: 405.94714pt x 323.93265pt.
- [22 <./imagenes/tema2_racionales_1.png>]
-<imagenes/tema2_radicales_1.png, id=283, 449.2785pt x 247.52475pt>
-File: imagenes/tema2_radicales_1.png Graphic file (type png)
-<use imagenes/tema2_radicales_1.png>
-Package pdftex.def Info: imagenes/tema2_radicales_1.png  used on input line 403.
-(pdftex.def)             Requested size: 405.94714pt x 223.66534pt.
- [23 <./imagenes/tema2_racionales_2.png>]
-<imagenes/tema2_radicales_2.png, id=290, 595.023pt x 313.77225pt>
-File: imagenes/tema2_radicales_2.png Graphic file (type png)
-<use imagenes/tema2_radicales_2.png>
-Package pdftex.def Info: imagenes/tema2_radicales_2.png  used on input line 412.
-(pdftex.def)             Requested size: 405.94714pt x 214.07088pt.
- [24 <./imagenes/tema2_radicales_1.png> <./imagenes/tema2_radicales_2.png>]
-<imagenes/tema2_exponenciales_1.png, id=300, 501.67426pt x 346.896pt>
-File: imagenes/tema2_exponenciales_1.png Graphic file (type png)
-<use imagenes/tema2_exponenciales_1.png>
-Package pdftex.def Info: imagenes/tema2_exponenciales_1.png  used on input line 425.
-(pdftex.def)             Requested size: 405.94714pt x 280.70897pt.
-<imagenes/tema2_exponenciales_2.png, id=301, 455.90324pt x 328.8285pt>
-File: imagenes/tema2_exponenciales_2.png Graphic file (type png)
-<use imagenes/tema2_exponenciales_2.png>
-Package pdftex.def Info: imagenes/tema2_exponenciales_2.png  used on input line 434.
-(pdftex.def)             Requested size: 405.94714pt x 292.81198pt.
- [25 <./imagenes/tema2_exponenciales_1.png>]
-<imagenes/tema2_logaritmicas_1.png, id=310, 654.64575pt x 406.51875pt>
-File: imagenes/tema2_logaritmicas_1.png Graphic file (type png)
-<use imagenes/tema2_logaritmicas_1.png>
-Package pdftex.def Info: imagenes/tema2_logaritmicas_1.png  used on input line 446.
-(pdftex.def)             Requested size: 405.94714pt x 252.08864pt.
- [26 <./imagenes/tema2_exponenciales_2.png>]
-<imagenes/tema2_logaritmicas_2.png, id=317, 496.85625pt x 330.033pt>
-File: imagenes/tema2_logaritmicas_2.png Graphic file (type png)
-<use imagenes/tema2_logaritmicas_2.png>
-Package pdftex.def Info: imagenes/tema2_logaritmicas_2.png  used on input line 453.
-(pdftex.def)             Requested size: 405.94714pt x 269.65184pt.
- [27 <./imagenes/tema2_logaritmicas_1.png> <./imagenes/tema2_logaritmicas_2.png>]
-<imagenes/tema2_trigonometricas_1.png, id=325, 592.01175pt x 305.943pt>
-File: imagenes/tema2_trigonometricas_1.png Graphic file (type png)
-<use imagenes/tema2_trigonometricas_1.png>
-Package pdftex.def Info: imagenes/tema2_trigonometricas_1.png  used on input line 465.
-(pdftex.def)             Requested size: 405.94714pt x 209.78908pt.
-<imagenes/tema2_trigonometricas_2.png, id=326, 552.26324pt x 296.307pt>
-File: imagenes/tema2_trigonometricas_2.png Graphic file (type png)
-<use imagenes/tema2_trigonometricas_2.png>
-Package pdftex.def Info: imagenes/tema2_trigonometricas_2.png  used on input line 474.
-(pdftex.def)             Requested size: 405.94714pt x 217.80789pt.
- [28 <./imagenes/tema2_trigonometricas_1.png> <./imagenes/tema2_trigonometricas_2.png>]
-<imagenes/tema2_trigonometricas_inversas.png, id=334, 620.3175pt x 314.3745pt>
-File: imagenes/tema2_trigonometricas_inversas.png Graphic file (type png)
-<use imagenes/tema2_trigonometricas_inversas.png>
-Package pdftex.def Info: imagenes/tema2_trigonometricas_inversas.png  used on input line 487.
-(pdftex.def)             Requested size: 405.94714pt x 205.73212pt.
- [29 <./imagenes/tema2_trigonometricas_inversas.png>]
-<imagenes/tema3_transformaciones_parabola.png, id=341, 490.83376pt x 419.76825pt>
-File: imagenes/tema3_transformaciones_parabola.png Graphic file (type png)
-<use imagenes/tema3_transformaciones_parabola.png>
-Package pdftex.def Info: imagenes/tema3_transformaciones_parabola.png  used on input line 523.
-(pdftex.def)             Requested size: 405.94714pt x 347.18416pt.
- [30]
-<imagenes/tema3_transformaciones_raiz.png, id=348, 420.3705pt x 346.29375pt>
-File: imagenes/tema3_transformaciones_raiz.png Graphic file (type png)
-<use imagenes/tema3_transformaciones_raiz.png>
-Package pdftex.def Info: imagenes/tema3_transformaciones_raiz.png  used on input line 540.
-(pdftex.def)             Requested size: 405.94714pt x 334.43028pt.
- [31 <./imagenes/tema3_transformaciones_parabola.png>] [32 <./imagenes/tema3_transformaciones_raiz.png>]
-<imagenes/tema4_limites_ejercicio_1.png, id=371, 394.47375pt x 199.947pt>
-File: imagenes/tema4_limites_ejercicio_1.png Graphic file (type png)
-<use imagenes/tema4_limites_ejercicio_1.png>
-Package pdftex.def Info: imagenes/tema4_limites_ejercicio_1.png  used on input line 568.
-(pdftex.def)             Requested size: 405.94714pt x 205.7616pt.
- [33 <./imagenes/tema4_limites_ejercicio_1.png>] [34] [35] [36] [37] [38] [39] [40] [41]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 850.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 850.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--855
+[54] [55] [56] [57] [58] [59]
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--857
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--859
-
- []
-
-[42] [43] [44] [45] [46] [47]
-Underfull \hbox (badness 10000) in paragraph at lines 980--981
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 990--991
+Underfull \hbox (badness 10000) in paragraph at lines 1064--1065
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--999
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
+
+ []
+
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1096
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1014
-
- []
-
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1040
-
- []
-
-
-Overfull \hbox (6.56541pt too wide) in paragraph at lines 1046--1048
+Overfull \hbox (6.56541pt too wide) in paragraph at lines 1107--1109
 []$\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = [] []$\T1/phv/m/n/12 . Co-mo el ar-gu-men-to se sim-pli-fi-ca a $\OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 e[]$\T1/phv/m/n/12 : $[]$. 
  []
 
-[49] [50] [51] [52] [53] [54] [55] [56] [57] [58]
-Overfull \hbox (16.78615pt too wide) in paragraph at lines 1296--1298
+[61] [62]
+<imagenes/tema9_1_a.jpeg, id=642, 962.59625pt x 1606.0pt>
+File: imagenes/tema9_1_a.jpeg Graphic file (type jpg)
+<use imagenes/tema9_1_a.jpeg>
+Package pdftex.def Info: imagenes/tema9_1_a.jpeg  used on input line 1148.
+(pdftex.def)             Requested size: 405.94714pt x 677.26004pt.
+ [63]
+Overfull \vbox (24.55382pt too high) has occurred while \output is active []
+
+ [64 <./imagenes/tema9_1_a.jpeg>]
+<imagenes/tema9_1_b.jpeg, id=654, 1066.98625pt x 1265.72874pt>
+File: imagenes/tema9_1_b.jpeg Graphic file (type jpg)
+<use imagenes/tema9_1_b.jpeg>
+Package pdftex.def Info: imagenes/tema9_1_b.jpeg  used on input line 1162.
+(pdftex.def)             Requested size: 405.94714pt x 481.56133pt.
+ [65 <./imagenes/tema9_1_b.jpeg>]
+<imagenes/tema9_1_c.jpeg, id=661, 1009.7725pt x 1489.565pt>
+File: imagenes/tema9_1_c.jpeg Graphic file (type jpg)
+<use imagenes/tema9_1_c.jpeg>
+Package pdftex.def Info: imagenes/tema9_1_c.jpeg  used on input line 1177.
+(pdftex.def)             Requested size: 405.94714pt x 598.8384pt.
+ [66] [67 <./imagenes/tema9_1_c.jpeg>] [68] [69]
+<imagenes/tema10_1_a.jpeg, id=684, 1284.8pt x 1380.15625pt>
+File: imagenes/tema10_1_a.jpeg Graphic file (type jpg)
+<use imagenes/tema10_1_a.jpeg>
+Package pdftex.def Info: imagenes/tema10_1_a.jpeg  used on input line 1266.
+(pdftex.def)             Requested size: 405.94714pt x 436.07826pt.
+ [70 <./imagenes/tema10_1_a.jpeg>]
+<imagenes/tema10_1_b.jpeg, id=691, 1284.8pt x 1472.50125pt>
+File: imagenes/tema10_1_b.jpeg Graphic file (type jpg)
+<use imagenes/tema10_1_b.jpeg>
+Package pdftex.def Info: imagenes/tema10_1_b.jpeg  used on input line 1271.
+(pdftex.def)             Requested size: 405.94714pt x 465.25587pt.
+ [71 <./imagenes/tema10_1_b.jpeg>]
+<imagenes/tema10_1_c.jpeg, id=698, 1284.8pt x 1301.86375pt>
+File: imagenes/tema10_1_c.jpeg Graphic file (type jpg)
+<use imagenes/tema10_1_c.jpeg>
+Package pdftex.def Info: imagenes/tema10_1_c.jpeg  used on input line 1277.
+(pdftex.def)             Requested size: 405.94714pt x 411.34074pt.
+ [72 <./imagenes/tema10_1_c.jpeg>]
+<imagenes/tema10_1_d.jpeg, id=705, 1284.8pt x 1099.10625pt>
+File: imagenes/tema10_1_d.jpeg Graphic file (type jpg)
+<use imagenes/tema10_1_d.jpeg>
+Package pdftex.def Info: imagenes/tema10_1_d.jpeg  used on input line 1283.
+(pdftex.def)             Requested size: 405.94714pt x 347.27687pt.
+ [73 <./imagenes/tema10_1_d.jpeg>]
+<imagenes/tema10_1_e.jpeg, id=713, 1284.8pt x 814.04124pt>
+File: imagenes/tema10_1_e.jpeg Graphic file (type jpg)
+<use imagenes/tema10_1_e.jpeg>
+Package pdftex.def Info: imagenes/tema10_1_e.jpeg  used on input line 1289.
+(pdftex.def)             Requested size: 405.94714pt x 257.20688pt.
+ [74 <./imagenes/tema10_1_e.jpeg>] [75] [76]
+Overfull \hbox (16.78615pt too wide) in paragraph at lines 1384--1386
 []$[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 x dx$\T1/phv/m/n/12 . Apli-can-do par-tes dos ve-ces: $[]$. 
  []
 
 
-Overfull \hbox (40.45358pt too wide) in paragraph at lines 1300--1302
+Overfull \hbox (40.45358pt too wide) in paragraph at lines 1388--1390
 []$[]\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 dx$\T1/phv/m/n/12 . Con $\OML/cmm/m/it/12 u \OT1/cmr/m/n/12 = ([] \OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[]$\T1/phv/m/n/12 , $\OML/cmm/m/it/12 dv \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 dx$ \T1/phv/m/n/12 y apli-can-do par-tes otra vez: $[]$. 
  []
 
 
-Overfull \hbox (37.39314pt too wide) in paragraph at lines 1304--1306
+Overfull \hbox (37.39314pt too wide) in paragraph at lines 1392--1394
 []$[] \OML/cmm/m/it/12 x[] [] x dx$\T1/phv/m/n/12 . Apli-can-do par-tes re-pe-ti-da-men-te: $[]$. 
  []
 
 
-Overfull \hbox (49.69159pt too wide) in paragraph at lines 1306--1308
+Overfull \hbox (49.69159pt too wide) in paragraph at lines 1394--1396
 []$[] \OML/cmm/m/it/12 x[]e[]dx$\T1/phv/m/n/12 . Apli-can-do par-tes re-pe-ti-da-men-te: $[]$. 
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 1308--1310
+Underfull \hbox (badness 2088) in paragraph at lines 1396--1398
 []$[] \OML/cmm/m/it/12 e[] [] x dx$\T1/phv/m/n/12 . Apli-can-do par-tes dos ve-ces y des-pe-jan-do la in-te-gral ori-gi-nal:
  []
 
 
-Overfull \hbox (5.76534pt too wide) in paragraph at lines 1310--1312
+Overfull \hbox (5.76534pt too wide) in paragraph at lines 1398--1400
 []$[] []\OT1/cmr/m/n/12 ([] \OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 dx$\T1/phv/m/n/12 . Sea $\OML/cmm/m/it/12 u \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 x$\T1/phv/m/n/12 , en-ton-ces $\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 e[]$ \T1/phv/m/n/12 y $\OML/cmm/m/it/12 dx \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 e[]du$\T1/phv/m/n/12 : $[]$. 
  []
 
-[59] [60] [61] [62] [63] 
+[77] [78] [79] [80] [81] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (Cuadernillo_resuelto.aux
 LaTeX Info: Redefining \. on input line 8.
@@ -1048,19 +1205,17 @@ Package rerunfilecheck Info: File `Cuadernillo_resuelto.out' has not changed.
 (rerunfilecheck)             Checksum: A7ABC732C1E374FB54DCA032901DB196;4899.
  ) 
 Here is how much of TeX's memory you used:
- 28200 strings out of 467871
- 537090 string characters out of 5418375
- 975917 words of memory out of 5000000
- 56385 multiletter control sequences out of 15000+600000
+ 28374 strings out of 467871
+ 542220 string characters out of 5418375
+ 969918 words of memory out of 5000000
+ 56541 multiletter control sequences out of 15000+600000
  658502 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,104p,1071b,821s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\diego\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/diego/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Cuadernillo_resuelto.pdf (63 pages, 2448068 bytes).
+Output written on Cuadernillo_resuelto.pdf (81 pages, 3986682 bytes).
 PDF statistics:
- 834 PDF objects out of 1000 (max. 8388607)
- 266 named destinations out of 1000 (max. 500000)
- 9020 words of extra memory for PDF output out of 10000 (max. 10000000)
-
- (max. 10000000)
+ 957 PDF objects out of 1000 (max. 8388607)
+ 284 named destinations out of 1000 (max. 500000)
+ 9150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
