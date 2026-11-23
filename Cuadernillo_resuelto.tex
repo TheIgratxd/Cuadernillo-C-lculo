@@ -929,14 +929,34 @@ $10$ & $2.6250$ & $10$ & $-2500$\\
 $100$ & $2.0510$ & $100$ & $-250000$
 \end{tabular}
 \end{center}
-
+\newpage
 \subsection*{2.- Evaluar los siguientes límites mediante manipulaciones algebraicas. Agrega la gráfica de la función y traza la asíntota horizontal correspondiente (si existe) para verificar tu respuesta.}
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^3+2x}{x^2-1}=+\infty$. El grado del numerador es mayor; la función crece como $x$ positivo. No hay asíntota horizontal.\grafica
-  \item $\displaystyle\lim_{x\to-\infty}\frac{x^3+2x}{x^2-1}=-\infty$. La función se comporta como $x$ para valores negativos grandes. No hay asíntota horizontal.\grafica
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^3-1}=0$. El denominador tiene mayor grado. Asíntota horizontal: $y=0$.\grafica
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^2-1}=\boxed{\frac12}$. Se divide entre $x^2$. Asíntota horizontal: $y=\frac12$.\grafica
-  \item $\displaystyle\lim_{x\to\infty}\frac{x^5+2x^3+1}{x^2-1}=+\infty$. El cociente se comporta como $x^3$. No hay asíntota horizontal.\grafica
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^3+2x}{x^2-1}=+\infty$. El grado del numerador es mayor; la función crece como $x$ positivo. No hay asíntota horizontal.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_a.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to-\infty}\frac{x^3+2x}{x^2-1}=-\infty$. La función se comporta como $x$ para valores negativos grandes. No hay asíntota horizontal.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_b.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^3-1}=0$. El denominador tiene mayor grado. Asíntota horizontal: $y=0$.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_c.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^2+1}{2x^2-1}=\boxed{\frac12}$. Se divide entre $x^2$. Asíntota horizontal: $y=\frac12$.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_d.jpeg}
+  \end{center}
+  \newpage
+  \item $\displaystyle\lim_{x\to\infty}\frac{x^5+2x^3+1}{x^2-1}=+\infty$. El cociente se comporta como $x^3$. No hay asíntota horizontal.
+  \begin{center}
+  \includegraphics[width=0.86\textwidth]{imagenes/tema6_2_e.jpeg}
+  \end{center}
+  \newpage
   \item $\displaystyle\lim_{x\to-\infty}\frac{x^5+2x^3+1}{x^2-1}=-\infty$. El cociente se comporta como $x^3$. No hay asíntota horizontal.\grafica
   \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^2+1}}{2x^2-1}=0$. El numerador crece como $x$ y el denominador como $2x^2$. Asíntota horizontal: $y=0$.\grafica
   \item $\displaystyle\lim_{x\to\infty}\frac{\sqrt{x^7+1}}{2x^3-1}=+\infty$. Para $x>0$, el cociente se comporta como $\frac12\sqrt{x}$. No hay asíntota horizontal.\grafica
@@ -1260,31 +1280,64 @@ Estas dimensiones minimizan el área total; el resultado también se obtiene al 
 
 \subsection*{1.- Resuelve las siguientes integrales definidas. Para cada una, grafique la función correspondiente e ilumine el área a la que hace referencia la integral. Haga un cálculo aproximado del área descomponiéndola en figuras geométricas básica (por ejemplo, rectángulos, cuadrados, triángulos, etc.).}
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\int_0^4(x+2)\,dx$. La región es un trapecio de bases $2$ y $6$, y altura $4$; área $\frac{2+6}{2}(4)=16$.\\
-  $\displaystyle\left[\frac{x^2}{2}+2x\right]_0^4=\boxed{16}$.
+  \item $\displaystyle\int_0^4(x+2)\,dx$. La región es un trapecio de bases $2$ y $6$, y altura $4$; área $\frac{2+6}{2}(4)=16$.
+  \[
+  \begin{aligned}
+  \int_0^4(x+2)\,dx&=\int_0^4x\,dx+\int_0^4 2\,dx\\
+  &=\left[\frac{x^2}{2}+2x\right]_0^4\\
+  &=\left(\frac{4^2}{2}+2(4)\right)-\left(\frac{0^2}{2}+2(0)\right)\\
+  &=(8+8)-0=\boxed{16}.
+  \end{aligned}
+  \]
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema10_1_a.jpeg}
   \end{center}
-  \item $\displaystyle\int_0^2(-x+4)\,dx$. La región es un trapecio de bases $4$ y $2$, y altura $2$; área $\frac{4+2}{2}(2)=6$.\\
-  $\displaystyle\left[-\frac{x^2}{2}+4x\right]_0^2=\boxed{6}$.
+  \item $\displaystyle\int_0^2(-x+4)\,dx$. La región es un trapecio de bases $4$ y $2$, y altura $2$; área $\frac{4+2}{2}(2)=6$.
+  \[
+  \begin{aligned}
+  \int_0^2(-x+4)\,dx&=\left[-\frac{x^2}{2}+4x\right]_0^2\\
+  &=\left(-\frac{2^2}{2}+4(2)\right)-\left(-\frac{0^2}{2}+4(0)\right)\\
+  &=(-2+8)-0=\boxed{6}.
+  \end{aligned}
+  \]
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema10_1_b.jpeg}
   \end{center}
   \newpage
-  \item $\displaystyle\int_0^6 5\,dx$. La región es un rectángulo de base $6$ y altura $5$; área $6(5)=30$.\\
-  $\displaystyle[5x]_0^6=\boxed{30}$.
+  \item $\displaystyle\int_0^6 5\,dx$. La región es un rectángulo de base $6$ y altura $5$; área $6(5)=30$.
+  \[
+  \begin{aligned}
+  \int_0^6 5\,dx&=[5x]_0^6\\
+  &=5(6)-5(0)=30-0=\boxed{30}.
+  \end{aligned}
+  \]
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema10_1_c.jpeg}
   \end{center}
   \newpage
   \item $\displaystyle\int_{-3}^3(-x+1)\,dx$. La integral con signo es
-  $\displaystyle\left[-\frac{x^2}{2}+x\right]_{-3}^3=\boxed{6}$. Para distinguir el área geométrica total: de $-3$ a $1$ hay un trapecio de área $8$ y de $1$ a $3$ un triángulo debajo del eje $x$ de área $2$; el área geométrica total es $8+2=10$, mientras que el área con signo es $8-2=6$.
+  \[
+  \begin{aligned}
+  \int_{-3}^3(-x+1)\,dx&=\left[-\frac{x^2}{2}+x\right]_{-3}^3\\
+  &=\left(-\frac{3^2}{2}+3\right)-\left(-\frac{(-3)^2}{2}-3\right)\\
+  &=\left(-\frac92+3\right)-\left(-\frac92-3\right)\\
+  &=-\frac32+\frac{15}{2}=\boxed{6}.
+  \end{aligned}
+  \]
+  Para distinguir el área geométrica total: de $-3$ a $1$ hay un trapecio de área $8$ y de $1$ a $3$ un triángulo debajo del eje $x$ de área $2$; el área geométrica total es $8+2=10$, mientras que el área con signo es $8-2=6$.
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema10_1_d.jpeg}
   \end{center}
   \newpage
-  \item $\displaystyle\int_0^{2\pi}\sin x\,dx$.\\
-  $\displaystyle[-\cos x]_0^{2\pi}=(-1)-(-1)=\boxed{0}$. El área geométrica sin signo es $2+2=4$: dos regiones iguales, una sobre el eje $x$ y otra debajo.
+  \item $\displaystyle\int_0^{2\pi}\sin x\,dx$. Primero recordamos que la integral de seno es $-\cos x$.
+  \[
+  \begin{aligned}
+  \int_0^{2\pi}\sin x\,dx&=[-\cos x]_0^{2\pi}\\
+  &=-\cos(2\pi)-(-\cos(0))\\
+  &=-1-(-1)=\boxed{0}.
+  \end{aligned}
+  \]
+  El área geométrica sin signo es $2+2=4$: dos regiones iguales, una sobre el eje $x$ y otra debajo.
   \begin{center}
   \includegraphics[width=0.86\textwidth]{imagenes/tema10_1_e.jpeg}
   \end{center}
@@ -1292,60 +1345,97 @@ Estas dimensiones minimizan el área total; el resultado también se obtiene al 
 
 \subsection*{2.- Resuelve las siguientes integrales inmediatas:}
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\int(3x^2+\cos x)\,dx
-  =\int3x^2\,dx+\int\cos x\,dx
-  =x^3+\sin x+C$.
+  \item $\displaystyle\int(3x^2+\cos x)\,dx$. Separamos porque la integral de una suma es la suma de las integrales. Para $3x^2$, aumentamos el exponente y dividimos entre el exponente nuevo:
   \[
-  \boxed{x^3+\sin x+C}.
+  \begin{aligned}
+  \int(3x^2+\cos x)\,dx&=3\int x^2\,dx+\int\cos x\,dx\\
+  &=3\left(\frac{x^3}{3}\right)+\sin x\\
+  &=x^3+\sin x+C=\boxed{x^3+\sin x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int(e^x-\sin x)\,dx
-  =\int e^x\,dx-\int\sin x\,dx
-  =e^x+\cos x+C$.
+  \item $\displaystyle\int(e^x-\sin x)\,dx$. Integramos cada parte por separado; la integral de $-\sin x$ es $\cos x$ porque su derivada es $-\sin x$:
   \[
-  \boxed{e^x+\cos x+C}.
+  \begin{aligned}
+  &=\int e^x\,dx-\int\sin x\,dx\\
+  &=e^x-(-\cos x)\\
+  &=\boxed{e^x+\cos x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int(4\cos x+5\sin x)\,dx
-  =4\int\cos x\,dx+5\int\sin x\,dx
-  =4\sin x-5\cos x+C$.
+  \item $\displaystyle\int(4\cos x+5\sin x)\,dx$. Los números 4 y 5 se pueden dejar afuera de las integrales:
   \[
-  \boxed{4\sin x-5\cos x+C}.
+  \begin{aligned}
+  &=4\int\cos x\,dx+5\int\sin x\,dx\\
+  &=4\sin x+5(-\cos x)\\
+  &=\boxed{4\sin x-5\cos x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\left(x^3+\frac12x^2+\frac{2}{\sqrt3}x+4\right)dx$
+  \item $\displaystyle\int\left(x^3+\frac12x^2+\frac{2}{\sqrt3}x+4\right)dx$. Vamos término por término y aplicamos la regla de aumentar el exponente en uno y dividir entre ese nuevo exponente:
   \[
-  =\boxed{\frac{x^4}{4}+\frac{x^3}{6}+\frac{x^2}{\sqrt3}+4x+C}.
+  \begin{aligned}
+  &=\frac{x^4}{4}+\frac12\frac{x^3}{3}+\frac{2}{\sqrt3}\frac{x^2}{2}+4x+C\\
+  &=\boxed{\frac{x^4}{4}+\frac{x^3}{6}+\frac{x^2}{\sqrt3}+4x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\left(3\sqrt{x}-5\sqrt[5]{x}\right)dx$
+  \item $\displaystyle\int\left(3\sqrt{x}-5\sqrt[5]{x}\right)dx$. Primero escribimos las raíces como potencias: $\sqrt{x}=x^{1/2}$ y $\sqrt[5]{x}=x^{1/5}$:
   \[
-  =\int(3x^{1/2}-5x^{1/5})dx
-  =\boxed{2x^{3/2}-\frac{25}{6}x^{6/5}+C}.
+  \begin{aligned}
+  &=\int(3x^{1/2}-5x^{1/5})dx\\
+  &=3\frac{x^{3/2}}{3/2}-5\frac{x^{6/5}}{6/5}\\
+  &=2x^{3/2}-\frac{25}{6}x^{6/5}+C\\
+  &=\boxed{2x^{3/2}-\frac{25}{6}x^{6/5}+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\left(\frac3{x^5}+\frac4{x^2}+\frac5x\right)dx$
+  \item $\displaystyle\int\left(\frac3{x^5}+\frac4{x^2}+\frac5x\right)dx$. Convertimos las fracciones a potencias negativas y aplicamos la regla de potencias. Para $1/x$, usamos que su integral es el logaritmo:
   \[
-  =\boxed{-\frac{3}{4x^4}-\frac4x+5\ln|x|+C}.
+  \begin{aligned}
+  &=\int(3x^{-5}+4x^{-2}+5x^{-1})dx\\
+  &=3\frac{x^{-4}}{-4}+4\frac{x^{-1}}{-1}+5\ln|x|+C\\
+  &=\boxed{-\frac{3}{4x^4}-\frac4x+5\ln|x|+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\frac5{\sqrt[3]{x^2}}dx=5\int x^{-2/3}dx=\boxed{15\sqrt[3]{x}+C}$.
-  \item $\displaystyle\int(2\tan x-3\sin x)dx$
+  \item $\displaystyle\int\frac5{\sqrt[3]{x^2}}dx$. La raíz se escribe como una potencia: $\sqrt[3]{x^2}=x^{2/3}$:
   \[
-  =2\int\frac{\sin x}{\cos x}\,dx-3\int\sin x\,dx.
+  \begin{aligned}
+  &=5\int x^{-2/3}dx\\
+  &=5\frac{x^{1/3}}{1/3}=15x^{1/3}\\
+  &=\boxed{15\sqrt[3]{x}+C}.
+  \end{aligned}
   \]
-  Con $u=\cos x$, $du=-\sin x\,dx$:
+  \item $\displaystyle\int(2\tan x-3\sin x)dx$. Como $\tan x=\sin x/\cos x$, para la primera parte hacemos un cambio: $u=\cos x$, entonces $du=-\sin x\,dx$ y $\sin x\,dx=-du$:
   \[
-  -2\ln|\cos x|+3\cos x+C
-  =\boxed{-2\ln|\cos x|+3\cos x+C}.
+  \begin{aligned}
+  &=2\int\frac{\sin x}{\cos x}dx-3\int\sin x\,dx\\
+  &=2\int\frac{-du}{u}+3\cos x+C\\
+  &=-2\ln|u|+3\cos x+C\\
+  &=-2\ln|\cos x|+3\cos x+C\\
+  &=\boxed{-2\ln|\cos x|+3\cos x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\left(\frac3{1+x^2}+\frac4{\sqrt{1-x^2}}\right)dx$
+  \item $\displaystyle\int\left(\frac3{1+x^2}+\frac4{\sqrt{1-x^2}}\right)dx$. Reconocemos dos fórmulas: la integral de $1/(1+x^2)$ es $\arctan x$ y la de $1/\sqrt{1-x^2}$ es $\arcsin x$:
   \[
-  =\boxed{3\arctan x+4\arcsin x+C}.
+  \begin{aligned}
+  &=3\int\frac{dx}{1+x^2}+4\int\frac{dx}{\sqrt{1-x^2}}\\
+  &=3\arctan x+4\arcsin x+C\\
+  &=\boxed{3\arctan x+4\arcsin x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\left(\frac5{x^2-4}+\frac4{x\sqrt{x^2-9}}\right)dx$
+  \item $\displaystyle\int\left(\frac5{x^2-4}+\frac4{x\sqrt{x^2-9}}\right)dx$. Primero factorizamos $x^2-4=(x-2)(x+2)$ y acomodamos la primera fracción:
   \[
-  =\frac54\int\left(\frac1{x-2}-\frac1{x+2}\right)dx
-  +4\int\frac{dx}{x\sqrt{x^2-9}}
+  \begin{aligned}
+  \frac5{x^2-4}&=\frac5{(x-2)(x+2)}\\
+  &=\frac54\left(\frac1{x-2}-\frac1{x+2}\right).
+  \end{aligned}
   \]
+  Integramos las dos partes. En la segunda usamos la fórmula correspondiente para $\int dx/(x\sqrt{x^2-a^2})$:
   \[
-  =\boxed{\frac54\ln\left|\frac{x-2}{x+2}\right|+\frac43\arcsec\left(\frac{|x|}{3}\right)+C}.
+  \begin{aligned}
+  &=\frac54\int\left(\frac1{x-2}-\frac1{x+2}\right)dx+4\int\frac{dx}{x\sqrt{x^2-9}}\\
+  &=\frac54(\ln|x-2|-\ln|x+2|)+\frac43\arcsec\left(\frac{|x|}{3}\right)+C\\
+  &=\boxed{\frac54\ln\left|\frac{x-2}{x+2}\right|+\frac43\arcsec\left(\frac{|x|}{3}\right)+C}.
+  \end{aligned}
   \]
 \end{enumerate}
+
 
 % =================================================
 % TEMA 11
@@ -1356,48 +1446,202 @@ Estas dimensiones minimizan el área total; el resultado también se obtiene al 
 
 \subsection{1.- Resuelve utilizando el método de integración por cambio de variable:}
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\int2x\sin(x^2)dx$. $u=x^2$, $du=2x\,dx$: $\boxed{-\cos(x^2)+C}$.
-  \item $\displaystyle\int3x^2e^{x^3}dx$. $u=x^3$, $du=3x^2\,dx$: $\boxed{e^{x^3}+C}$.
-  \item $\displaystyle\int x^2e^{x^3}dx$. $u=x^3$, $du=3x^2\,dx$: $\boxed{\frac13e^{x^3}+C}$.
-  \item $\displaystyle\int x\sin(x^2)dx$. $u=x^2$, $du=2x\,dx$: $\boxed{-\frac12\cos(x^2)+C}$.
-  \item $\displaystyle\int e^{-2x}dx=\boxed{-\frac12e^{-2x}+C}$.
-  \item $\displaystyle\int\frac1{5-3x}dx$. $u=5-3x$, $du=-3dx$: $\boxed{-\frac13\ln|5-3x|+C}$.
-  \item $\displaystyle\int\frac{x^2}{x^3+1}dx$. $u=x^3+1$, $du=3x^2dx$: $\boxed{\frac13\ln|x^3+1|+C}$.
-  \item $\displaystyle\int\frac{(\ln x)^2}{x}dx$. $u=\ln x$, $du=dx/x$: $\boxed{\frac{(\ln x)^3}{3}+C}$.
-  \item $\displaystyle\int(x+1)\sqrt{2x+x^2}\,dx$. $u=x^2+2x$, $du=2(x+1)dx$: $\boxed{\frac13(2x+x^2)^{3/2}+C}$.
-  \item $\displaystyle\int(\cos^4\theta)(\sin\theta)d\theta$. $u=\cos\theta$, $du=-\sin\theta d\theta$: $\boxed{-\frac15\cos^5\theta+C}$.
-  \item $\displaystyle\int\frac{e^u}{(1-e^u)^2}du$. $v=1-e^u$, $dv=-e^u du$: $\boxed{\frac1{1-e^u}+C}$.
-  \item $\displaystyle\int_0^1\cos\left(\frac{\pi t}{2}\right)dt$
+  \item $\displaystyle\int2x\sin(x^2)dx$. Dentro del seno está $x^2$ y afuera aparece $2x$, que es justo lo que sale al derivar $x^2$. Tomamos $u=x^2$, entonces $du=2x\,dx$:
   \[
-  =\left[\frac2\pi\sin\left(\frac{\pi t}{2}\right)\right]_0^1
-  =\boxed{\frac2\pi}.
+  \begin{aligned}
+  &=\int\sin u\,du\\
+  &=-\cos u+C\\
+  &=\boxed{-\cos(x^2)+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int3x^2e^{x^3}dx$. Elegimos $u=x^3$ porque su derivada es $3x^2$ y ese factor está multiplicando:
+  \[
+  du=3x^2dx,\quad \int e^u du=e^u+C,\quad \boxed{e^{x^3}+C}.
+  \]
+  \item $\displaystyle\int x^2e^{x^3}dx$. El cambio sigue siendo $u=x^3$, pero ahora tenemos solamente $x^2dx$. Como $du=3x^2dx$, despejamos $x^2dx=du/3$:
+  \[
+  \begin{aligned}
+  &=\frac13\int e^u du=\frac13e^u+C\\
+  &=\boxed{\frac13e^{x^3}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int x\sin(x^2)dx$. Tomamos $u=x^2$ y $du=2x\,dx$. Como solo hay $x\,dx$, lo cambiamos por $du/2$:
+  \[
+  \begin{aligned}
+  &=\frac12\int\sin u\,du\\
+  &=-\frac12\cos u+C\\
+  &=\boxed{-\frac12\cos(x^2)+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int e^{-2x}dx$. La derivada de $-2x$ es $-2$, por eso al integrar debemos compensar dividiendo entre $-2$:
+  \[
+  \boxed{-\frac12e^{-2x}+C}.
+  \]
+  \item $\displaystyle\int\frac1{5-3x}dx$. Ponemos $u=5-3x$; al derivar $du=-3dx$, entonces $dx=-du/3$:
+  \[
+  \begin{aligned}
+  &= -\frac13\int\frac1u du\\
+  &=-\frac13\ln|u|+C\\
+  &=\boxed{-\frac13\ln|5-3x|+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int\frac{x^2}{x^3+1}dx$. Usamos $u=x^3+1$; su derivada es $3x^2$, así que $x^2dx=du/3$:
+  \[
+  \begin{aligned}
+  &=\frac13\int\frac1u du\\
+  &=\frac13\ln|u|+C\\
+  &=\boxed{\frac13\ln|x^3+1|+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int\frac{(\ln x)^2}{x}dx$. Como la derivada de $\ln x$ es $1/x$, hacemos $u=\ln x$, $du=dx/x$:
+  \[
+  \begin{aligned}
+  &=\int u^2du=\frac{u^3}{3}+C\\
+  &=\boxed{\frac{(\ln x)^3}{3}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int(x+1)\sqrt{2x+x^2}\,dx$. Lo que está dentro de la raíz es $x^2+2x$ y su derivada es $2x+2=2(x+1)$. Tomamos $u=x^2+2x$, por lo que $du=2(x+1)dx$ y $(x+1)dx=du/2$:
+  \[
+  \begin{aligned}
+  &=\frac12\int u^{1/2}du\\
+  &=\frac12\frac{u^{3/2}}{3/2}+C=\frac13u^{3/2}+C\\
+  &=\boxed{\frac13(2x+x^2)^{3/2}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int(\cos^4\theta)(\sin\theta)d\theta$. Elegimos $u=\cos\theta$, entonces $du=-\sin\theta d\theta$. El signo menos aparece al sustituir:
+  \[
+  \begin{aligned}
+  &=-\int u^4du\\
+  &=-\frac{u^5}{5}+C\\
+  &=\boxed{-\frac15\cos^5\theta+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int\frac{e^u}{(1-e^u)^2}du$. Sea $v=1-e^u$. Al derivar, $dv=-e^u du$, por eso $e^u du=-dv$:
+  \[
+  \begin{aligned}
+  &=-\int\frac1{v^2}dv=-\int v^{-2}dv\\
+  &=-\frac{v^{-1}}{-1}+C=\frac1v+C\\
+  &=\boxed{\frac1{1-e^u}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int_0^1\cos\left(\frac{\pi t}{2}\right)dt$. La integral de $\cos(kt)$ es $\sin(kt)/k$, por lo que aquí dividimos entre $\pi/2$:
+  \[
+  \begin{aligned}
+  &=\left[\frac2\pi\sin\left(\frac{\pi t}{2}\right)\right]_0^1\\
+  &=\frac2\pi\sin\left(\frac\pi2\right)-\frac2\pi\sin(0)\\
+  &=\frac2\pi(1)-\frac2\pi(0)=\boxed{\frac2\pi}.
+  \end{aligned}
   \]
 \end{enumerate}
 
+
 \subsection{2.- Resuelve utilizando el método de integración por partes:}
-Se utiliza $\displaystyle\int u\,dv=uv-\int v\,du$.
+Se utiliza $\displaystyle\int u\,dv=uv-\int v\,du$. La idea es escoger una parte que sea fácil de derivar y otra que sea fácil de integrar.
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\int x\cos5x\,dx$. Tomamos $u=x$, $dv=\cos5x\,dx$:
-  $\boxed{\frac{x\sin5x}{5}+\frac{\cos5x}{25}+C}$.
-  \item $\displaystyle\int te^{-3t}dt$. Con $u=t$, $dv=e^{-3t}dt$:
-  $\boxed{-\frac{te^{-3t}}3-\frac{e^{-3t}}9+C}$.
-  \item $\displaystyle\int(x^2+2x)\cos x\,dx$. Aplicando partes dos veces:
-  $\boxed{(x^2+2x-2)\sin x+(2x+2)\cos x+C}$.
-  \item $\displaystyle\int x^2\ln x\,dx$. Con $u=\ln x$, $dv=x^2dx$:
-  $\boxed{\frac{x^3}{3}\ln x-\frac{x^3}{9}+C}$.
-  \item $\displaystyle\int(\ln x)^2dx$. Con $u=(\ln x)^2$, $dv=dx$ y aplicando partes otra vez:
-  $\boxed{x(\ln x)^2-2x\ln x+2x+C}$.
-  \item $\displaystyle\int\sqrt{x^3}\ln x\,dx=\int x^{3/2}\ln x\,dx$:
-  $\boxed{\frac25x^{5/2}\ln x-\frac4{25}x^{5/2}+C}$.
-  \item $\displaystyle\int x^3\sin x\,dx$. Aplicando partes repetidamente:
-  $\boxed{-x^3\cos x+3x^2\sin x+6x\cos x-6\sin x+C}$.
-  \item $\displaystyle\int x^5e^{-x}dx$. Aplicando partes repetidamente:
-  $\boxed{-e^{-x}(x^5+5x^4+20x^3+60x^2+120x+120)+C}$.
-  \item $\displaystyle\int e^x\cos x\,dx$. Aplicando partes dos veces y despejando la integral original:
-  $\boxed{\frac{e^x}{2}(\sin x+\cos x)+C}$.
-  \item $\displaystyle\int\sin(\ln x)dx$. Sea $u=\ln x$, entonces $x=e^u$ y $dx=e^u du$:
-  $\boxed{\frac{x}{2}\left[\sin(\ln x)-\cos(\ln x)\right]+C}$.
+  \item $\displaystyle\int x\cos5x\,dx$. Tomamos $u=x$, así $du=dx$; y $dv=\cos5x\,dx$, entonces $v=\sin5x/5$:
+  \[
+  \begin{aligned}
+  &=\frac{x\sin5x}{5}-\int\frac{\sin5x}{5}dx\\
+  &=\frac{x\sin5x}{5}+\frac{\cos5x}{25}+C\\
+  &=\boxed{\frac{x\sin5x}{5}+\frac{\cos5x}{25}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int te^{-3t}dt$. Elegimos $u=t$, $du=dt$; $dv=e^{-3t}dt$, cuya integral es $v=-e^{-3t}/3$:
+  \[
+  \begin{aligned}
+  &= -\frac{te^{-3t}}3-\int\left(-\frac{e^{-3t}}3\right)dt\\
+  &= -\frac{te^{-3t}}3-\frac{e^{-3t}}9+C\\
+  &=\boxed{-\frac{te^{-3t}}3-\frac{e^{-3t}}9+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int(x^2+2x)\cos x\,dx$. Separamos la suma y aplicamos partes a cada término, o lo hacemos con $u=x^2+2x$ y $dv=\cos xdx$:
+  \[
+  \begin{aligned}
+  &= (x^2+2x)\sin x-\int(2x+2)\sin x\,dx\\
+  &=(x^2+2x)\sin x-\left(-2x\cos x+2\sin x-2\cos x\right)\\
+  &=(x^2+2x)\sin x+2x\cos x-2\sin x+2\cos x+C\\
+  &=\boxed{(x^2+2x-2)\sin x+(2x+2)\cos x+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int x^2\ln x\,dx$. Tomamos $u=\ln x$ y $dv=x^2dx$. Entonces $du=dx/x$ y $v=x^3/3$:
+  \[
+  \begin{aligned}
+  &=\frac{x^3}{3}\ln x-\int\frac{x^3}{3}\frac1x dx\\
+  &=\frac{x^3}{3}\ln x-\frac13\int x^2dx\\
+  &=\frac{x^3}{3}\ln x-\frac{x^3}{9}+C\\
+  &=\boxed{\frac{x^3}{3}\ln x-\frac{x^3}{9}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int(\ln x)^2dx$. Primero tomamos $u=(\ln x)^2$ y $dv=dx$, de modo que $du=2\ln x\,dx/x$ y $v=x$:
+  \[
+  \begin{aligned}
+  &=x(\ln x)^2-2\int\ln x\,dx\\
+  \end{aligned}
+  \]
+  Para la integral que quedó, hacemos partes otra vez: $u=\ln x$, $dv=dx$, entonces $du=dx/x$ y $v=x$; así $\int\ln xdx=x\ln x-x$.
+  \[
+  \begin{aligned}
+  &=x(\ln x)^2-2(x\ln x-x)+C\\
+  &=\boxed{x(\ln x)^2-2x\ln x+2x+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int\sqrt{x^3}\ln x\,dx=\int x^{3/2}\ln x\,dx$. Escribimos la raíz como potencia y usamos partes: $u=\ln x$, $dv=x^{3/2}dx$. Entonces $du=dx/x$ y $v=\frac25x^{5/2}$:
+  \[
+  \begin{aligned}
+  &=\frac25x^{5/2}\ln x-\frac25\int x^{3/2}dx\\
+  &=\frac25x^{5/2}\ln x-\frac25\left(\frac25x^{5/2}\right)+C\\
+  &=\boxed{\frac25x^{5/2}\ln x-\frac4{25}x^{5/2}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int x^3\sin x\,dx$. Aplicamos partes: $u=x^3$, $dv=\sin xdx$, por lo que $du=3x^2dx$, $v=-\cos x$:
+  \[
+  \begin{aligned}
+  &=-x^3\cos x+3\int x^2\cos xdx\\
+  \end{aligned}
+  \]
+  A la integral restante le aplicamos partes con $u=x^2$, $dv=\cos xdx$; después repetimos con $x$:
+  \[
+  \begin{aligned}
+  \int x^2\cos xdx&=x^2\sin x-2\int x\sin xdx\\
+  \int x\sin xdx&=-x\cos x+\sin x.
+  \end{aligned}
+  \]
+  Sustituimos ambas expresiones:
+  \[
+  \begin{aligned}
+  &=-x^3\cos x+3x^2\sin x-6(-x\cos x+\sin x)+C\\
+  &=\boxed{-x^3\cos x+3x^2\sin x+6x\cos x-6\sin x+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int x^5e^{-x}dx$. Usamos partes varias veces, siempre tomando $u$ como la potencia de $x$ (que va bajando) y derivándola. Al integrar $e^{-x}$ obtenemos $-e^{-x}$:
+  \[
+  \begin{aligned}
+  &= -x^5e^{-x}+5\int x^4e^{-x}dx\\
+  &= -x^5e^{-x}-5x^4e^{-x}+20\int x^3e^{-x}dx\\
+  &= -x^5e^{-x}-5x^4e^{-x}-20x^3e^{-x}+60\int x^2e^{-x}dx\\
+  &= -x^5e^{-x}-5x^4e^{-x}-20x^3e^{-x}-60x^2e^{-x}+120\int xe^{-x}dx\\
+  &= -x^5e^{-x}-5x^4e^{-x}-20x^3e^{-x}-60x^2e^{-x}-120xe^{-x}-120e^{-x}+C\\
+  &=\boxed{-e^{-x}(x^5+5x^4+20x^3+60x^2+120x+120)+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int e^x\cos x\,dx$. Hacemos partes dos veces. Sea $I$ la integral que queremos resolver. La primera vez:
+  \[
+  I=e^x\sin x-\int e^x\sin xdx.
+  \]
+  La integral restante también por partes da $\int e^x\sin xdx=e^x\sin x-e^x\cos x+I$ al ordenar la igualdad. Sustituyendo y juntando la $I$ que aparece de nuevo:
+  \[
+  \begin{aligned}
+  I&=e^x\sin x-(e^x\sin x-e^x\cos x-I)\\
+  2I&=e^x(\sin x+\cos x)\\
+  I&=\boxed{\frac{e^x}{2}(\sin x+\cos x)+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int\sin(\ln x)dx$. Hacemos $u=\ln x$, así $x=e^u$ y $dx=e^u du$. Entonces queda $\int e^u\sin udu$, que es del mismo tipo que el ejercicio anterior; al regresar a $x$:
+  \[
+  \boxed{\frac{x}{2}\left[\sin(\ln x)-\cos(\ln x)\right]+C}.
+  \]
 \end{enumerate}
+
 
 % =================================================
 % TEMA 12
@@ -1406,132 +1650,224 @@ Se utiliza $\displaystyle\int u\,dv=uv-\int v\,du$.
 \newpage
 \section{Tema 12. Técnicas de integración: integración de funciones trigonométricas e integración de funciones racionales}
 
+
 \subsection{1.- Integra las siguientes funciones trigonométricas:}
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\int\cos^7x\,dx$. Se separa un factor $\cos x$ y se usa $u=\sin x$:
+  \item $\displaystyle\int\cos^7x\,dx$. Separamos un coseno porque la potencia es impar; el resto lo cambiamos usando $\cos^2x=1-\sin^2x$. Luego tomamos $u=\sin x$, $du=\cos xdx$:
   \[
   \begin{aligned}
-  \int\cos^7x\,dx
-  &=\int\cos^6x\cos x\,dx\\
-  &=\int(1-\sin^2x)^3\cos x\,dx\\
+  &=\int\cos^6x\cos xdx=\int(1-\sin^2x)^3\cos xdx\\
   &\xrightarrow{u=\sin x}\int(1-u^2)^3du\\
   &=\int(1-3u^2+3u^4-u^6)du\\
+  &=u-u^3+\frac35u^5-\frac17u^7+C\\
   &=\boxed{\sin x-\sin^3x+\frac35\sin^5x-\frac17\sin^7x+C}.
   \end{aligned}
   \]
-  \item $\displaystyle\int(\sin^4x)(\cos^3x)dx$. Se reserva $\cos x$ y se usa $u=\sin x$:
+  \item $\displaystyle\int(\sin^4x)(\cos^3x)dx$. Como la potencia del coseno es impar, dejamos un $\cos x$ y convertimos el resto: $\cos^2x=1-\sin^2x$. Usamos $u=\sin x$:
   \[
   \begin{aligned}
-  \int\sin^4x\cos^3x\,dx
-  &=\int\sin^4x(1-\sin^2x)\cos x\,dx\\
-  &\xrightarrow{u=\sin x}\int u^4(1-u^2)\,du\\
-  &=\int(u^4-u^6)\,du\\
+  &=\int\sin^4x(1-\sin^2x)\cos xdx\\
+  &\xrightarrow{u=\sin x}\int u^4(1-u^2)du=\int(u^4-u^6)du\\
+  &=\frac{u^5}{5}-\frac{u^7}{7}+C\\
   &=\boxed{\frac{\sin^5x}{5}-\frac{\sin^7x}{7}+C}.
   \end{aligned}
   \]
-  \item $\displaystyle\int\sin^5x\,dx$. Se reserva $\sin x$ y se usa $u=\cos x$:
+  \item $\displaystyle\int\sin^5x\,dx$. Dejamos un seno y convertimos $\sin^2x=1-\cos^2x$. Con $u=\cos x$ y $du=-\sin xdx$:
   \[
-  -\int(1-u^2)^2du
-  =\boxed{-\cos x+\frac23\cos^3x-\frac15\cos^5x+C}.
+  \begin{aligned}
+  &=-\int(1-u^2)^2du=-\int(1-2u^2+u^4)du\\
+  &=-u+\frac23u^3-\frac15u^5+C\\
+  &=\boxed{-\cos x+\frac23\cos^3x-\frac15\cos^5x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int(\sin^3x)(\cos^4x)dx$. Se reserva $\sin x$ y se usa $u=\cos x$:
+  \item $\displaystyle\int(\sin^3x)(\cos^4x)dx$. Dejamos un seno, escribimos $\sin^2x=1-\cos^2x$ y cambiamos $u=\cos x$:
   \[
-  -\int(u^4-u^6)du
-  =\boxed{-\frac15\cos^5x+\frac17\cos^7x+C}.
+  \begin{aligned}
+  &=-\int(1-u^2)u^4du=-\int(u^4-u^6)du\\
+  &=-\frac15u^5+\frac17u^7+C\\
+  &=\boxed{-\frac15\cos^5x+\frac17\cos^7x+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\cos^4x\,dx$. Con reducción de potencia, $\cos^4x=\frac{3+4\cos2x+\cos4x}{8}$:
+  \item $\displaystyle\int\cos^4x\,dx$. Usamos $\cos^2x=(1+\cos2x)/2$ y elevamos al cuadrado:
+  \[
+  \begin{aligned}
+  \cos^4x&=\left(\frac{1+\cos2x}{2}\right)^2\\
+  &=\frac14(1+2\cos2x+\cos^22x)\\
+  &=\frac14\left(1+2\cos2x+\frac{1+\cos4x}{2}\right)\\
+  &=\frac{3+4\cos2x+\cos4x}{8}.
+  \end{aligned}
+  \]
+  Ahora integramos término a término, recordando que al integrar $\cos2x$ dividimos entre 2 y al integrar $\cos4x$ entre 4:
   \[
   \boxed{\frac{3x}{8}+\frac{\sin2x}{4}+\frac{\sin4x}{32}+C}.
   \]
-  \item $\displaystyle\int\sin^6x\,dx$. Con reducción de potencia, $\sin^6x=\frac{10-15\cos2x+6\cos4x-\cos6x}{32}$:
+  \item $\displaystyle\int\sin^6x\,dx$. Aplicamos la identidad de reducción de potencia (se puede obtener usando $\sin^2x=(1-\cos2x)/2$ y multiplicando varias veces):
+  \[
+  \sin^6x=\frac{10-15\cos2x+6\cos4x-\cos6x}{32}.
+  \]
+  Integramos cada parte:
   \[
   \boxed{\frac{5x}{16}-\frac{15\sin2x}{64}+\frac{3\sin4x}{64}-\frac{\sin6x}{192}+C}.
   \]
-  \item $\displaystyle\int(\sin^2x)(\cos^2x)dx$. Como $\sin^2x\cos^2x=\frac18(1-\cos4x)$:
+  \item $\displaystyle\int(\sin^2x)(\cos^2x)dx$. Como $\sin2x=2\sin x\cos x$, elevamos al cuadrado y usamos $\cos4x=1-2\sin^22x$:
   \[
-  \boxed{\frac{x}{8}-\frac{\sin4x}{32}+C}.
+  \sin^2x\cos^2x=\frac14\sin^22x=\frac18(1-\cos4x).
   \]
-  \item $\displaystyle\int(\tan^4x)(\sec^4x)dx$. Se escribe $\sec^4x=(1+\tan^2x)\sec^2x$ y se usa $u=\tan x$:
+  Así,
   \[
-  \int u^4(1+u^2)du
-  =\boxed{\frac{\tan^5x}{5}+\frac{\tan^7x}{7}+C}.
+  \int\frac18(1-\cos4x)dx=\boxed{\frac{x}{8}-\frac{\sin4x}{32}+C}.
   \]
-  \item $\displaystyle\int(\tan^3x)(\sec^5x)dx$. Se separa $\sec x\tan x\,dx$ y se usa $u=\sec x$:
+  \item $\displaystyle\int(\tan^4x)(\sec^4x)dx$. Escribimos una parte de $\sec^2x$ para que sea la derivada de $\tan x$. Como $\sec^2x=1+\tan^2x$, usamos $u=\tan x$, $du=\sec^2x dx$:
   \[
-  \int(u^2-1)u^4du
-  =\boxed{\frac{\sec^7x}{7}-\frac{\sec^5x}{5}+C}.
+  \begin{aligned}
+  &=\int\tan^4x(1+\tan^2x)\sec^2x dx\\
+  &\xrightarrow{u=\tan x}\int u^4(1+u^2)du\\
+  &=\int(u^4+u^6)du=\frac{u^5}{5}+\frac{u^7}{7}+C\\
+  &=\boxed{\frac{\tan^5x}{5}+\frac{\tan^7x}{7}+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int(\sin3x)(\cos4x)dx$. Por producto a suma, $\sin3x\cos4x=\frac12(\sin7x-\sin x)$:
+  \item $\displaystyle\int(\tan^3x)(\sec^5x)dx$. Separamos $\sec x\tan xdx$ porque la derivada de $\sec x$ es precisamente esa. El resto se cambia con $\tan^2x=\sec^2x-1$. Sea $u=\sec x$:
   \[
-  \boxed{-\frac{\cos7x}{14}+\frac{\cos x}{2}+C}.
+  \begin{aligned}
+  &=\int\tan^2x\sec^4x(\sec x\tan xdx)\\
+  &\xrightarrow{u=\sec x}\int(u^2-1)u^4du\\
+  &=\int(u^6-u^4)du=\frac{u^7}{7}-\frac{u^5}{5}+C\\
+  &=\boxed{\frac{\sec^7x}{7}-\frac{\sec^5x}{5}+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int(\sin3x)(\cos4x)dx$. Usamos la identidad que transforma un producto en suma: $\sin A\cos B=\frac12[\sin(A+B)+\sin(A-B)]$. Con $A=3x$, $B=4x$:
+  \[
+  \sin3x\cos4x=\frac12(\sin7x+\sin(-x))=\frac12(\sin7x-\sin x).
+  \]
+  Integramos los dos senos, teniendo cuidado de dividir entre 7 en el primero:
+  \[
+  \begin{aligned}
+  &=\frac12\int(\sin7x-\sin x)dx\\
+  &=\frac12\left(-\frac{\cos7x}{7}+\cos x\right)+C\\
+  &=\boxed{-\frac{\cos7x}{14}+\frac{\cos x}{2}+C}.
+  \end{aligned}
   \]
 \end{enumerate}
 
 \subsection{2.- Integra las siguientes funciones racionales:}
 \begin{enumerate}[label=\alph*)]
-  \item $\displaystyle\int\frac{x^4+3x^2+x}{x-2}dx$. División algebraica:
+  \item $\displaystyle\int\frac{x^4+3x^2+x}{x-2}dx$. Como el grado de arriba es mayor, primero dividimos polinomios. Al dividir obtenemos $x^3+2x^2+7x+15$ y sobra 30, por lo que:
   \[
   \frac{x^4+3x^2+x}{x-2}=x^3+2x^2+7x+15+\frac{30}{x-2}.
   \]
+  Ahora integramos cada término. La última fracción se integra como logaritmo:
   \[
-  \boxed{\frac{x^4}{4}+\frac{2x^3}{3}+\frac{7x^2}{2}+15x+30\ln|x-2|+C}.
+  \begin{aligned}
+  &=\int(x^3+2x^2+7x+15)dx+30\int\frac1{x-2}dx\\
+  &=\frac{x^4}{4}+\frac{2x^3}{3}+\frac{7x^2}{2}+15x+30\ln|x-2|+C\\
+  &=\boxed{\frac{x^4}{4}+\frac{2x^3}{3}+\frac{7x^2}{2}+15x+30\ln|x-2|+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\frac{x+12}{x^2+5x+6}dx$. Factorizando y descomponiendo:
+  \item $\displaystyle\int\frac{x+12}{x^2+5x+6}dx$. Factorizamos el denominador: $x^2+5x+6=(x+2)(x+3)$. Como son dos factores sencillos, separamos la fracción en dos:
+  \[
+  \frac{x+12}{(x+2)(x+3)}=\frac{A}{x+2}+\frac{B}{x+3}.
+  \]
+  Multiplicamos todo por $(x+2)(x+3)$: $x+12=A(x+3)+B(x+2)$. Si $x=-2$, $10=A$; si $x=-3$, $9=-B$, así $B=-9$:
   \[
   \frac{x+12}{(x+2)(x+3)}=\frac{10}{x+2}-\frac9{x+3}.
   \]
+  Integramos usando $\int dx/(x+a)=\ln|x+a|$:
   \[
   \boxed{10\ln|x+2|-9\ln|x+3|+C}.
   \]
-  \item $\displaystyle\int\frac{2x+3}{x^3+x^2-6x}dx$. Factorizamos $x(x+3)(x-2)$:
+  \item $\displaystyle\int\frac{2x+3}{x^3+x^2-6x}dx$. Sacamos $x$ como factor y factorizamos el resto: $x^3+x^2-6x=x(x^2+x-6)=x(x+3)(x-2)$. Separamos en fracciones:
   \[
-  \frac{2x+3}{x(x+3)(x-2)}=-\frac1{2x}+\frac7{10(x-2)}-\frac1{5(x+3)}.
+  \frac{2x+3}{x(x+3)(x-2)}=\frac A x+\frac B{x-2}+\frac C{x+3}.
   \]
+  Multiplicando por el denominador, $2x+3=A(x+3)(x-2)+Bx(x+3)+Cx(x-2)$. Sustituyendo $x=0,2,-3$ se obtiene $A=-1/2$, $B=7/10$ y $C=-1/5$:
+  \[
+  =-\frac1{2x}+\frac7{10(x-2)}-\frac1{5(x+3)}.
+  \]
+  Integramos cada fracción como logaritmo:
   \[
   \boxed{-\frac12\ln|x|+\frac7{10}\ln|x-2|-\frac15\ln|x+3|+C}.
   \]
-  \item $\displaystyle\int\frac{x^2}{x^4-5x^2+4}dx$. Como $x^4-5x^2+4=(x^2-1)(x^2-4)$:
+  \item $\displaystyle\int\frac{x^2}{x^4-5x^2+4}dx$. Factorizamos pensando en $x^2$: $x^4-5x^2+4=(x^2-1)(x^2-4)=(x-1)(x+1)(x-2)(x+2)$. Después se separa en cuatro fracciones sencillas:
   \[
   \frac{x^2}{(x^2-1)(x^2-4)}=-\frac1{3(x+2)}+\frac1{6(x+1)}-\frac1{6(x-1)}+\frac1{3(x-2)}.
   \]
+  Se integra cada una con el logaritmo natural, conservando los signos y coeficientes:
   \[
   \boxed{-\frac13\ln|x+2|+\frac16\ln|x+1|-\frac16\ln|x-1|+\frac13\ln|x-2|+C}.
   \]
-  \item $\displaystyle\int\frac{x+1}{x^2-6x+9}dx=\int\left(\frac1{x-3}+\frac4{(x-3)^2}\right)dx$:
+  \item $\displaystyle\int\frac{x+1}{x^2-6x+9}dx$. El denominador es un cuadrado perfecto: $x^2-6x+9=(x-3)^2$. Podemos separar el numerador $x+1=(x-3)+4$:
   \[
-  \boxed{\ln|x-3|-\frac4{x-3}+C}.
+  \frac{x+1}{(x-3)^2}=\frac{x-3}{(x-3)^2}+\frac4{(x-3)^2}=\frac1{x-3}+\frac4{(x-3)^2}.
   \]
-  \item $\displaystyle\int\frac{x}{x^3-3x^2+3x-1}dx=\int\frac{x}{(x-1)^3}dx$.
+  Integramos: el primero es logaritmo; el segundo es una potencia negativa, cuya integral baja un exponente:
   \[
-  \frac{x}{(x-1)^3}=\frac1{(x-1)^2}+\frac1{(x-1)^3},\qquad
-  \boxed{-\frac1{x-1}-\frac1{2(x-1)^2}+C}.
+  \begin{aligned}
+  &=\ln|x-3|+4\int(x-3)^{-2}dx\\
+  &=\ln|x-3|-\frac4{x-3}+C\\
+  &=\boxed{\ln|x-3|-\frac4{x-3}+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\frac{x+1}{x^3+2x}dx=\int\left[\frac1{2x}-\frac{x-2}{2(x^2+2)}\right]dx$:
+  \item $\displaystyle\int\frac{x}{x^3-3x^2+3x-1}dx$. El denominador se reconoce como $(x-1)^3$, porque es el desarrollo de $(x-1)^3=x^3-3x^2+3x-1$. Reescribimos el numerador $x=(x-1)+1$:
   \[
-  \boxed{\frac12\ln|x|-\frac14\ln(x^2+2)+\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \begin{aligned}
+  &=\int\frac{(x-1)+1}{(x-1)^3}dx\\
+  &=\int\left(\frac1{(x-1)^2}+\frac1{(x-1)^3}\right)dx\\
+  &=\int((x-1)^{-2}+(x-1)^{-3})dx\\
+  &=-\frac1{x-1}-\frac1{2(x-1)^2}+C\\
+  &=\boxed{-\frac1{x-1}-\frac1{2(x-1)^2}+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\frac{x+1}{x^4+3x^2+2}dx$. Como $x^4+3x^2+2=(x^2+1)(x^2+2)$:
+  \item $\displaystyle\int\frac{x+1}{x^3+2x}dx$. Sacamos $x$ como factor: $x^3+2x=x(x^2+2)$. Reescribimos el numerador para que coincida con los términos del denominador y separamos:
+  \[
+  \frac{x+1}{x(x^2+2)}=\frac1{2x}-\frac{x-2}{2(x^2+2)}.
+  \]
+  En el segundo término, separamos $x-2=x-0+(-2)$ y usamos que la derivada de $x^2+2$ es $2x$:
+  \[
+  \begin{aligned}
+  &=\frac12\int\frac1x dx-\frac12\int\frac{x}{x^2+2}dx+\int\frac1{x^2+2}dx\\
+  &=\frac12\ln|x|-\frac14\ln(x^2+2)+\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C\\
+  &=\boxed{\frac12\ln|x|-\frac14\ln(x^2+2)+\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \end{aligned}
+  \]
+  \item $\displaystyle\int\frac{x+1}{x^4+3x^2+2}dx$. Factorizamos como si fuera una cuadrática en $x^2$: $x^4+3x^2+2=(x^2+1)(x^2+2)$. Separamos en dos fracciones:
   \[
   \frac{x+1}{(x^2+1)(x^2+2)}=\frac{x+1}{x^2+1}-\frac{x+1}{x^2+2}.
   \]
+  En cada fracción separamos la parte con $x$ (que da logaritmo al hacer $u=x^2+a$) y la parte constante (que da arctan):
   \[
-  \boxed{\frac12\ln(x^2+1)+\arctan x-\frac12\ln(x^2+2)-\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \begin{aligned}
+  &=\frac12\ln(x^2+1)+\arctan x-\frac12\ln(x^2+2)-\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C\\
+  &=\boxed{\frac12\ln(x^2+1)+\arctan x-\frac12\ln(x^2+2)-\frac1{\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\frac{x^3+1}{x^4+4x^2+4}dx=\int\frac{x^3+1}{(x^2+2)^2}dx$.
+  \item $\displaystyle\int\frac{x^3+1}{x^4+4x^2+4}dx$. El denominador es $(x^2+2)^2$. Separamos el numerador para que una parte sea $x(x^2+2)$ y así aparezca la derivada del denominador:
   \[
   \frac{x^3+1}{(x^2+2)^2}=\frac{x}{x^2+2}-\frac{2x-1}{(x^2+2)^2}.
   \]
-  Integrando cada término:
+  Integramos la primera parte con $u=x^2+2$. En la segunda, separamos $2x$ y $-1$; el término con $2x$ también se integra con el mismo cambio y el que tiene $1$ usa la fórmula de arctan:
   \[
-  \boxed{\frac12\ln(x^2+2)+\frac{x+4}{4(x^2+2)}+\frac1{4\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \begin{aligned}
+  &=\frac12\ln(x^2+2)+\frac{x+4}{4(x^2+2)}+\frac1{4\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C\\
+  &=\boxed{\frac12\ln(x^2+2)+\frac{x+4}{4(x^2+2)}+\frac1{4\sqrt2}\arctan\left(\frac{x}{\sqrt2}\right)+C}.
+  \end{aligned}
   \]
-  \item $\displaystyle\int\frac{3x+4}{(x+1)(x+2)^2}dx$. Fracciones parciales:
+  \item $\displaystyle\int\frac{3x+4}{(x+1)(x+2)^2}dx$. Como el denominador tiene un factor repetido, usamos tres partes: $A/(x+1)+B/(x+2)+C/(x+2)^2$. Al multiplicar por todo el denominador:
+  \[
+  3x+4=A(x+2)^2+B(x+1)(x+2)+C(x+1).
+  \]
+  Sustituyendo valores sencillos y comparando se obtiene $A=1$, $B=-1$ y $C=2$:
   \[
   \frac{3x+4}{(x+1)(x+2)^2}=\frac1{x+1}-\frac1{x+2}+\frac2{(x+2)^2}.
   \]
+  Integramos cada término:
   \[
-  \boxed{\ln|x+1|-\ln|x+2|-\frac2{x+2}+C}.
+  \begin{aligned}
+  &=\ln|x+1|-\ln|x+2|+2\int(x+2)^{-2}dx\\
+  &=\ln|x+1|-\ln|x+2|-\frac2{x+2}+C\\
+  &=\boxed{\ln|x+1|-\ln|x+2|-\frac2{x+2}+C}.
+  \end{aligned}
   \]
 \end{enumerate}
+
 
 \end{document}
